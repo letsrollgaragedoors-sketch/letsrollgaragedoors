@@ -1,87 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/#about</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/#services</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/#areas</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/#faq</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/#quote</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/blog.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/garage-door-repair-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/garage-door-spring-repair-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/garage-door-opener-repair-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/garage-door-installation-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/garage-door-cable-repair-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/garage-door-roller-replacement-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.letsrollgaragedoors.com/emergency-garage-door-repair-austin.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-</urlset>
+User-agent: *
+Allow: /
+
+# AI / chatbot crawlers — explicitly allowed for visibility in AI search answers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.letsrollgaragedoors.com/sitemap.xml
