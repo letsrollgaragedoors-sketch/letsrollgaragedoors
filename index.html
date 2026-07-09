@@ -165,8 +165,15 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -247,7 +254,7 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 
 /* ── HERO ── */
 .hero{position:relative;overflow:hidden;min-height:640px;display:flex;align-items:center}
-.hero-photo{position:absolute;inset:0;background:url('images/img-d8d103469b7c.jpg') center/cover no-repeat}
+.hero-photo{position:absolute;inset:0;background:url('images/img-d8d103469b7c.webp') center/cover no-repeat}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.93) 0%,rgba(10,10,10,.75) 55%,rgba(10,10,10,.3) 100%)}
 .hero-inner{max-width:1280px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 410px;gap:60px;align-items:center;position:relative;z-index:2;width:100%}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(232,93,4,.2);border:1px solid rgba(232,93,4,.45);color:var(--orange-light);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px}
@@ -318,7 +325,7 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 
 /* ── EMERGENCY ── */
 .emergency{position:relative;overflow:hidden;padding:80px 0}
-.emergency-photo{position:absolute;inset:0;background:url('images/img-5e13a14d530c.jpg') center/cover no-repeat}
+.emergency-photo{position:absolute;inset:0;background:url('images/img-5e13a14d530c.webp') center/cover no-repeat}
 .emergency-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,37,87,.97) 0%,rgba(15,37,87,.88) 50%,rgba(15,37,87,.6) 100%)}
 .emergency-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:36px;position:relative;z-index:2}
 .emergency h2{font-family:'Oswald',sans-serif;font-size:clamp(30px,4vw,52px);color:white;font-weight:700;line-height:1.05;letter-spacing:.02em}
@@ -408,7 +415,7 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 
 /* ── AREAS ── */
 .areas{padding:80px 0;background:var(--off-white);position:relative;overflow:hidden}
-.areas-bg-photo{position:absolute;inset:0;background:url('images/img-d8d103469b7c.jpg') center/cover no-repeat;opacity:.06}
+.areas-bg-photo{position:absolute;inset:0;background:url('images/img-d8d103469b7c.webp') center/cover no-repeat;opacity:.06}
 .areas-inner{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
 .areas-header{text-align:center;margin-bottom:40px}
 .areas-sub{color:var(--gray);font-size:15px;font-weight:300;text-align:center;max-width:480px;margin:8px auto 0}
@@ -557,6 +564,7 @@ footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--borde
 }
 body{padding-bottom:64px}
 </style>
+<script>(function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""),n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "187261177",enableAutoSpaTracking: true});</script>
 </head>
 <body>
 
@@ -574,11 +582,11 @@ body{padding-bottom:64px}
   <nav class="article-nav">
     <button class="article-back" onclick="closeArticle('art1')"><i class="fas fa-arrow-left"></i> Back to Website</button>
     <div class="article-nav-logo">
-      <img src="images/img-63f59f98af3e.jpg" alt="Let's Roll Garage Doors" height="56">
+      <img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" height="56">
     </div>
   </nav>
   <div class="article-hero">
-    <img src="images/img-a1337081c6a5.jpg" alt="Garage door torsion springs, Let's Roll Garage Doors">
+    <img src="images/img-a1337081c6a5.webp" alt="Garage door torsion springs, Let's Roll Garage Doors">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <span class="article-tag">Safety</span>
@@ -593,14 +601,14 @@ body{padding-bottom:64px}
   <div class="article-content">
     <p>A broken torsion spring is one of the most common, and most dangerous, garage door failures. When a spring snaps, your door can become completely inoperable in seconds, leaving your vehicle trapped or your home unsecured. The good news: springs usually give you warning signs before they fail entirely.</p>
     <div class="callout"><p><i class="fas fa-exclamation-triangle"></i> <strong>Never attempt to repair or replace garage door springs yourself.</strong> Torsion springs are under extreme tension and can cause serious injury. Always call a certified technician.</p></div>
-    <div class="article-img-block"><img src="images/img-f1174ec9119d.jpg" alt="Torsion spring system on garage door, visible gap indicates broken spring"><p class="article-img-caption">A torsion spring system showing the gap from a broken spring. Never attempt repairs yourself, always call a certified technician.</p></div>
+    <div class="article-img-block"><img src="images/img-f1174ec9119d.webp" alt="Torsion spring system on garage door, visible gap indicates broken spring"><p class="article-img-caption">A torsion spring system showing the gap from a broken spring. Never attempt repairs yourself, always call a certified technician.</p></div>
 
     <h2>1. The Door Feels Unusually Heavy</h2>
     <p>Springs counterbalance the weight of your garage door. If a spring is weakening or partially broken, the door will feel much heavier than normal when you try to open it manually. A balanced door should lift easily with one hand, if it takes real effort, that's a red flag.</p>
     <h2>2. You Hear a Loud Bang</h2>
     <p>When a torsion spring snaps, it makes a sound like a gunshot or loud bang, often described as someone throwing something heavy in the garage. If you hear this sound and your door won't open, your spring has likely broken.</p>
     <h2>3. There's a Visible Gap in the Spring</h2>
-    <div class="article-img-block"><img src="images/img-f1174ec9119d.jpg" alt="Torsion spring on garage door, Let's Roll Garage Doors Austin TX"><p class="article-img-caption">Visible gaps in a torsion spring coil indicate a broken spring that needs immediate replacement.</p></div>
+    <div class="article-img-block"><img src="images/img-f1174ec9119d.webp" alt="Torsion spring on garage door, Let's Roll Garage Doors Austin TX"><p class="article-img-caption">Visible gaps in a torsion spring coil indicate a broken spring that needs immediate replacement.</p></div>
     <p>Look at the springs above your garage door. A broken torsion spring will have a visible gap, typically a separation of 2 inches or more in the coil. If you see this, don't use the door until it's repaired.</p>
     <h2>4. The Door Opens Crooked</h2>
     <p>If one spring fails in a two-spring system, the door will rise unevenly, one side will be higher than the other. This puts enormous strain on the cables, tracks, and opener, and can cause secondary damage quickly.</p>
@@ -627,7 +635,7 @@ body{padding-bottom:64px}
     <div class="article-nav-logo"><img src="https://images.unsplash.com/photo-1604689598793-b8bf1dc445a1?w=1200&q=80" alt="Garage door pricing guide Austin TX" loading="lazy"></div>
   </nav>
   <div class="article-hero">
-    <img src="images/img-d8d103469b7c.jpg" alt="Beautiful Austin home with garage door">
+    <img src="images/img-d8d103469b7c.webp" alt="Beautiful Austin home with garage door">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <span class="article-tag">Pricing</span>
@@ -669,10 +677,10 @@ body{padding-bottom:64px}
 <div class="article-page" id="art3">
   <nav class="article-nav">
     <button class="article-back" onclick="closeArticle('art3')"><i class="fas fa-arrow-left"></i> Back to Website</button>
-    <div class="article-nav-logo"><img src="images/img-63f59f98af3e.jpg" alt="Let's Roll Garage Doors" height="56"></div>
+    <div class="article-nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" height="56"></div>
   </nav>
   <div class="article-hero">
-    <img src="images/img-1c0276e8eab4.jpg" alt="Garage door maintenance hardware and parts">
+    <img src="images/img-1c0276e8eab4.webp" alt="Garage door maintenance hardware and parts">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <span class="article-tag">Maintenance</span>
@@ -688,7 +696,7 @@ body{padding-bottom:64px}
     <p>Your garage door is one of the hardest-working mechanical systems in your home, often opening and closing 1,500+ times per year. A little preventative maintenance goes a long way. Here are five things you can do in under 30 minutes to extend its life and avoid expensive repairs.</p>
     <h2>1. Lubricate the Moving Parts Every 6 Months</h2>
     <p>Use a white lithium grease or silicone-based lubricant (not WD-40) on springs, hinges, rollers, and the opener chain or screw. Avoid lubricating the tracks, they should stay clean and dry for proper roller contact.</p>
-    <div class="article-img-block"><img src="images/img-e30406e3d755.jpg" alt="Garage door hinge and roller before and after replacement, Let's Roll Garage Doors"<p class="article-img-caption">Apply lubricant to hinges, springs, and rollers, never to the tracks themselves.</p></div>
+    <div class="article-img-block"><img src="images/img-e30406e3d755.webp" alt="Garage door hinge and roller before and after replacement, Let's Roll Garage Doors"<p class="article-img-caption">Apply lubricant to hinges, springs, and rollers, never to the tracks themselves.</p></div>
     <h2>2. Test the Balance Monthly</h2>
     <p>Disconnect the opener (pull the red cord) and manually lift the door halfway. It should stay in place. If it falls or shoots up, the springs are out of balance and need professional adjustment.</p>
     <h2>3. Inspect and Replace Weather Stripping</h2>
@@ -710,10 +718,10 @@ body{padding-bottom:64px}
 <div class="article-page" id="art4">
   <nav class="article-nav">
     <button class="article-back" onclick="closeArticle('art4')"><i class="fas fa-arrow-left"></i> Back to Website</button>
-    <div class="article-nav-logo"><img src="images/img-63f59f98af3e.jpg" alt="Let's Roll Garage Doors" height="56"></div>
+    <div class="article-nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" height="56"></div>
   </nav>
   <div class="article-hero">
-    <img src="images/img-17af44cc041a.jpg" alt="LiftMaster smart garage door opener">
+    <img src="images/img-17af44cc041a.webp" alt="LiftMaster smart garage door opener">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <span class="article-tag">Smart Home</span>
@@ -729,7 +737,7 @@ body{padding-bottom:64px}
     <p>Smart garage door openers let you open, close, and monitor your garage from anywhere in the world via smartphone. They've dropped significantly in price over the last few years, and for Austin homeowners, they offer real peace of mind.</p>
     <h2>What Makes an Opener "Smart"?</h2>
     <p>A smart opener connects to your home's WiFi and pairs with an app. Key features include remote open/close, real-time alerts (e.g., "Your garage door has been open for 30 minutes"), activity history, and integration with smart home platforms like Google Home, Amazon Alexa, and Apple HomeKit.</p>
-    <div class="article-img-block"><img src="images/img-e62c25322e22.jpg" alt="LiftMaster myQ smart garage door opener installed in Austin TX garage"><p class="article-img-caption">A LiftMaster myQ opener installed and running, control your garage from anywhere via the app.</p></div>
+    <div class="article-img-block"><img src="images/img-e62c25322e22.webp" alt="LiftMaster myQ smart garage door opener installed in Austin TX garage"><p class="article-img-caption">A LiftMaster myQ opener installed and running, control your garage from anywhere via the app.</p></div>
 
     <h2>Top Smart Openers in 2026</h2>
     <h3>LiftMaster 84505R, Best Overall</h3>
@@ -753,10 +761,10 @@ body{padding-bottom:64px}
 <div class="article-page" id="art5">
   <nav class="article-nav">
     <button class="article-back" onclick="closeArticle('art5')"><i class="fas fa-arrow-left"></i> Back to Website</button>
-    <div class="article-nav-logo"><img src="images/img-63f59f98af3e.jpg" alt="Let's Roll Garage Doors" height="56"></div>
+    <div class="article-nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" height="56"></div>
   </nav>
   <div class="article-hero">
-    <img src="images/img-d8d103469b7c.jpg" alt="Austin Texas home with garage door at dusk">
+    <img src="images/img-d8d103469b7c.webp" alt="Austin Texas home with garage door at dusk">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <span class="article-tag">Austin Tips</span>
@@ -774,7 +782,7 @@ body{padding-bottom:64px}
     <p>Wooden garage doors and those with wood overlays are especially vulnerable to Texas summers. Prolonged heat exposure causes wood to warp, crack, and separate, especially on south- or west-facing garages with direct afternoon sun exposure. UV-resistant sealant applied annually can significantly extend panel life.</p>
     <h2>Metal Expands and Contracts</h2>
     <p>Steel and aluminum doors expand in heat and contract at night. Over years, this thermal cycling loosens fasteners, warps tracks slightly, and causes seals to degrade faster than in milder climates. Quarterly hardware checks are more important here than in most parts of the country.</p>
-    <div class="article-img-block"><img src="images/img-d8d103469b7c.jpg" alt="Austin home with garage door at night"><p class="article-img-caption">South and west-facing garage doors in Austin receive the most sun exposure and need extra protection.</p></div>
+    <div class="article-img-block"><img src="images/img-d8d103469b7c.webp" alt="Austin home with garage door at night"><p class="article-img-caption">South and west-facing garage doors in Austin receive the most sun exposure and need extra protection.</p></div>
     <h2>Rubber Seals Degrade Fast</h2>
     <p>The bottom seal and weatherstripping on your door are made of rubber, and rubber doesn't love Texas heat. UV exposure hardens and cracks seals over time, letting in hot air, water, and insects. Plan to replace seals every 2-3 years in Austin vs. every 5 years in cooler climates.</p>
     <h2>Humidity and Springs</h2>
@@ -817,7 +825,7 @@ body{padding-bottom:64px}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><img src="images/img-63f59f98af3e.jpg" alt="Let's Roll Garage Doors" width="260" height="82"></a>
+    <a href="#" class="nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="260" height="82"></a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -915,27 +923,27 @@ body{padding-bottom:64px}
     </div>
     <div class="services-grid">
       <article class="service-card">
-        <div class="sc-img"><img src="images/img-f094afc0d447.jpg" alt="Damaged garage door panel repair, Let's Roll Garage Doors Austin TX" loading="lazy"></div>
+        <div class="sc-img"><img src="images/img-f094afc0d447.webp" alt="Damaged garage door panel repair, Let's Roll Garage Doors Austin TX" loading="lazy"></div>
         <div class="sc-body"><div class="sc-icon"><i class="fas fa-wrench"></i></div><h3><a href="garage-door-repair-austin.html" style="color:inherit;text-decoration:none">Garage Door Repair</a></h3><p>Swift, reliable repair for any malfunction, noisy rollers, off-track panels, bent sections, damaged hardware, and more.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
-        <div class="sc-img"><img src="images/img-e1e403b1e721.jpg" alt="New garage door installation by Let's Roll Garage Doors Austin TX" loading="lazy"></div>
+        <div class="sc-img"><img src="images/img-e1e403b1e721.webp" alt="New garage door installation by Let's Roll Garage Doors Austin TX" loading="lazy"></div>
         <div class="sc-body"><div class="sc-icon"><i class="fas fa-hard-hat"></i></div><h3><a href="garage-door-installation-austin.html" style="color:inherit;text-decoration:none">New Door Installation</a></h3><p>Upgrade your home's curb appeal with a professionally installed door. Wide selection of styles, materials, and colors available.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
-        <div class="sc-img"><img src="images/img-17af44cc041a.jpg" alt="LiftMaster garage door opener" loading="lazy"></div>
+        <div class="sc-img"><img src="images/img-17af44cc041a.webp" alt="LiftMaster garage door opener" loading="lazy"></div>
         <div class="sc-body"><div class="sc-icon"><i class="fas fa-cog"></i></div><h3><a href="garage-door-opener-repair-austin.html" style="color:inherit;text-decoration:none">Opener Repair &amp; Install</a></h3><p>We service all major opener brands, LiftMaster, Chamberlain, Genie, Craftsman. Belt, chain, and screw drives.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
-        <div class="sc-img"><img src="images/img-a1337081c6a5.jpg" alt="Garage door torsion spring replacement" loading="lazy"></div>
+        <div class="sc-img"><img src="images/img-a1337081c6a5.webp" alt="Garage door torsion spring replacement" loading="lazy"></div>
         <div class="sc-body"><div class="sc-icon"><i class="fas fa-expand-arrows-alt"></i></div><h3><a href="garage-door-spring-repair-austin.html" style="color:inherit;text-decoration:none">Spring Replacement</a></h3><p>Broken torsion or extension springs are a safety risk. Our techs replace them safely using quality parts backed by warranty.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
-        <div class="sc-img"><img src="images/img-201c9be8b3cb.jpg" alt="Garage door cable drum and wire rope repair, Let's Roll Garage Doors Austin TX" loading="lazy"></div>
+        <div class="sc-img"><img src="images/img-201c9be8b3cb.webp" alt="Garage door cable drum and wire rope repair, Let's Roll Garage Doors Austin TX" loading="lazy"></div>
         <div class="sc-body"><div class="sc-icon"><i class="fas fa-link"></i></div><h3><a href="garage-door-cable-repair-austin.html" style="color:inherit;text-decoration:none">Cable Repair</a></h3><p>Frayed or snapped cables cause dangerous imbalance. We restore proper tension and safe, smooth operation quickly.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
-        <div class="sc-img"><img src="images/img-f0ff33e1f5bd.jpg" alt="Garage door lubrication tune-up maintenance service" loading="lazy"></div>
+        <div class="sc-img"><img src="images/img-f0ff33e1f5bd.webp" alt="Garage door lubrication tune-up maintenance service" loading="lazy"></div>
         <div class="sc-body"><div class="sc-icon"><i class="fas fa-calendar-check"></i></div><h3>Tune-Up &amp; Maintenance</h3><p>Prevent costly breakdowns with a full inspection, lubrication, balance check, and safety test. Keeps your door lasting longer. Need quieter operation? See our <a href="garage-door-roller-replacement-austin.html" style="color:var(--orange);font-weight:600">roller replacement service</a>.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
       </article>
     </div>
@@ -946,7 +954,7 @@ body{padding-bottom:64px}
 <section class="about" id="about">
   <div class="about-inner">
     <div class="about-photo-col">
-      <img src="images/img-1b2b0522b06f.jpg" alt="Let's Roll Garage Doors technician in Austin TX" loading="lazy">
+      <img src="images/img-1b2b0522b06f.webp" alt="Let's Roll Garage Doors technician in Austin TX" loading="lazy">
       <div class="about-photo-overlay"></div>
       <div class="about-badge"><span class="num">5★</span><span class="lbl">Google Rated</span></div>
     </div>
@@ -1103,7 +1111,7 @@ body{padding-bottom:64px}
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.jpg" alt="Let's Roll Garage Doors" width="280" height="90"></div>
+      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90"></div>
       <p>Austin, TX's trusted garage door repair and installation team. Licensed, insured, and available 24/7 for your peace of mind.</p>
     </div>
     <div class="footer-col">
