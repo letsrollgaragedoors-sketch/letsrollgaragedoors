@@ -100,13 +100,15 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "3",
+        "reviewCount": "5",
         "bestRating": "5"
       },
       "review": [
         {"@type": "Review", "author": {"@type": "Person", "name": "Catherine Herrington"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "I highly recommend David! When my garage door was stuck on a Sunday, he responded and came out to help me super quickly. He was very friendly and got my broken door working even better than before."},
         {"@type": "Review", "author": {"@type": "Person", "name": "John Adedayo"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Had an amazing experience. He took his time to walk me through the issues, proposed solution."},
-        {"@type": "Review", "author": {"@type": "Person", "name": "Blair Nelson"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "David is incredibly knowledgeable, prompt, and responsive. He was a life saver for us with both a repair recently and even came by after a power outage to help us get back on track."}
+        {"@type": "Review", "author": {"@type": "Person", "name": "Blair Nelson"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "David is incredibly knowledgeable, prompt, and responsive. He was a life saver for us with both a repair recently and even came by after a power outage to help us get back on track."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Aubrey Bredvick"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "David was very kind, educated, and patient. Fixed the problem right away. Zero complaints."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Johnny Ardoin"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Super kind and friendly, brought everything needed, and fixed everything professionally at a fair price."}
       ]
     },
     {
@@ -361,8 +363,11 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 /* ── TESTIMONIALS ── */
 .testimonials{padding:96px 0;background:var(--off-white)}
 .testimonials-inner{max-width:1280px;margin:0 auto;padding:0 24px}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
-.testimonial-card{background:white;border-radius:8px;padding:28px 24px;position:relative;border-top:4px solid var(--orange)}
+.testimonials-marquee{margin-top:52px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.testimonials-track{display:flex;gap:22px;width:max-content;animation:testimonial-scroll 42s linear infinite}
+.testimonials-marquee:hover .testimonials-track{animation-play-state:paused}
+@keyframes testimonial-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.testimonial-card{background:white;border-radius:8px;padding:28px 24px;position:relative;border-top:4px solid var(--orange);width:360px;flex-shrink:0}
 .testimonial-card::before{content:'"';font-family:'Oswald',sans-serif;font-size:100px;color:var(--orange);opacity:.13;position:absolute;top:-8px;left:18px;line-height:1}
 .stars{color:#f59e0b;font-size:14px;margin-bottom:14px}
 .testimonial-card blockquote{font-size:14px;color:var(--gray);line-height:1.7;font-style:italic}
@@ -370,6 +375,7 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 .author-avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-weight:700;font-size:14px;color:var(--orange);flex-shrink:0}
 .author-name{font-size:14px;font-weight:700;color:var(--black)}
 .author-loc{font-size:12px;color:#999;margin-top:1px}
+@media (prefers-reduced-motion: reduce){.testimonials-track{animation:none}}
 
 /* ── BLOG ── */
 .blog{padding:96px 0;background:white}
@@ -507,7 +513,6 @@ footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--borde
   .faq-inner{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:repeat(2,1fr)}
-  .testimonials-grid{grid-template-columns:repeat(2,1fr)}
   .areas-grid{grid-template-columns:repeat(3,1fr)}
   .blog-grid{grid-template-columns:repeat(2,1fr)}
   .blog-card.featured{grid-column:span 2}
@@ -521,7 +526,8 @@ footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--borde
   .hero-inner{padding:50px 20px 60px}
   .hero-card{max-width:100%}
   .form-row{grid-template-columns:1fr}
-  .services-grid,.testimonials-grid,.sectors-grid,.blog-grid{grid-template-columns:1fr}
+  .services-grid,.sectors-grid,.blog-grid{grid-template-columns:1fr}
+  .testimonial-card{width:280px}
   .blog-card.featured{grid-column:span 1}
   .blog-card.featured .blog-img{height:210px}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
@@ -1036,10 +1042,20 @@ body{padding-bottom:64px}
       <div class="section-tag center">Reviews</div>
       <h2 class="section-title" style="text-align:center">What Austin Customers <span>Say</span></h2>
     </div>
-    <div class="testimonials-grid">
+    <div class="testimonials-marquee">
+    <div class="testimonials-track">
       <article class="testimonial-card"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>I highly recommend David! When my garage door was stuck on a Sunday, he responded and came out to help me super quickly. He was very friendly and got my broken door working even better than before. I will be calling him again!</blockquote><div class="testimonial-author"><div class="author-avatar">CH</div><div><div class="author-name">Catherine Herrington</div><div class="author-loc">Google Review</div></div></div></article>
       <article class="testimonial-card"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>Had an amazing experience. He took his time to walk me through the issues, proposed solution.</blockquote><div class="testimonial-author"><div class="author-avatar">JA</div><div><div class="author-name">John Adedayo</div><div class="author-loc">Google Review</div></div></div></article>
       <article class="testimonial-card"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>David is incredibly knowledgeable, prompt, and responsive. He was a life saver for us with both a repair recently and even came by after a power outage to help us get "back on track" - literally! Highly recommend!</blockquote><div class="testimonial-author"><div class="author-avatar">BN</div><div><div class="author-name">Blair Nelson</div><div class="author-loc">Google Review</div></div></div></article>
+      <article class="testimonial-card"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>David was very kind, educated, and patient! Fixed the problem right away. Zero complaints!</blockquote><div class="testimonial-author"><div class="author-avatar">AB</div><div><div class="author-name">Aubrey Bredvick</div><div class="author-loc">Google Review</div></div></div></article>
+      <article class="testimonial-card"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>He was super kind and friendly, my garage has been needing repairs and everyone else was a bit costly. He brought everything needed and fixed everything professionally. Very easy to work with and fast &mdash; I wish I could give more than 5 stars.</blockquote><div class="testimonial-author"><div class="author-avatar">JA</div><div><div class="author-name">Johnny Ardoin</div><div class="author-loc">Google Review</div></div></div></article>
+      <!-- duplicate set for seamless loop -->
+      <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>I highly recommend David! When my garage door was stuck on a Sunday, he responded and came out to help me super quickly. He was very friendly and got my broken door working even better than before. I will be calling him again!</blockquote><div class="testimonial-author"><div class="author-avatar">CH</div><div><div class="author-name">Catherine Herrington</div><div class="author-loc">Google Review</div></div></div></article>
+      <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>Had an amazing experience. He took his time to walk me through the issues, proposed solution.</blockquote><div class="testimonial-author"><div class="author-avatar">JA</div><div><div class="author-name">John Adedayo</div><div class="author-loc">Google Review</div></div></div></article>
+      <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>David is incredibly knowledgeable, prompt, and responsive. He was a life saver for us with both a repair recently and even came by after a power outage to help us get "back on track" - literally! Highly recommend!</blockquote><div class="testimonial-author"><div class="author-avatar">BN</div><div><div class="author-name">Blair Nelson</div><div class="author-loc">Google Review</div></div></div></article>
+      <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>David was very kind, educated, and patient! Fixed the problem right away. Zero complaints!</blockquote><div class="testimonial-author"><div class="author-avatar">AB</div><div><div class="author-name">Aubrey Bredvick</div><div class="author-loc">Google Review</div></div></div></article>
+      <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" aria-label="Google review"></i></div><blockquote>He was super kind and friendly, my garage has been needing repairs and everyone else was a bit costly. He brought everything needed and fixed everything professionally. Very easy to work with and fast &mdash; I wish I could give more than 5 stars.</blockquote><div class="testimonial-author"><div class="author-avatar">JA</div><div><div class="author-name">Johnny Ardoin</div><div class="author-loc">Google Review</div></div></div></article>
+    </div>
     </div>
   </div>
 </section>
