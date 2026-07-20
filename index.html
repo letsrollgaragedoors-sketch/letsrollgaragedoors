@@ -204,7 +204,7 @@ a{text-decoration:none;color:inherit}
 .topbar-left{display:flex;gap:22px;flex-wrap:wrap}
 .topbar-item{display:flex;align-items:center;gap:7px}
 .topbar-item i{color:var(--orange)}
-.topbar-item a{color:white;font-weight:600;transition:color .2s}
+.topbar-item a{color:white;font-weight:600;transition:color .2s;display:inline-flex;align-items:center;gap:7px}
 .topbar-item a:hover{color:var(--orange-light)}
 .topbar-social a{color:rgba(255,255,255,.5);font-size:13px;margin-left:12px;transition:color .2s}
 .topbar-social a:hover{color:var(--orange)}
@@ -519,6 +519,10 @@ footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--borde
 }
 @media(max-width:740px){
   .topbar-left{flex-direction:column;gap:4px}
+  .topbar-item{min-height:40px}
+  .topbar-item a{display:inline-flex;align-items:center;min-height:40px;padding:2px 0}
+  .topbar-social{gap:2px}
+  .topbar-social a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin-left:0;padding:8px}
   .nav-links,.nav-phone,.nav-cta{display:none}
   .hamburger{display:flex}
   .nav-logo img{height:76px}
@@ -815,8 +819,8 @@ body{padding-bottom:64px}
 <div class="topbar">
   <div class="topbar-inner">
     <div class="topbar-left">
-      <div class="topbar-item"><i class="fas fa-phone-alt"></i><span>Call: <a href="tel:+15129474451">(512) 947-4451</a></span></div>
-      <div class="topbar-item"><i class="fas fa-envelope"></i><span><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></span></div>
+      <div class="topbar-item"><a href="tel:+15129474451"><i class="fas fa-phone-alt"></i><span>Call: (512) 947-4451</span></a></div>
+      <div class="topbar-item"><a href="mailto:letsrollgaragedoors@gmail.com"><i class="fas fa-envelope"></i><span>letsrollgaragedoors@gmail.com</span></a></div>
       <div class="topbar-item"><i class="fas fa-clock"></i><span>Mon-Sun · 24/7 Emergency Available</span></div>
     </div>
     <div class="topbar-social">
