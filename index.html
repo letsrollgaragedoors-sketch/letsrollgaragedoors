@@ -296,7 +296,8 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 .services-inner{max-width:1280px;margin:0 auto;padding:0 24px}
 .section-header-center{text-align:center;margin-bottom:54px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.service-card{background:white;border-radius:8px;overflow:hidden;border:1.5px solid var(--border);transition:all .25s;display:flex;flex-direction:column}
+.service-card{background:white;border-radius:8px;overflow:hidden;border:1.5px solid var(--border);transition:all .25s;display:flex;flex-direction:column;position:relative;cursor:pointer}
+.sc-body h3 a::after{content:"";position:absolute;inset:0;z-index:1}
 .service-card:hover{box-shadow:0 10px 40px rgba(0,0,0,.12);transform:translateY(-4px)}
 .sc-img{height:180px;overflow:hidden;position:relative}
 .sc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
@@ -306,7 +307,7 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 .sc-icon i{font-size:20px;color:var(--orange)}
 .sc-body h3{font-family:'Oswald',sans-serif;font-size:18px;font-weight:600;color:var(--black);margin-bottom:8px;letter-spacing:.02em}
 .sc-body p{font-size:13.5px;color:var(--gray);line-height:1.65;flex:1}
-.service-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);font-family:'Oswald',sans-serif;transition:gap .2s}
+.service-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);font-family:'Oswald',sans-serif;transition:gap .2s;position:relative;z-index:2}
 .service-link:hover{gap:9px}
 
 /* ── ABOUT ── */
@@ -933,27 +934,27 @@ body{padding-bottom:64px}
     <div class="services-grid">
       <article class="service-card">
         <div class="sc-img"><img src="images/img-f094afc0d447.webp" alt="Damaged garage door panel repair, Let's Roll Garage Doors Austin TX" loading="lazy"></div>
-        <div class="sc-body"><div class="sc-icon"><i class="fas fa-wrench"></i></div><h3><a href="garage-door-repair-austin.html" style="color:inherit;text-decoration:none">Garage Door Repair</a></h3><p>Swift, reliable repair for any malfunction, noisy rollers, off-track panels, bent sections, damaged hardware, and more.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
+        <div class="sc-body"><div class="sc-icon"><i class="fas fa-wrench"></i></div><h3><a href="garage-door-repair-austin.html" style="color:inherit;text-decoration:none">Garage Door Repair</a></h3><p>Swift, reliable repair for any malfunction, noisy rollers, off-track panels, bent sections, damaged hardware, and more.</p><a href="#quote" class="service-link">Get Free Quote <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
         <div class="sc-img"><img src="images/img-e1e403b1e721.webp" alt="New garage door installation by Let's Roll Garage Doors Austin TX" loading="lazy"></div>
-        <div class="sc-body"><div class="sc-icon"><i class="fas fa-hard-hat"></i></div><h3><a href="garage-door-installation-austin.html" style="color:inherit;text-decoration:none">New Door Installation</a></h3><p>Upgrade your home's curb appeal with a professionally installed door. Wide selection of styles, materials, and colors available.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
+        <div class="sc-body"><div class="sc-icon"><i class="fas fa-hard-hat"></i></div><h3><a href="garage-door-installation-austin.html" style="color:inherit;text-decoration:none">New Door Installation</a></h3><p>Upgrade your home's curb appeal with a professionally installed door. Wide selection of styles, materials, and colors available.</p><a href="#quote" class="service-link">Get Free Quote <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
         <div class="sc-img"><img src="images/img-liftmaster-opener-real.webp" alt="LiftMaster myQ garage door opener installed by Let's Roll Garage Doors in Austin TX" loading="lazy"></div>
-        <div class="sc-body"><div class="sc-icon"><i class="fas fa-cog"></i></div><h3><a href="garage-door-opener-repair-austin.html" style="color:inherit;text-decoration:none">Opener Repair &amp; Install</a></h3><p>We service all major opener brands, LiftMaster, Chamberlain, Genie, Craftsman. Belt, chain, and screw drives.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
+        <div class="sc-body"><div class="sc-icon"><i class="fas fa-cog"></i></div><h3><a href="garage-door-opener-repair-austin.html" style="color:inherit;text-decoration:none">Opener Repair &amp; Install</a></h3><p>We service all major opener brands, LiftMaster, Chamberlain, Genie, Craftsman. Belt, chain, and screw drives.</p><a href="#quote" class="service-link">Get Free Quote <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
         <div class="sc-img"><img src="images/img-a1337081c6a5.webp" alt="Garage door torsion spring replacement" loading="lazy"></div>
-        <div class="sc-body"><div class="sc-icon"><i class="fas fa-expand-arrows-alt"></i></div><h3><a href="garage-door-spring-repair-austin.html" style="color:inherit;text-decoration:none">Spring Replacement</a></h3><p>Broken torsion or extension springs are a safety risk. Our techs replace them safely using quality parts backed by warranty.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
+        <div class="sc-body"><div class="sc-icon"><i class="fas fa-expand-arrows-alt"></i></div><h3><a href="garage-door-spring-repair-austin.html" style="color:inherit;text-decoration:none">Spring Replacement</a></h3><p>Broken torsion or extension springs are a safety risk. Our techs replace them safely using quality parts backed by warranty.</p><a href="#quote" class="service-link">Get Free Quote <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
         <div class="sc-img"><img src="images/img-201c9be8b3cb.webp" alt="Garage door cable drum and wire rope repair, Let's Roll Garage Doors Austin TX" loading="lazy"></div>
-        <div class="sc-body"><div class="sc-icon"><i class="fas fa-link"></i></div><h3><a href="garage-door-cable-repair-austin.html" style="color:inherit;text-decoration:none">Cable Repair</a></h3><p>Frayed or snapped cables cause dangerous imbalance. We restore proper tension and safe, smooth operation quickly.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
+        <div class="sc-body"><div class="sc-icon"><i class="fas fa-link"></i></div><h3><a href="garage-door-cable-repair-austin.html" style="color:inherit;text-decoration:none">Cable Repair</a></h3><p>Frayed or snapped cables cause dangerous imbalance. We restore proper tension and safe, smooth operation quickly.</p><a href="#quote" class="service-link">Get Free Quote <i class="fas fa-arrow-right"></i></a></div>
       </article>
       <article class="service-card">
         <div class="sc-img"><img src="images/img-f0ff33e1f5bd.webp" alt="Garage door lubrication tune-up maintenance service" loading="lazy"></div>
-        <div class="sc-body"><div class="sc-icon"><i class="fas fa-calendar-check"></i></div><h3>Tune-Up &amp; Maintenance</h3><p>Prevent costly breakdowns with a full inspection, lubrication, balance check, and safety test. Keeps your door lasting longer. Need quieter operation? See our <a href="garage-door-roller-replacement-austin.html" style="color:var(--orange);font-weight:600">roller replacement service</a>.</p><a href="#quote" class="service-link">Request Service <i class="fas fa-arrow-right"></i></a></div>
+        <div class="sc-body"><div class="sc-icon"><i class="fas fa-calendar-check"></i></div><h3><a href="blog.html" style="color:inherit;text-decoration:none">Tune-Up &amp; Maintenance</a></h3><p>Prevent costly breakdowns with a full inspection, lubrication, balance check, and safety test. Keeps your door lasting longer. Need quieter operation? See our <a href="garage-door-roller-replacement-austin.html" style="color:var(--orange);font-weight:600;position:relative;z-index:2">roller replacement service</a>.</p><a href="#quote" class="service-link">Get Free Quote <i class="fas fa-arrow-right"></i></a></div>
       </article>
     </div>
   </div>
