@@ -490,6 +490,15 @@ footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--borde
 .article-cta-box{background:var(--navy);border-radius:8px;padding:36px;text-align:center;margin-top:60px}
 .article-cta-box h3{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:white;margin-bottom:10px}
 .article-cta-box p{color:rgba(255,255,255,.7);margin-bottom:22px}
+.article-faq{margin:48px 0 0}
+.article-faq>h2{font-family:'Oswald',sans-serif;font-size:26px;font-weight:600;color:var(--navy);letter-spacing:.02em;margin:0 0 20px;padding-bottom:10px;border-bottom:2px solid var(--orange)}
+.article-faq-item{background:#f7f7f8;border-radius:6px;overflow:hidden;border:1px solid #e6e6e8;margin-bottom:10px}
+.article-faq-question{padding:16px 18px;font-size:15px;font-weight:600;color:var(--black);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;user-select:none}
+.article-faq-question i{color:var(--orange);font-size:14px;transition:transform .2s;flex-shrink:0}
+.article-faq-item.open .article-faq-question{background:var(--orange-bg)}
+.article-faq-item.open .article-faq-question i{transform:rotate(180deg)}
+.article-faq-answer{font-size:15px;color:#555;line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s;padding:0 18px}
+.article-faq-item.open .article-faq-answer{max-height:320px;padding:0 18px 16px}
 .article-img-block{margin:30px 0;border-radius:8px;overflow:hidden}
 .article-img-block img{width:100%;height:300px;object-fit:cover}
 .article-img-caption{font-size:13px;color:#999;text-align:center;padding:8px 0;font-style:italic}
@@ -660,6 +669,33 @@ body{padding-bottom:64px}
     <p>Over time, springs lose tension and may appear stretched, elongated, or corroded. If the coils look widely spaced or the spring has visible rust, it's nearing the end of its lifespan and should be replaced proactively.</p>
     <h2>How Long Do Garage Door Springs Last?</h2>
     <p>Standard torsion springs are rated for approximately 10,000 cycles. For an average household opening the door 4 times a day, that's roughly 7 years. High-cycle springs rated for 25,000-50,000 cycles are available and worth the investment.</p>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Can I replace a garage door spring myself?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>No. Torsion springs are under extreme tension and can cause severe injury or death if handled without the right tools and training. This is one repair that should always be left to a certified technician.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How much does it cost to replace a broken garage door spring?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>In Austin, single torsion spring replacement typically runs $150-$250, while a two-spring system is usually $200-$350. We always recommend replacing both springs together since they wear at a similar rate.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How long do garage door springs typically last?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Standard torsion springs are rated for about 10,000 cycles, roughly 7 years for an average household. High-cycle springs rated for 25,000-50,000 cycles are available and last considerably longer.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Is it safe to use my garage door if a spring is broken?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>No. A broken spring means the door has lost its counterbalance, putting excess strain on the opener and cables and creating a real risk of the door falling. Avoid using the door and call for emergency service.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What's the difference between torsion springs and extension springs?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Torsion springs mount horizontally above the door and twist to store energy, while extension springs run along the upper tracks and stretch. Torsion springs are more common today and generally considered safer and longer-lasting.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How quickly should I get a spring replaced once I notice warning signs?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>As soon as possible. Once a spring shows signs of wear, it can fail completely with little further warning. We offer 24/7 emergency service in Austin for exactly this reason.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Suspect a Spring Issue? We Can Help.</h3>
       <p>Our Austin technicians are available 24/7 for spring inspections and emergency replacements. Don't risk injury, let the pros handle it.</p>
@@ -705,6 +741,33 @@ body{padding-bottom:64px}
     <p>Most companies charge an after-hours or weekend service call fee of $50-$100. At Let's Roll, we're transparent about this upfront and work to keep emergency costs reasonable.</p>
     <h2>When to Repair vs. Replace</h2>
     <p>If your door is over 15-20 years old and repairs would cost more than 50% of a new door's value, replacement is often the smarter investment. Our techs will always give you an honest recommendation.</p>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Does homeowners insurance cover garage door repair?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>It depends on the cause. Damage from a storm, fire, or vehicle impact is often covered, while normal wear and tear from age usually isn't. Check with your insurance provider about your specific policy.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How much does emergency garage door repair cost after hours?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Most companies, including us, add a $50-$100 after-hours or weekend service fee on top of the repair cost itself. We're upfront about this fee before any work begins.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Is it cheaper to repair or replace an old garage door?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>If your door is over 15-20 years old and the repair would cost more than half of a new door's value, replacement is usually the smarter long-term investment. Our techs will give you an honest comparison before you decide.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Do you offer free estimates before starting work?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes. We provide free, no-obligation estimates with transparent, upfront pricing so you know the full cost before any work begins.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What factors affect the total cost of a garage door repair?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Cost depends on the specific issue, the parts needed, door size and material, and whether the job is standard or after-hours emergency service. A single-spring fix costs far less than a full opener or door replacement.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How long does a typical garage door repair take?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Most common repairs, like spring or cable replacement, take about an hour. Full door or opener installations typically take a few hours depending on the scope of the job.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Get an Honest, Upfront Estimate</h3>
       <p>No surprises, no pressure. Call or submit your info and we'll give you a straight answer on cost.</p>
@@ -746,6 +809,29 @@ body{padding-bottom:64px}
     <h2>5. Test Your Safety Sensors</h2>
     <p>Place a 2x4 flat on the floor in the path of the door and try to close it. The door should reverse immediately on contact. If it doesn't, the auto-reverse is malfunctioning and needs immediate attention, this is a safety requirement, not optional.</p>
     <div class="callout"><p><i class="fas fa-star"></i> Pro tip: Schedule a professional tune-up once a year. Our techs catch issues you'd never notice, and it's far cheaper than an emergency repair call.</p></div>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How often should I lubricate my garage door?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Every 6 months is a good baseline for most homes. If your door sees heavy daily use or you notice new noise, lubricating a bit more often won't hurt.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What type of lubricant should I use on my garage door?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Use a white lithium grease or silicone-based lubricant on springs, hinges, rollers, and the opener chain or screw. Avoid WD-40, and never lubricate the tracks themselves.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How do I know if my garage door is unbalanced?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Disconnect the opener and manually lift the door about halfway. A balanced door will stay in place. If it falls or shoots upward, the springs need professional adjustment.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Can I test my garage door's safety sensors myself?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes. Place a 2x4 flat on the floor in the door's path and try closing it. The door should reverse immediately on contact. If it doesn't, the auto-reverse feature needs immediate professional attention.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How often should I schedule a professional tune-up?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Once a year is the standard recommendation. A professional catches wear and hardware issues that are easy to miss during a DIY check.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Schedule a Professional Tune-Up</h3>
       <p>Our Austin team does full inspections, lubrication, balance checks, and safety tests. Book yours today.</p>
@@ -789,6 +875,33 @@ body{padding-bottom:64px}
     <h2>Is It Worth It?</h2>
     <p>If you've ever driven halfway to work wondering whether you closed the garage, yes, it's worth it. The ability to check and close your door remotely eliminates that anxiety. Combined with the added home security and delivery access features, the upgrade typically pays for itself in convenience within the first year.</p>
     <div class="callout"><p><i class="fas fa-lightbulb"></i> Many Austin homeowners use smart openers to grant access to house cleaners, dog walkers, and family members without sharing physical keys or garage codes.</p></div>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Will a smart garage door opener work with my existing garage door?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>In most cases, yes. Smart openers are compatible with the large majority of residential doors and door types. Our techs can confirm compatibility during your free estimate.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Do smart openers require a monthly subscription fee?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Core features like remote open/close and alerts are typically free through apps like myQ or Aladdin Connect. Some advanced features, such as extended camera storage, may involve an optional paid tier.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What happens if my WiFi goes down, will my smart opener still work?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes. The opener still functions normally with your wall button or physical remote during a WiFi outage. You'll only lose the remote app features until the connection is restored.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Can I install a smart garage door opener myself?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>It's possible for some models, but professional installation ensures correct wiring, safety sensor alignment, and proper spring/door balance, which matters both for safety and for the opener's long-term performance.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Which smart home platforms do smart openers support?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Most current models integrate with Google Home, Amazon Alexa, and Apple HomeKit, letting you control your garage door through voice commands or a broader smart home routine.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How much does it cost to install a smart garage door opener?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Installed pricing generally ranges from about $380 for a solid budget pick up to $650-$750 for a premium model with camera and advanced features.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Ready to Upgrade Your Opener?</h3>
       <p>We install all major smart opener brands throughout Austin and surrounding areas. Call for a free recommendation and quote.</p>
@@ -834,6 +947,29 @@ body{padding-bottom:64px}
       <li><strong>Fall (Sept-Nov):</strong> Replace any degraded seals, tighten hardware, test auto-reverse.</li>
       <li><strong>Winter (Dec-Feb):</strong> Rare freezes can contract metal and crack brittle seals, inspect after any freeze event.</li>
     </ul>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How often should I replace my garage door's weather seals in Austin?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Plan on every 2-3 years in Austin, compared to about every 5 years in milder climates. Texas UV exposure hardens and cracks rubber seals faster than average.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Can extreme heat damage my garage door opener?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes, indirectly. Prolonged summer heat can affect an opener's internal components and heat sensors, so it's worth checking opener performance during the hottest summer months.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Should I choose a different garage door material for Austin's climate?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Steel and aluminum doors handle Austin's heat cycling reasonably well, but wood or wood-overlay doors are more vulnerable to warping and cracking and need annual UV-resistant sealant.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Does humidity affect garage door springs?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes. Austin's humidity, especially during spring storm season, accelerates corrosion on uncoated torsion springs. Galvanized or powder-coated springs resist this much better over time.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What's the best time of year to schedule garage door maintenance in Austin?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Spring (March-May) is ideal, since it lets you inspect seals and check spring tension before peak summer heat sets in. A fall check-up is also smart to catch any summer sun damage.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Protect Your Door From Texas Weather</h3>
       <p>Book a seasonal inspection with our Austin team and we'll catch weather-related damage before it becomes an expensive repair.</p>
@@ -908,6 +1044,33 @@ body{padding-bottom:64px}
     <h2>Professional Installation Matters</h2>
     <p>Even the highest-quality garage door performs best when installed correctly. At Let's Roll Garage Doors, our experienced technicians ensure proper door sizing, correct spring balancing, safe installation, opener compatibility, a complete safety inspection, and smooth and reliable operation.</p>
     <div class="callout"><p><i class="fas fa-lightbulb"></i> We proudly serve homeowners across Austin, Round Rock, Cedar Park, Georgetown, Pflugerville, Leander, Lakeway, Buda, Kyle, and surrounding areas.</p></div>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How much more do insulated garage doors cost compared to standard doors?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Insulated doors typically cost more upfront than single-layer steel doors due to the added material and construction, but the difference is often offset over time by energy savings and durability.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What R-value should I look for in Austin's climate?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>For Austin's intense summer heat, an R-10 or higher is generally worth the investment. R-14+ offers the best performance if your garage is attached to living space.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Will an insulated garage door actually lower my energy bills?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>It can, especially if your garage is attached to bedrooms, laundry rooms, or living space. Reducing heat transfer through the garage eases the load on your HVAC system.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Are insulated garage doors heavier, and does that matter for my opener?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes, they're heavier than single-layer doors. Our technicians factor this into spring balancing and confirm your opener is rated to handle the added weight during installation.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Can I add insulation to my existing garage door instead of replacing it?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>DIY insulation kits exist for some door types, but they don't match the performance or durability of a factory-insulated door. For most homeowners, an insulated replacement door offers better long-term value.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How long does insulated garage door installation take?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Most single-door installations are completed in a few hours by our team, including door sizing, spring balancing, opener compatibility checks, and a full safety inspection.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Schedule Your Insulated Garage Door Installation Today</h3>
       <p>Whether you're replacing an outdated garage door or building a new home, an insulated garage door is a smart investment that improves comfort, efficiency, and curb appeal. Call today to schedule your free estimate and discover why homeowners throughout Austin trust Let's Roll Garage Doors for reliable garage door installation and repair.</p>
@@ -983,6 +1146,33 @@ body{padding-bottom:64px}
       <li>It's been more than one year since your last maintenance</li>
     </ul>
     <p>Ignoring these warning signs often leads to larger repairs later.</p>
+    <div class="article-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How much does a professional garage door tune-up cost?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Pricing varies by door size and condition. Call for a free, upfront quote, our team is transparent about cost before any work begins.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How long does a garage door tune-up take?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>A standard tune-up typically takes under an hour, covering a full inspection, lubrication, balance test, and safety checks.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>What's included in a standard tune-up service?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>A full safety inspection, balance test, spring and cable check, roller and hinge inspection, hardware tightening, lubrication, track adjustment, opener performance check, and auto-reverse safety test.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>How often should I get my garage door tuned up?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Once a year is the standard recommendation for most households, similar to routine car maintenance.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Can a tune-up prevent an emergency breakdown?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>In many cases, yes. Most emergency repairs are caused by components that were wearing out for months, weak springs, fraying cables, or worn rollers. A routine tune-up catches these before they fail.</p></div>
+      </div>
+      <div class="article-faq-item">
+        <div class="article-faq-question" onclick="toggleArticleFaq(this)" tabindex="0" role="button" aria-expanded="false"><span>Is a tune-up necessary if my garage door seems to be working fine?</span><i class="fas fa-chevron-down"></i></div>
+        <div class="article-faq-answer"><p>Yes. Many issues, like a weakening spring or a misaligned safety sensor, aren't obvious during normal daily use. A tune-up catches these before they turn into a bigger problem.</p></div>
+      </div>
+    </div>
     <div class="article-cta-box">
       <h3>Schedule Your Garage Door Tune-Up in Austin, TX</h3>
       <p>Whether your garage door is brand new or over 15 years old, routine maintenance can help extend its lifespan, improve performance, and prevent unexpected repairs. If your garage door has become noisy, isn't operating as smoothly as it should, or simply hasn't been serviced in over a year, now is the perfect time to schedule a professional tune-up.</p>
@@ -1181,6 +1371,14 @@ function toggleFaq(el){
   if(!isOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
 }
 document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(q)}})});
+
+// Article FAQ accordion (scoped per-article, separate from homepage FAQ)
+function toggleArticleFaq(el){
+  const item=el.parentElement,isOpen=item.classList.contains('open'),group=item.closest('.article-faq');
+  group.querySelectorAll('.article-faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.article-faq-question').setAttribute('aria-expanded','false')});
+  if(!isOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
+}
+document.querySelectorAll('.article-faq-question').forEach(q=>{q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleArticleFaq(q)}})});
 
 // Stat counters
 function animateCount(el,target,suffix=''){
