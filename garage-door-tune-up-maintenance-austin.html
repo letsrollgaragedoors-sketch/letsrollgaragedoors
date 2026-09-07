@@ -287,6 +287,10 @@ body{padding-bottom:64px}
   .footer-inner{grid-template-columns:1fr}
   .cta-btns{flex-direction:column;align-items:center}
 }
+.back-to-services{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:#fff;border:2px solid #0f2557;border-radius:6px;color:#0f2557;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:.04em;text-decoration:none;transition:background .2s,color .2s;margin:20px 0 0 0}
+.back-to-services:hover{background:#0f2557;color:#fff}
+.back-to-services i{font-size:13px}
+.back-btn-wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 </style>
 <script>(function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "187261177",enableAutoSpaTracking: true});</script>
 </head>
@@ -317,17 +321,17 @@ body{padding-bottom:64px}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="260" height="82"></a>
+    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="260" height="82"></a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#services">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#areas">Areas</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="/#areas">Areas</a></li>
+        <li><a href="/#faq">FAQ</a></li>
       </ul>
       <a href="tel:+15129474451" class="nav-phone"><i class="fas fa-phone-alt"></i>(512) 947-4451</a>
-      <a href="index.html#quote" class="nav-cta">Free Quote</a>
+      <a href="/#quote" class="nav-cta">Free Quote</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -336,13 +340,18 @@ body{padding-bottom:64px}
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
   <button class="mob-close" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
-  <a href="index.html#about" onclick="closeMobile()">About</a>
-  <a href="index.html#services" onclick="closeMobile()">Services</a>
+  <a href="/#about" onclick="closeMobile()">About</a>
+  <a href="/#services" onclick="closeMobile()">Services</a>
   <a href="blog.html" onclick="closeMobile()">Blog</a>
-  <a href="index.html#areas" onclick="closeMobile()">Areas</a>
-  <a href="index.html#faq" onclick="closeMobile()">FAQ</a>
+  <a href="/#areas" onclick="closeMobile()">Areas</a>
+  <a href="/#faq" onclick="closeMobile()">FAQ</a>
   <a href="tel:+15129474451" class="m-phone" onclick="closeMobile()">(512) 947-4451</a>
-  <a href="index.html#quote" class="m-cta" onclick="closeMobile()">Free Quote</a>
+  <a href="/#quote" class="m-cta" onclick="closeMobile()">Free Quote</a>
+</div>
+
+<!-- BACK TO SERVICES BUTTON -->
+<div class="back-btn-wrap">
+  <a href="/#services" class="back-to-services"><i class="fas fa-arrow-left"></i> Back to Services</a>
 </div>
 
 <!-- HERO -->
@@ -355,11 +364,11 @@ body{padding-bottom:64px}
     <p class="hero-sub">Most major garage door repairs start as small issues that could have been caught early. A yearly professional tune-up keeps your door safe, quiet, and reliable, and helps you avoid costly emergency repairs down the road.</p>
     <div class="hero-btns">
       <a href="tel:+15129474451" class="btn btn-orange"><i class="fas fa-phone-alt"></i> Call (512) 947-4451</a>
-      <a href="index.html#quote" class="btn btn-outline-white">Schedule a Tune-Up</a>
+      <a href="/#quote" class="btn btn-outline-white">Schedule a Tune-Up</a>
     </div>
     <div class="hero-phone-row">
       <i class="fas fa-circle-check"></i><span>Trusted by homeowners across</span>
-      <a href="index.html#areas">Austin &amp; surrounding areas</a>
+      <a href="/#areas">Austin &amp; surrounding areas</a>
     </div>
   </div>
 </section>
@@ -510,7 +519,7 @@ body{padding-bottom:64px}
     <p>Whether your door is brand new or over 15 years old, routine maintenance extends its life and prevents surprise breakdowns.</p>
     <div class="cta-btns">
       <a href="tel:+15129474451" class="btn btn-navy"><i class="fas fa-phone-alt"></i> Call (512) 947-4451</a>
-      <a href="index.html#quote" class="btn btn-outline-white">Request a Free Quote</a>
+      <a href="/#quote" class="btn btn-outline-white">Request a Free Quote</a>
     </div>
   </div>
 </section>
@@ -525,12 +534,12 @@ body{padding-bottom:64px}
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i>Services</a></li>
+        <li><a href="/#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+        <li><a href="/#services"><i class="fas fa-chevron-right"></i>Services</a></li>
         <li><a href="blog.html"><i class="fas fa-chevron-right"></i>Blog</a></li>
-        <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i>Service Areas</a></li>
-        <li><a href="index.html#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
-        <li><a href="index.html#quote"><i class="fas fa-chevron-right"></i>Free Estimate</a></li>
+        <li><a href="/#areas"><i class="fas fa-chevron-right"></i>Service Areas</a></li>
+        <li><a href="/#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
+        <li><a href="/#quote"><i class="fas fa-chevron-right"></i>Free Estimate</a></li>
         <li><a href="warranty-terms.html"><i class="fas fa-chevron-right"></i>Warranty Terms</a></li>
       </ul>
     </div>
