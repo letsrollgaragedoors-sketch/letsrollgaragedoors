@@ -20,4 +20,11 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Google Ads crawlers — must be named explicitly (not covered by wildcard *)
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
 Sitemap: https://www.letsrollgaragedoors.com/sitemap.xml
