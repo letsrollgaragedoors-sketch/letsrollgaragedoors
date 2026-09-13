@@ -31,7 +31,7 @@
     .nav-cta:hover{background:var(--orange-dark)!important}
     .breadcrumb{background:var(--light-bg);padding:10px 24px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border)}
     .breadcrumb a{color:var(--navy);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}.breadcrumb span{margin:0 6px}
-    .article-wrap{max-width:820px;margin:0 auto;padding:48px 24px 80px}
+    .article-wrap{max-width:820px;margin:0 auto;padding:48px 24px 100px}
     .article-tag{display:inline-block;background:var(--orange);color:#fff;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:3px;margin-bottom:14px}
     h1{font-family:'Oswald',sans-serif;font-size:clamp(26px,4vw,38px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:14px}
     .article-meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding-bottom:20px;border-bottom:2px solid var(--orange);margin-bottom:32px}
@@ -89,24 +89,64 @@
   </style>
 </head>
 <body>
-<div class="sticky-bar"><i class="fas fa-phone"></i> <a href="tel:+15129474451">Call Now: (512) 947-4451</a> &nbsp;|&nbsp; 24/7 Emergency Garage Door Repair in Austin, TX</div>
-<nav>
-  <a href="https://www.letsrollgaragedoors.com/index.html" class="nav-logo">
-    <img src="https://www.letsrollgaragedoors.com/images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="140" height="48" / loading="lazy" decoding="async">
-  </a>
-  <div class="nav-links">
-    <a href="https://www.letsrollgaragedoors.com/index.html#about">About</a>
-    <a href="https://www.letsrollgaragedoors.com/index.html#services">Services</a>
-    <a href="https://www.letsrollgaragedoors.com/blog.html">Blog</a>
-    <a href="https://www.letsrollgaragedoors.com/index.html#areas">Areas</a>
-    <a href="https://www.letsrollgaragedoors.com/index.html#faq">FAQ</a>
-    <a href="tel:+15129474451">(512) 947-4451</a>
-    <a href="https://www.letsrollgaragedoors.com/index.html#quote" class="nav-cta">Free Quote</a>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-cta">
+  <a href="tel:+15129474451"><i class="fas fa-phone-alt"></i>CALL NOW: (512) 947-4451<span class="sticky-cta-sub"> &bull; 24/7 Emergency Service</span></a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item"><i class="fas fa-phone-alt"></i><span>Call: <a href="tel:+15129474451">(512) 947-4451</a></span></div>
+      <div class="topbar-item"><i class="fas fa-envelope"></i><span><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></span></div>
+      <div class="topbar-item"><i class="fas fa-clock"></i><span>Mon-Sun &middot; 24/7 Emergency Available</span></div>
+    </div>
+    <div class="topbar-social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/letsrollgaragedoors" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
+      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin" target="_blank" rel="noopener" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+    </div>
   </div>
-  <a href="tel:+15129474451" class="nav-mobile-call">
-    <i class="fas fa-phone"></i> Call Now
-  </a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.letsrollgaragedoors.com/index.html" class="nav-logo">
+      <img src="https://www.letsrollgaragedoors.com/images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="200" height="80" loading="eager" />
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="https://www.letsrollgaragedoors.com/index.html#about">About</a></li>
+        <li><a href="https://www.letsrollgaragedoors.com/index.html#services">Services</a></li>
+        <li><a href="https://www.letsrollgaragedoors.com/blog.html">Blog</a></li>
+        <li><a href="https://www.letsrollgaragedoors.com/index.html#areas">Areas</a></li>
+        <li><a href="https://www.letsrollgaragedoors.com/index.html#faq">FAQ</a></li>
+      </ul>
+      <a href="tel:+15129474451" class="nav-phone"><i class="fas fa-phone-alt"></i>(512) 947-4451</a>
+      <a href="https://www.letsrollgaragedoors.com/index.html#quote" class="nav-cta">Free Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mob-close" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
+  <a href="https://www.letsrollgaragedoors.com/index.html#about" onclick="closeMobile()">About</a>
+  <a href="https://www.letsrollgaragedoors.com/index.html#services" onclick="closeMobile()">Services</a>
+  <a href="https://www.letsrollgaragedoors.com/blog.html" onclick="closeMobile()">Blog</a>
+  <a href="https://www.letsrollgaragedoors.com/index.html#areas" onclick="closeMobile()">Areas</a>
+  <a href="https://www.letsrollgaragedoors.com/index.html#faq" onclick="closeMobile()">FAQ</a>
+  <a href="tel:+15129474451" class="m-phone"><i class="fas fa-phone-alt"></i> (512) 947-4451</a>
+  <a href="https://www.letsrollgaragedoors.com/index.html#quote" class="m-cta" onclick="closeMobile()">Free Estimate</a>
+</div>
+
 <div class="breadcrumb"><a href="https://www.letsrollgaragedoors.com/index.html">Home</a><span>›</span><a href="https://www.letsrollgaragedoors.com/blog.html">Blog</a><span>›</span>5 Easy Garage Door Maintenance Tips</div>
 <div class="article-wrap">
   <a href="https://www.letsrollgaragedoors.com/blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
@@ -214,5 +254,13 @@
   </div>
   <div class="footer-bottom">&copy; 2026 Let's Roll Garage Doors &middot; Austin, TX &middot; All rights reserved.</div>
 </footer>
-<script>function toggleFaq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open')}</script>
+<script>
+  // Mobile menu
+  const ham=document.getElementById('hamburger'),mMenu=document.getElementById('mobile-menu'),mClose=document.getElementById('mob-close');
+  function openMobile(){mMenu.classList.add('open');document.body.style.overflow='hidden';ham.classList.add('open');ham.setAttribute('aria-expanded','true')}
+  function closeMobile(){mMenu.classList.remove('open');document.body.style.overflow='';ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}
+  ham.addEventListener('click',openMobile);
+  mClose.addEventListener('click',closeMobile);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobile()});
+function toggleFaq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open')}</script>
 </body></html>
