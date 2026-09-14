@@ -847,6 +847,7 @@ body{padding-bottom:64px}
         <input type="hidden" name="subject" value="New Quote Request, Let's Roll Garage Doors">
         <input type="hidden" name="from_name" value="Let's Roll Garage Doors Website">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="referral_code" id="referral-code-field" value="">
         <div class="form-row">
           <div class="fg"><label for="f-fn">First Name</label><input id="f-fn" name="first_name" type="text" placeholder="John" autocomplete="given-name" required></div>
           <div class="fg"><label for="f-ln">Last Name</label><input id="f-ln" name="last_name" type="text" placeholder="Smith" autocomplete="family-name" required></div>
@@ -1445,5 +1446,22 @@ window.addEventListener("load", function() {
   </div>
 </div>
 
+
+<script>
+  // Referral code tracking
+  (function() {
+    // If landing with ?ref=CODE, save it to localStorage
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    if (ref) localStorage.setItem('letsroll_ref', ref.toUpperCase());
+
+    // Populate the hidden form field with stored code (if any)
+    const stored = localStorage.getItem('letsroll_ref');
+    if (stored) {
+      const field = document.getElementById('referral-code-field');
+      if (field) field.value = stored;
+    }
+  })();
+</script>
 </body>
 </html>
