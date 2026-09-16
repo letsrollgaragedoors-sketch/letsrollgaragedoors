@@ -132,11 +132,26 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 .btn-outline:hover{border-color:white;background:rgba(255,255,255,.08)}
 
 /* ── FOOTER ── */
-footer{background:#080f22;color:rgba(255,255,255,.6);padding:40px 24px;text-align:center;font-size:13px}
-footer a{color:rgba(255,255,255,.6);transition:color .2s}
-footer a:hover{color:var(--orange)}
-.footer-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:14px;align-items:center}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--border)}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:48px}
+.footer-logo-wrap{background:transparent;border-radius:0;padding:0;display:inline-block;margin-bottom:18px}
+.footer-logo-wrap img{height:90px;width:auto;max-width:280px}
+.footer-brand p{font-size:13px;color:var(--gray);line-height:1.7;font-weight:300}
+.footer-col h4{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:18px;padding-bottom:9px;border-bottom:1px solid var(--border)}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:13px;color:var(--gray);transition:color .2s;display:flex;align-items:center;gap:7px}
+.footer-col ul li a:hover{color:var(--orange)}
+.footer-col ul li a i{font-size:11px}
+.footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+.footer-contact-item i{font-size:15px;color:var(--orange);margin-top:2px;flex-shrink:0}
+.footer-contact-item p{font-size:13px;color:var(--gray);line-height:1.5}
+.footer-contact-item a{color:var(--black);font-weight:600}
+.footer-contact-item a:hover{color:var(--orange)}
+.footer-bottom{max-width:1280px;margin:52px auto 0;padding:18px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:12px;color:var(--gray)}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:34px;height:34px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:13px;transition:all .2s}
+.footer-social a:hover{border-color:var(--orange);color:var(--orange)}
 
 /* ── STICKY CALL BAR ── */
 .sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--orange);z-index:8000;display:none;align-items:center;justify-content:center;gap:10px;padding:13px 20px;box-shadow:0 -2px 16px rgba(0,0,0,.18)}
@@ -145,6 +160,9 @@ footer a:hover{color:var(--orange)}
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .gallery-grid{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:900px){
+  .footer-inner{grid-template-columns:1fr 1fr}
 }
 @media(max-width:700px){
   .nav-links,.nav-phone,.nav-cta{display:none}
@@ -155,6 +173,11 @@ footer a:hover{color:var(--orange)}
   body{padding-bottom:56px}
   .page-hero{padding:48px 20px 40px}
   .gallery-section{padding:52px 20px}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .topbar-left{flex-direction:column;gap:4px}
+  .topbar-item{min-height:40px}
+  .topbar-social a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin-left:0;padding:8px}
 }
 </style>
 </head>
@@ -165,12 +188,14 @@ footer a:hover{color:var(--orange)}
   <div class="topbar-inner">
     <div class="topbar-left">
       <div class="topbar-item"><a href="tel:+15129474451"><i class="fas fa-phone-alt"></i><span>Call: (512) 947-4451</span></a></div>
-      <div class="topbar-item"><i class="fas fa-map-marker-alt"></i><span>Austin, TX &amp; Surrounding Areas</span></div>
-      <div class="topbar-item"><i class="fas fa-clock"></i><span>24/7 Emergency Service</span></div>
+      <div class="topbar-item"><a href="mailto:letsrollgaragedoors@gmail.com"><i class="fas fa-envelope"></i><span>letsrollgaragedoors@gmail.com</span></a></div>
+      <div class="topbar-item"><i class="fas fa-clock"></i><span>Mon-Sun · 24/7 Emergency Available</span></div>
     </div>
     <div class="topbar-social">
+      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
-      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
     </div>
   </div>
 </div>
@@ -352,16 +377,50 @@ footer a:hover{color:var(--orange)}
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="gallery.html">Our Work</a>
-      <a href="blog.html">Blog</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#quote">Contact</a>
+    <div class="footer-brand">
+      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90"></div>
+      <p>Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
     </div>
-    <p>720 Airport Blvd #1280, Austin, TX 78702 &nbsp;·&nbsp; <a href="tel:+15129474451">(512) 947-4451</a></p>
-    <p>&copy; 2025 Let's Roll Garage Doors. All rights reserved.</p>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i>Services</a></li>
+        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i>Our Work</a></li>
+        <li><a href="blog.html"><i class="fas fa-chevron-right"></i>Blog</a></li>
+        <li><a href="index.html#areas"><i class="fas fa-chevron-right"></i>Service Areas</a></li>
+        <li><a href="index.html#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
+        <li><a href="index.html#quote"><i class="fas fa-chevron-right"></i>Free Estimate</a></li>
+        <li><a href="warranty-terms.html"><i class="fas fa-chevron-right"></i>Warranty Terms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>Garage Door Repair</a></li>
+        <li><a href="garage-door-installation-austin.html"><i class="fas fa-chevron-right"></i>Door Installation</a></li>
+        <li><a href="garage-door-opener-repair-austin.html"><i class="fas fa-chevron-right"></i>Opener Repair &amp; Install</a></li>
+        <li><a href="garage-door-spring-repair-austin.html"><i class="fas fa-chevron-right"></i>Spring Replacement</a></li>
+        <li><a href="garage-door-cable-repair-austin.html"><i class="fas fa-chevron-right"></i>Cable Repair</a></li>
+        <li><a href="emergency-garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>24/7 Emergency</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+15129474451">(512) 947-4451</a><br><span style="font-size:12px;color:var(--gray)">24/7 Emergency Line</span></p></div>
+      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p></div>
+      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p style="color:var(--gray)">720 Airport Blvd #1280<br>Austin, TX 78702</p></div>
+      <div class="footer-contact-item"><i class="fas fa-clock"></i><p style="color:var(--gray)"><strong style="color:var(--black)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
+      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+    </div>
   </div>
 </footer>
 
