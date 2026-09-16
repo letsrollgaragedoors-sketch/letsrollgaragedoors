@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Let's Roll Garage Doors Austin TX</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --orange:#e85d04;
+  --orange-dark:#c44d00;
+  --orange-light:#ff7a20;
+  --orange-bg:#fff4ee;
+  --black:#0e0e0e;
+  --black-mid:#1a1a1a;
+  --navy:#0f2557;
+  --navy-mid:#1a3a8f;
+  --navy-light:#e8f0ff;
+  --white:#ffffff;
+  --off-white:#f7f5f2;
+  --gray:#666;
+  --border:#e0dbd5;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--black);background:var(--white);overflow-x:hidden;line-height:1.6;margin:0}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy);color:rgba(255,255,255,.82);font-size:13px;padding:9px 0}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;gap:22px;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px}
+.topbar-item i{color:var(--orange)}
+.topbar-item a{color:white;font-weight:600;transition:color .2s;display:inline-flex;align-items:center;gap:7px}
+.topbar-item a:hover{color:var(--orange-light)}
+.topbar-social a{color:rgba(255,255,255,.5);font-size:13px;margin-left:12px;transition:color .2s}
+.topbar-social a:hover{color:var(--orange)}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px solid var(--orange);box-shadow:0 2px 20px rgba(0,0,0,.12)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:110px}
+.nav-logo img{height:96px;width:auto;object-fit:contain}
+.nav-right{display:flex;align-items:center;gap:4px}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.nav-links a{font-family:'Oswald',sans-serif;font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--black-mid);padding:8px 13px;border-radius:4px;transition:all .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--orange);background:var(--orange-bg)}
+.nav-phone{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;color:var(--navy);margin:0 8px;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.nav-cta{background:var(--orange);color:white;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:4px;transition:background .2s;border:none;cursor:pointer;text-decoration:none;display:inline-block}
+.nav-cta:hover{background:var(--orange-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{width:26px;height:2px;background:var(--navy);border-radius:2px;display:block}
+.mobile-menu{display:none;position:fixed;inset:0;background:white;z-index:9999;overflow-y:auto;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.mobile-menu.open{display:flex}
+.mob-close{background:none;border:none;font-size:24px;color:var(--navy);cursor:pointer;position:absolute;top:20px;right:24px}
+.mobile-menu a{font-family:'Oswald',sans-serif;font-size:22px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--black);padding:13px 30px;width:100%;text-align:center;border-bottom:1px solid var(--border);box-sizing:border-box}
+.mobile-menu .m-phone{color:var(--orange);font-weight:700;font-size:24px;border:none}
+.mobile-menu .m-cta{background:var(--orange);color:white!important;border-radius:5px;margin-top:10px;border:none}
+
+/* ── PAGE HERO ── */
+.page-hero{background:var(--navy);padding:64px 24px 52px;text-align:center}
+.page-hero-inner{max-width:760px;margin:0 auto}
+.section-tag{display:inline-block;font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);background:var(--orange-bg);border:1px solid rgba(232,93,4,.25);padding:5px 14px;border-radius:50px;margin-bottom:16px}
+.page-hero h1{font-family:'Oswald',sans-serif;font-size:clamp(32px,5vw,54px);font-weight:700;color:white;line-height:1.05;margin:0 0 14px}
+.page-hero h1 span{color:var(--orange)}
+.page-hero p{color:rgba(255,255,255,.75);font-size:16px;max-width:520px;margin:0 auto}
+
+/* ── GALLERY SECTION ── */
+.gallery-section{padding:80px 24px;background:var(--off-white)}
+.gallery-inner{max-width:1200px;margin:0 auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:48px}
+
+/* ── JOB CARD ── */
+.job-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.08);border:1px solid var(--border)}
+.job-card-header{background:var(--navy);padding:10px 18px;display:flex;align-items:center;gap:10px}
+.job-number{font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--orange);background:rgba(232,93,4,.15);border:1px solid rgba(232,93,4,.3);border-radius:4px;padding:3px 10px}
+.job-card-header span{font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase}
+
+/* ── BEFORE / AFTER PHOTOS ── */
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--border)}
+.photo-col{display:flex;flex-direction:column}
+.photo-col-label{font-family:'Oswald',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:6px 10px;color:white}
+.photo-col-label.before-label{background:var(--navy)}
+.photo-col-label.after-label{background:var(--orange)}
+.photo-col-photos{display:grid;grid-template-rows:1fr 1fr}
+.photo-slot{position:relative;aspect-ratio:4/3;overflow:hidden}
+.photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-slot-num{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.45);color:white;font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;letter-spacing:.08em;padding:2px 7px;border-radius:3px}
+
+/* placeholder styling */
+.photo-placeholder{width:100%;height:100%;background:var(--off-white);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:2px dashed var(--border);box-sizing:border-box;transition:border-color .2s;aspect-ratio:4/3}
+.photo-placeholder:hover{border-color:var(--orange)}
+.photo-placeholder i{font-size:22px;color:#ccc}
+.photo-placeholder span{font-family:'Open Sans',sans-serif;font-size:11px;color:#aaa;text-align:center;padding:0 10px;line-height:1.4}
+
+/* ── JOB META ── */
+.job-meta{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px}
+.job-meta-row{display:flex;gap:20px;flex-wrap:wrap}
+.job-meta-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--gray)}
+.job-meta-item i{color:var(--orange);font-size:12px;width:14px;text-align:center}
+.job-meta-item strong{color:var(--black-mid);font-weight:600}
+.job-description{font-size:14px;color:var(--gray);line-height:1.55;border-top:1px solid var(--border);padding-top:12px;margin-top:2px}
+.job-description strong{color:var(--navy);font-weight:600}
+
+/* ── CTA STRIP ── */
+.cta-strip{background:var(--navy);padding:60px 24px;text-align:center}
+.cta-strip h2{font-family:'Oswald',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;color:white;margin:0 0 10px}
+.cta-strip h2 span{color:var(--orange)}
+.cta-strip p{color:rgba(255,255,255,.7);margin:0 0 28px;font-size:15px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:14px 28px;border-radius:5px;transition:all .2s;cursor:pointer;border:none}
+.btn-orange{background:var(--orange);color:white}
+.btn-orange:hover{background:var(--orange-dark)}
+.btn-outline{background:transparent;color:white;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{border-color:white;background:rgba(255,255,255,.08)}
+
+/* ── FOOTER ── */
+footer{background:#080f22;color:rgba(255,255,255,.6);padding:40px 24px;text-align:center;font-size:13px}
+footer a{color:rgba(255,255,255,.6);transition:color .2s}
+footer a:hover{color:var(--orange)}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:14px;align-items:center}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+
+/* ── STICKY CALL BAR ── */
+.sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--orange);z-index:8000;display:none;align-items:center;justify-content:center;gap:10px;padding:13px 20px;box-shadow:0 -2px 16px rgba(0,0,0,.18)}
+.sticky-call a{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;color:white;letter-spacing:.05em;display:flex;align-items:center;gap:9px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .gallery-grid{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:700px){
+  .nav-links,.nav-phone,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .nav-logo img{height:76px}
+  .nav-inner{height:96px}
+  .sticky-call{display:flex}
+  body{padding-bottom:56px}
+  .page-hero{padding:48px 20px 40px}
+  .gallery-section{padding:52px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item"><a href="tel:+15129474451"><i class="fas fa-phone-alt"></i><span>Call: (512) 947-4451</span></a></div>
+      <div class="topbar-item"><i class="fas fa-map-marker-alt"></i><span>Austin, TX &amp; Surrounding Areas</span></div>
+      <div class="topbar-item"><i class="fas fa-clock"></i><span>24/7 Emergency Service</span></div>
+    </div>
+    <div class="topbar-social">
+      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
+      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="260" height="82" fetchpriority="high"></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="gallery.html" class="active">Our Work</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#areas">Areas</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+      <a href="tel:+15129474451" class="nav-phone"><i class="fas fa-phone-alt"></i>(512) 947-4451</a>
+      <a href="index.html#quote" class="nav-cta">Free Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mob-close" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
+  <a href="index.html#about" onclick="closeMobile()">About</a>
+  <a href="index.html#services" onclick="closeMobile()">Services</a>
+  <a href="gallery.html" onclick="closeMobile()">Our Work</a>
+  <a href="blog.html" onclick="closeMobile()">Blog</a>
+  <a href="index.html#areas" onclick="closeMobile()">Areas</a>
+  <a href="index.html#faq" onclick="closeMobile()">FAQ</a>
+  <a href="tel:+15129474451" class="m-phone"><i class="fas fa-phone-alt"></i> (512) 947-4451</a>
+  <a href="index.html#quote" class="m-cta" onclick="closeMobile()">Free Estimate</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-tag">Our Work</div>
+    <h1>Real Jobs. <span>Real Results.</span></h1>
+    <p>Before &amp; after photos from garage door repairs and installations across Austin and surrounding areas.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery-inner">
+
+    <div class="gallery-grid">
+
+      <!-- JOB 1 -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <span class="job-number">JOB 01</span>
+          <span>Spring Replacement &amp; Tune-Up</span>
+        </div>
+        <div class="photo-pair">
+          <div class="photo-col">
+            <div class="photo-col-label before-label">Before</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <img src="images/job1-before-1.webp" alt="Before - garage door with worn springs Austin TX" loading="lazy">
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <img src="images/job1-before-2.webp" alt="Before - old worn torsion springs removed" loading="lazy">
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="photo-col">
+            <div class="photo-col-label after-label">After</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <img src="images/job1-after-1.webp" alt="After - new torsion springs installed Austin TX" loading="lazy">
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <img src="images/job1-after-2.webp" alt="After - garage door fully operational after tune-up" loading="lazy">
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-meta">
+          <div class="job-meta-row">
+            <div class="job-meta-item"><i class="fas fa-calendar-alt"></i><span><strong>Date:</strong> September 10, 2026</span></div>
+            <div class="job-meta-item"><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> Austin, TX</span></div>
+          </div>
+          <div class="job-description"><strong>Description:</strong> All 4 springs were replaced, full garage door tune-up performed, and opener travel limit adjusted for smooth reliable operation.</div>
+        </div>
+      </div>
+
+      <!-- ======================================================
+           JOB 2 — Replace image filenames below when ready:
+           BEFORE: images/job2-before.webp
+           AFTER:  images/job2-after.webp
+      ====================================================== -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <span class="job-number">JOB 02</span>
+          <span>Panel Replacement</span>
+        </div>
+        <div class="photo-pair">
+          <div class="photo-col">
+            <div class="photo-col-label before-label">Before</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job2-before-1.webp</span></div>
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job2-before-2.webp</span></div>
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="photo-col">
+            <div class="photo-col-label after-label">After</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job2-after-1.webp</span></div>
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job2-after-2.webp</span></div>
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-meta">
+          <div class="job-meta-row">
+            <div class="job-meta-item"><i class="fas fa-calendar-alt"></i><span><strong>Date:</strong> Month DD, YYYY</span></div>
+            <div class="job-meta-item"><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> Austin, TX</span></div>
+          </div>
+          <div class="job-description"><strong>Description:</strong> Describe what was repaired or installed here — e.g. damaged panel replaced, color matched to existing door.</div>
+        </div>
+      </div>
+
+      <!-- ======================================================
+           JOB 3 — Replace image filenames below when ready:
+           BEFORE: images/job3-before.webp
+           AFTER:  images/job3-after.webp
+      ====================================================== -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <span class="job-number">JOB 03</span>
+          <span>New Door Installation</span>
+        </div>
+        <div class="photo-pair">
+          <div class="photo-col">
+            <div class="photo-col-label before-label">Before</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job3-before-1.webp</span></div>
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job3-before-2.webp</span></div>
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="photo-col">
+            <div class="photo-col-label after-label">After</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job3-after-1.webp</span></div>
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job3-after-2.webp</span></div>
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-meta">
+          <div class="job-meta-row">
+            <div class="job-meta-item"><i class="fas fa-calendar-alt"></i><span><strong>Date:</strong> Month DD, YYYY</span></div>
+            <div class="job-meta-item"><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> Austin, TX</span></div>
+          </div>
+          <div class="job-description"><strong>Description:</strong> Describe what was repaired or installed here — e.g. full door replacement, new opener installed and programmed.</div>
+        </div>
+      </div>
+
+      <!-- ======================================================
+           JOB 4 — Replace image filenames below when ready:
+           BEFORE: images/job4-before.webp
+           AFTER:  images/job4-after.webp
+      ====================================================== -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <span class="job-number">JOB 04</span>
+          <span>Cable &amp; Roller Repair</span>
+        </div>
+        <div class="photo-pair">
+          <div class="photo-col">
+            <div class="photo-col-label before-label">Before</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job4-before-1.webp</span></div>
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job4-before-2.webp</span></div>
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+          <div class="photo-col">
+            <div class="photo-col-label after-label">After</div>
+            <div class="photo-col-photos">
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job4-after-1.webp</span></div>
+                <div class="photo-slot-num">1</div>
+              </div>
+              <div class="photo-slot">
+                <div class="photo-placeholder"><i class="fas fa-camera"></i><span>job4-after-2.webp</span></div>
+                <div class="photo-slot-num">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-meta">
+          <div class="job-meta-row">
+            <div class="job-meta-item"><i class="fas fa-calendar-alt"></i><span><strong>Date:</strong> Month DD, YYYY</span></div>
+            <div class="job-meta-item"><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> Austin, TX</span></div>
+          </div>
+          <div class="job-description"><strong>Description:</strong> Describe what was repaired or installed here — e.g. snapped cable replaced, nylon rollers upgraded, full tune-up performed.</div>
+        </div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+  </div><!-- /gallery-inner -->
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2>Need a Repair or <span>New Door?</span></h2>
+  <p>Same-day service across Austin. Call or text anytime — 24/7.</p>
+  <div class="cta-btns">
+    <a href="tel:+15129474451" class="btn btn-orange"><i class="fas fa-phone-alt"></i>Call (512) 947-4451</a>
+    <a href="index.html#quote" class="btn btn-outline"><i class="fas fa-clipboard-list"></i>Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="gallery.html">Our Work</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#quote">Contact</a>
+    </div>
+    <p>720 Airport Blvd #1280, Austin, TX 78702 &nbsp;·&nbsp; <a href="tel:+15129474451">(512) 947-4451</a></p>
+    <p>&copy; 2025 Let's Roll Garage Doors. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY CALL BAR (mobile) -->
+<div class="sticky-call">
+  <a href="tel:+15129474451"><i class="fas fa-phone-alt"></i>Call Now — (512) 947-4451</a>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobClose = document.getElementById('mob-close');
+  function closeMobile(){mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false')}
+  hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'))});
+  mobClose.addEventListener('click',closeMobile);
+</script>
+
+</body>
+</html>
