@@ -459,8 +459,9 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:4px
 
 /* ── HERO ── */
 .hero{position:relative;overflow:hidden;min-height:640px;display:flex;align-items:center}
-.hero-photo{position:absolute;inset:0;background:url('images/img-d8d103469b7c.webp') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.93) 0%,rgba(10,10,10,.75) 55%,rgba(10,10,10,.3) 100%)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-photo{position:absolute;inset:0;background:url('images/img-d8d103469b7c.webp') center/cover no-repeat;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.93) 0%,rgba(10,10,10,.75) 55%,rgba(10,10,10,.3) 100%);z-index:1}
 .hero-inner{max-width:1280px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 410px;gap:60px;align-items:center;position:relative;z-index:2;width:100%}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(232,93,4,.2);border:1px solid rgba(232,93,4,.45);color:var(--orange-light);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px}
 .hero h1{font-family:'Oswald',sans-serif;font-size:clamp(40px,6vw,74px);font-weight:700;line-height:.98;color:white;letter-spacing:.02em;margin-bottom:8px}
@@ -826,6 +827,9 @@ body{padding-bottom:64px}
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-photo"></div>
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="videos/hero-bg.mp4" type="video/mp4">
+  </video>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-left">
