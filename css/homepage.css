@@ -461,4 +461,12 @@ footer{background:var(--white);padding:68px 0 0;border-top:1px solid var(--borde
 .back-to-services:hover{background:var(--navy);color:#fff}
 .back-to-services i{font-size:13px}
 .back-btn-wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* ── SHARED: BRAND CHIPS (installation / opener pages) ── */
+.brands-strip{background:var(--off-white);border-radius:14px;padding:36px 24px;text-align:center}
+.brands-strip p{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:.03em;color:var(--navy);margin-bottom:18px}
+.brands-strip-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.brand-chip{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--navy);background:#fff;border:1px solid var(--border);border-radius:20px;padding:11px 22px;transition:border-color .2s ease,color .2s ease}
+.brand-chip:hover{border-color:var(--orange);color:var(--orange)}
+
 body{padding-bottom:64px}
