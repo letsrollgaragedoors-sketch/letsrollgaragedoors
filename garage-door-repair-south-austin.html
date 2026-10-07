@@ -263,10 +263,8 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</noscript>
+<style>@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2) format("woff2")}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2) format("woff2")}</style>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="css/homepage.css">
 <script type="application/ld+json">
 {
@@ -390,7 +388,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="260" height="82"></a>
+    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="/#about">About</a></li>
@@ -418,6 +416,7 @@
   <a href="tel:+15129474451" class="m-phone"><i class="fas fa-phone-alt"></i> (512) 947-4451</a>
   <a href="/#quote" class="m-cta" onclick="closeMobile()">Free Estimate</a>
 </div>
+<main id="main">
 
 <!-- BACK TO SERVICES BUTTON -->
 <div class="back-btn-wrap">
@@ -516,14 +515,15 @@
 </section>
 
 
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90"></div>
+      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async"></div>
       <p>Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
     </div>
     <div class="footer-col">
-      <h4>Quick Links</h4>
+      <h3>Quick Links</h3>
       <ul>
         <li><a href="/#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
         <li><a href="/#services"><i class="fas fa-chevron-right"></i>Services</a></li>
@@ -535,7 +535,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <ul>
         <li><a href="garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>Garage Door Repair</a></li>
         <li><a href="garage-door-installation-austin.html"><i class="fas fa-chevron-right"></i>Door Installation</a></li>
@@ -546,7 +546,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h3>Contact</h3>
       <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+15129474451">(512) 947-4451</a><br><span style="font-size:12px;color:var(--gray)">24/7 Emergency Line</span></p></div>
       <div class="footer-contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p></div>
       <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p style="color:var(--gray)">720 Airport Blvd #1280<br>Austin, TX 78702</p></div>
@@ -577,7 +577,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMobile();docum
 function openArticle(id){
   document.getElementById(id).classList.add('active');
   document.body.style.overflow='hidden';
-  document.getElementById(id).scrollTop=0;
+  requestAnimationFrame(function(){document.getElementById(id).scrollTop=0});
 }
 function closeArticle(id){
   document.getElementById(id).classList.remove('active');

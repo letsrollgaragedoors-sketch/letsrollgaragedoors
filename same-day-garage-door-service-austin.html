@@ -88,9 +88,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<style>@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2) format("woff2")}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2) format("woff2")}</style>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <link rel="stylesheet" href="css/homepage.css">
 <script>(function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "187261177",enableAutoSpaTracking: true});</script>
 </head>
@@ -121,7 +123,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="260" height="82"></a>
+    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="/#about">About</a></li>
@@ -150,6 +152,7 @@
   <a href="tel:+15129474451" class="m-phone" onclick="closeMobile()">(512) 947-4451</a>
   <a href="/#quote" class="m-cta" onclick="closeMobile()">Free Quote</a>
 </div>
+<main id="main">
 
 <!-- BACK TO SERVICES BUTTON -->
 <div class="back-btn-wrap">
@@ -356,14 +359,15 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors"></div>
+      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="520" height="347" loading="lazy" decoding="async"></div>
       <p>Austin, TX's trusted garage door repair, installation, and maintenance company, offering same-day and 24/7 emergency service across the greater Austin area.</p>
     </div>
     <div class="footer-col">
-      <h4>Quick Links</h4>
+      <h3>Quick Links</h3>
       <ul>
         <li><a href="/#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
         <li><a href="/#services"><i class="fas fa-chevron-right"></i>Services</a></li>
@@ -375,7 +379,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <ul>
         <li><a href="garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>Garage Door Repair</a></li>
         <li><a href="garage-door-installation-austin.html"><i class="fas fa-chevron-right"></i>Door Installation</a></li>
@@ -386,7 +390,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h3>Contact</h3>
       <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+15129474451">(512) 947-4451</a><br><span style="font-size:12px;color:var(--gray)">24/7 Emergency Line</span></p></div>
       <div class="footer-contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p></div>
       <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p style="color:var(--gray)">720 Airport Blvd #1280<br>Austin, TX 78702</p></div>
