@@ -548,23 +548,6 @@ function toggleFaq(el){
 }
 document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(q)}})});
 
-// Stat counters
-function animateCount(el,target,suffix=''){
-  let cur=0;const step=Math.ceil(target/55);
-  const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur+suffix;if(cur>=target)clearInterval(t)},22);
-}
-let counted=false;
-const statsSection=document.querySelector('.stats');
-if(statsSection){
-  new IntersectionObserver(entries=>{
-    if(entries[0].isIntersecting&&!counted){
-      counted=true;
-      animateCount(document.getElementById('stat1'),850,'+');
-      animateCount(document.getElementById('stat2'),600,'+');
-    }
-  },{threshold:.3}).observe(statsSection);
-}
-
 // Form, submits to Web3Forms (real lead delivery to letsrollgaragedoors@gmail.com)
 async function submitQuoteForm(e){
   e.preventDefault();

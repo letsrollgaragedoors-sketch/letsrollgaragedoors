@@ -613,7 +613,7 @@
     </div>
     <div class="emergency-cta">
       <a href="tel:+15129474451" class="btn btn-orange" style="font-size:17px;padding:16px 36px"><i class="fas fa-phone-alt"></i>Call (512) 947-4451</a>
-      <small>Average response time: Under 60 minutes</small>
+      <small>Most emergency calls reached within about an hour</small>
       <small><a href="emergency-garage-door-repair-austin.html" style="color:rgba(255,255,255,.85);text-decoration:underline">Learn more about our emergency service →</a></small>
     </div>
   </div>
@@ -622,10 +622,10 @@
 <!-- STATS -->
 <section class="stats">
   <div class="stats-inner">
-    <div><div class="stat-num" id="stat1">0</div><div class="stat-lbl">Jobs Completed</div></div>
-    <div class="stat-divider"><div class="stat-num" id="stat2">0</div><div class="stat-lbl">Happy Customers</div></div>
-    <div class="stat-divider"><div class="stat-num">24/7</div><div class="stat-lbl">Emergency Available</div></div>
-    <div class="stat-divider"><div class="stat-num" style="color:#fff0b3">5★</div><div class="stat-lbl">Google Rating</div></div>
+    <div><div class="stat-num">Free</div><div class="stat-lbl">Estimates, No Obligation</div></div>
+    <div class="stat-divider"><div class="stat-num">24/7</div><div class="stat-lbl">Emergency Line</div></div>
+    <div class="stat-divider"><div class="stat-num">29</div><div class="stat-lbl">Google Reviews</div></div>
+    <div class="stat-divider"><div class="stat-num" style="color:#fff0b3">5.0★</div><div class="stat-lbl">Google Rating</div></div>
   </div>
 </section>
 
@@ -865,23 +865,6 @@ function toggleFaq(el){
   if(!isOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
 }
 document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(q)}})});
-
-// Stat counters
-function animateCount(el,target,suffix=''){
-  let cur=0;const step=Math.ceil(target/55);
-  const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur+suffix;if(cur>=target)clearInterval(t)},22);
-}
-let counted=false;
-const statsSection=document.querySelector('.stats');
-if(statsSection){
-  new IntersectionObserver(entries=>{
-    if(entries[0].isIntersecting&&!counted){
-      counted=true;
-      animateCount(document.getElementById('stat1'),850,'+');
-      animateCount(document.getElementById('stat2'),600,'+');
-    }
-  },{threshold:.3}).observe(statsSection);
-}
 
 // Form, submits to Web3Forms (real lead delivery to letsrollgaragedoors@gmail.com)
 async function submitQuoteForm(e){
