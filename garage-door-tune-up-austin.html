@@ -485,18 +485,8 @@ function openMobile(){mMenu.classList.add('open');document.body.style.overflow='
 function closeMobile(){mMenu.classList.remove('open');document.body.style.overflow='';ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}
 ham.addEventListener('click',openMobile);
 mClose.addEventListener('click',closeMobile);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMobile();document.querySelectorAll('.article-page.active').forEach(p=>p.classList.remove('active'));document.body.style.overflow=''}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMobile()}});
 
-// Article open/close
-function openArticle(id){
-  document.getElementById(id).classList.add('active');
-  document.body.style.overflow='hidden';
-  requestAnimationFrame(function(){document.getElementById(id).scrollTop=0});
-}
-function closeArticle(id){
-  document.getElementById(id).classList.remove('active');
-  document.body.style.overflow='';
-}
 
 // FAQ accordion
 function toggleFaq(el){
