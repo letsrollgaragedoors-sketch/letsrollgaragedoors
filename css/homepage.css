@@ -719,3 +719,4 @@ nav{background:rgba(255,255,255,.97)}
 .hero-left>*{opacity:1;animation:none}
 }
 .map-embed{position:relative;width:100%;aspect-ratio:16/9;max-height:420px;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:#eef0f3}.map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}@media(max-width:600px){.map-embed{aspect-ratio:4/3}}.map-section{padding:72px 24px;background:#fff}.map-section-inner{max-width:1000px;margin:0 auto;text-align:center}.map-section h2{margin-bottom:10px}.map-section p{color:var(--gray);margin-bottom:24px}.map-section .map-embed{text-align:left}
+@media(max-width:768px){.hero-photo-poster{background-image:url('../images/hero-poster-m.webp')}}

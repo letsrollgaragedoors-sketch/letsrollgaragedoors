@@ -9,7 +9,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="preload" as="image" href="images/hero-poster.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-poster-m.webp" media="(max-width:768px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-poster.webp" media="(min-width:769px)" fetchpriority="high">
 
 <meta name="description" content="Same-day & 24/7 emergency garage door repair in Austin, TX. Spring replacement, opener repair, new door installation. Background-checked & insured. Call (512) 947-4451 for a free estimate.">
 <meta name="keywords" content="garage door repair Austin TX, same day garage door repair Austin, emergency garage door repair Austin, broken spring repair Austin, garage door installation Austin, garage door opener repair Austin, 24/7 garage door repair near me, Let's Roll Garage Doors">
@@ -417,7 +418,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"></noscript>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-solid-sub.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-brands-sub.woff2">
-<link rel="stylesheet" href="css/homepage.css?v=20261010">
+<link rel="stylesheet" href="css/homepage.css?v=20261011">
 <!-- Microsoft UET tag loaded after page render -->
 </head>
 <body>
@@ -910,12 +911,6 @@ async function submitQuoteForm(e){
   return false;
 }
 </script>
-<!-- Microsoft UET tag (deferred for performance) -->
-<script>
-window.addEventListener("load", function() {
-  (function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""),n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "187261177",enableAutoSpaTracking: true});
-});
-</script>
 <!-- ═══════════════════════════════════════════
      ARTICLE PAGES (hidden by default)
 ═══════════════════════════════════════════ -->
@@ -937,5 +932,7 @@ window.addEventListener("load", function() {
     }
   })();
 </script>
+<script>/* analytics tags load after first interaction (or 5s) to keep the first paint fast */
+(function(){var d=0;function go(){if(d)return;d=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag("js",new Date());gtag("config","G-P3MF0KR48G");var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id=G-P3MF0KR48G";document.head.appendChild(g);var o={ti:"187261177",enableAutoSpaTracking:true},w=window,u="uetq";w[u]=w[u]||[];o.ts=(new Date).getTime();var n=document.createElement("script");n.src="https://bat.bing.net/bat.js?ti="+o.ti;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&"loaded"!==s&&"complete"!==s||(o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad"),n.onload=n.onreadystatechange=null)};document.head.appendChild(n);}["scroll","touchstart","mousemove","keydown","click"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});setTimeout(go,5000)})();</script>
 </body>
 </html>
