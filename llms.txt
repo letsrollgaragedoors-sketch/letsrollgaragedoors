@@ -25,17 +25,11 @@ Let's Roll Garage Doors serves Austin, TX homeowners with fast, transparent, and
 - Garage Door Tune-Up & Maintenance (lubrication, balance check, safety inspection)
 - 24/7 Emergency Garage Door Service (most emergency calls reached within about an hour)
 
-## Pricing (Austin, TX - 2026)
+## Pricing
 
-- Spring replacement: $150-$250 single spring, $200-$350 two-spring system
-- Opener repair: $75-$125 minor (sensor alignment, remote reprogramming); $150-$250 motor replacement
-- New opener installation: $380-$750 installed depending on model
-- Cable replacement: $100-$200
-- New door installation: $800-$1,200 basic single-car; $1,500-$2,500+ premium or double-car
-- Roller & hinge replacement: $75-$150
-- After-hours/emergency service fee: $50-$100 (disclosed upfront)
-- Free estimates: Yes, no obligation
-
+- Free estimates with no obligation
+- The exact price is confirmed before any work begins
+- Pricing depends on the repair, parts needed, and door or opener model, so we quote after looking at the problem
 ## Brands Serviced
 
 - Garage door openers: LiftMaster, Chamberlain, Genie, Craftsman
@@ -60,10 +54,10 @@ Let's Roll Garage Doors serves Austin, TX homeowners with fast, transparent, and
 
 ## Blog Articles
 
-Articles live on the blog page with anchor IDs. Each has full structured data (BlogPosting + FAQPage schema).
+Each article has its own page (listed below and on the blog page) with structured data.
 
 - [7 Warning Signs Your Garage Door Spring Is About to Break](https://www.letsrollgaragedoors.com/garage-door-spring-warning-signs-austin.html) - June 2, 2026. Covers: loud bang, visible gap, heavy door, crooked opening, loose cables, stretched spring, opener strain.
-- [How Much Does Garage Door Repair Cost in Austin, TX? (2026 Guide)](https://www.letsrollgaragedoors.com/garage-door-repair-cost-austin.html) - May 28, 2026. Covers: spring $150-$350, opener $100-$250, cable $100-$200, new door $800-$2,500+, emergency fees, repair vs. replace.
+- [How Much Does Garage Door Repair Cost in Austin, TX? (2026 Guide)](https://www.letsrollgaragedoors.com/garage-door-repair-cost-austin.html) - May 28, 2026. Covers: what affects repair cost for springs, openers, cables, new doors and emergency visits, plus repair vs. replace.
 - [5 Easy Garage Door Maintenance Tips That Add Years to Its Life](https://www.letsrollgaragedoors.com/garage-door-maintenance-tips-austin.html) - May 15, 2026. Covers: lubrication, balance test, weather stripping, hardware tightening, sensor test.
 - [The Complete Guide to Garage Door Openers for Austin Homeowners](https://www.letsrollgaragedoors.com/smart-garage-door-openers-austin.html) - September 30, 2026. Covers: chain, belt, screw, wall-mount/jackshaft and smart openers; brands (LiftMaster recommended, Chamberlain, Genie, Craftsman, Marantec, Sommer, Overhead Door, Clopay, Ryobi); Austin heat, power outages, HOA; repair vs. replacement; professional installation.
 - [When Should You Replace Your Garage Door? 10 Signs It's Time](https://www.letsrollgaragedoors.com/when-to-replace-garage-door-austin.html) - August 12, 2026. Covers: age, frequent repairs, sagging, damaged panels, noise, rust, poor insulation, curb appeal, safety failures. Includes repair vs. replace decision framework.
