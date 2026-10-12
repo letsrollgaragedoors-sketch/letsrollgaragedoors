@@ -1,0 +1,67 @@
+<template>
+  <style>
+    @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/captured-memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2") format('woff2');}
+    @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/captured-memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2") format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
+    @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/captured-memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2") format('woff2');unicode-range:U+1F00-1FFF;}
+    @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/captured-memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2") format('woff2');unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;}
+
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; container-type: size; font-family: 'Open Sans', sans-serif; }
+    .clip { position: absolute; inset: 0; }
+
+    #nd-bg { background: #1D1D1F; overflow: hidden; }
+    #nd-photo { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; display: block; }
+    #nd-dim { position: absolute; inset: 0; background: rgba(29,29,31,0.62); }
+
+    #nd-text { position: absolute; left: 5.5cqw; top: 15cqh; width: 89cqw; }
+    .nd-line { display: block; overflow: hidden; padding: 0 0 1.2cqw 0; }
+    .nd-line > span { display: block; font-weight: 700; text-transform: lowercase; letter-spacing: -0.04em; will-change: transform; }
+    .nd-white > span { color: #FFFFFF; font-size: 25cqw; line-height: 0.9; }
+    .nd-orange > span { color: #C24C07; font-size: 17cqw; line-height: 0.92; }
+    #nd-rule { width: 36px; height: 2px; background: #C24C07; margin: 3cqw 0 3cqw 0.6cqw; transform-origin: left center; }
+
+    #nd-card { position: absolute; right: 5.5cqw; top: 1210px; width: 420px; height: 300px; background: #1D1D1F; border-top: 2px solid #C24C07; overflow: hidden; }
+    #nd-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  </style>
+
+  <div data-hf-id="hf-8kei" id="root" data-composition-id="04-new-doors" data-width="1080" data-height="1920" data-start="0" data-duration="3.5">
+    <div data-hf-id="hf-hzgy" id="nd-bg" class="clip" data-start="0" data-duration="3.5" data-track-index="0">
+      <img data-hf-id="hf-yrrk" id="nd-photo" src="assets/new-garage-door-installation-by-lets-rol.webp" alt="">
+      <div data-hf-id="hf-9402" id="nd-dim"></div>
+    </div>
+
+    <div data-hf-id="hf-7usf" id="nd-text" class="clip" data-start="0" data-duration="3.5" data-track-index="1" style="inset:auto;left:5.5cqw;top:15cqh;width:89cqw;height:auto;">
+      <span data-hf-id="hf-i684" class="nd-line nd-white"><span data-hf-id="hf-bvod" id="nd-w1">new</span></span>
+      <span data-hf-id="hf-b8e4" class="nd-line nd-white"><span data-hf-id="hf-7ish" id="nd-w2">doors,</span></span>
+      <div data-hf-id="hf-x7yi" id="nd-rule"></div>
+      <span data-hf-id="hf-024z" class="nd-line nd-orange"><span data-hf-id="hf-fkjh" id="nd-o1">installed</span></span>
+      <span data-hf-id="hf-t837" class="nd-line nd-orange"><span data-hf-id="hf-e22a" id="nd-o2">right.</span></span>
+    </div>
+
+    <div data-hf-id="hf-ahq6" id="nd-card" class="clip" data-start="0" data-duration="3.5" data-track-index="2" style="inset:auto;right:5.5cqw;top:1210px;width:420px;height:300px;">
+      <img data-hf-id="hf-k555" src="assets/lets-roll-garage-doors-technician-in-aus.webp" alt="">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    // Background: slow drift across the whole shot (the one live element)
+    tl.fromTo("#nd-photo", { scale: 1.0 }, { scale: 1.07, duration: 3, ease: "none" }, 0);
+
+    // Scene 1 (0.0-1.2s): "new doors," builds in white across two lines
+    tl.fromTo("#nd-w1", { yPercent: 105, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.05);
+    tl.fromTo("#nd-w2", { yPercent: 105, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.4);
+
+    // Scene 2 (1.2-2.4s): "installed right." lands in orange, tech card appears
+    tl.fromTo("#nd-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.out" }, 1.1);
+    tl.fromTo("#nd-o1", { yPercent: 105, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 1.25);
+    tl.fromTo("#nd-o2", { yPercent: 105, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 1.55);
+    tl.fromTo("#nd-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.8);
+
+    // Scene 3 (2.4-3.0s): hold still (only the slow photo drift continues)
+
+    window.__timelines["04-new-doors"] = tl;
+  </script>
+</template>
