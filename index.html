@@ -418,7 +418,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"></noscript>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-solid-sub.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-brands-sub.woff2">
-<link rel="stylesheet" href="css/homepage.css?v=20261011">
+<link rel="stylesheet" href="css/homepage.css?v=20261014">
 <!-- Microsoft UET tag loaded after page render -->
 </head>
 <body>
@@ -457,6 +457,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="gallery.html">Our Work</a></li>
+        <li><a href="coupons.html">Deals</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="#areas">Areas</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -474,6 +475,7 @@
   <a href="#about" onclick="closeMobile()">About</a>
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="gallery.html" onclick="closeMobile()">Our Work</a>
+  <a href="coupons.html" onclick="closeMobile()">Deals</a>
   <a href="blog.html" onclick="closeMobile()">Blog</a>
   <a href="#areas" onclick="closeMobile()">Areas</a>
   <a href="#faq" onclick="closeMobile()">FAQ</a>
@@ -700,6 +702,26 @@
       <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" role="img" aria-label="Google review"></i></div><blockquote>I've used David from Let's Roll Garage Doors twice now for my garage motor replacement. He was quick in responding and quick in replacing the motor with the latest Liftmaster model. He was patient in describing all the features as well. I won't hesitate to call him for any additional repairs should I need them. Great service all around.</blockquote><div class="testimonial-author"><div class="author-avatar">GC</div><div><div class="author-name">Gaurav Choudhary</div><div class="author-loc">Google Review</div></div></div></article>
       <article class="testimonial-card" aria-hidden="true"><div class="stars">★★★★★ <i class="fab fa-google" style="color:#4285F4;margin-left:4px;font-size:13px;" role="img" aria-label="Google review"></i></div><blockquote>Truly exceptional experience with David! We called him at 1:30p on a Saturday and he was here by 2p. It's 3:40p and I have a functional garage door! Very reasonably priced. I would gladly call him again if I ever have another garage door issue.</blockquote><div class="testimonial-author"><div class="author-avatar">RS</div><div><div class="author-name">Rachel Sanchez-Madhur</div><div class="author-loc">Google Review</div></div></div></article>
     </div>
+    </div>
+  </div>
+</section>
+
+<!-- OCTOBER DEALS -->
+<section class="deals-home" id="deals">
+  <div class="deals-home-inner">
+    <div class="section-tag center">Limited Time</div>
+    <h2 class="section-title">October <span>Specials</span></h2>
+    <p class="deals-home-sub">Save on spring repair, a new opener, or rollers and a tune-up. Mention your code when you call.</p>
+    <div class="deals-grid">
+      <article class="deal-card compact"><div class="deal-top"><div class="deal-price">$50 OFF</div><h3 class="deal-name">Single Spring Repair</h3></div><div class="deal-body"><p class="deal-desc">Parts and labor included. Same-day service available.</p><div class="deal-code"><span>Coupon code</span><strong>SPRING50</strong></div></div></article>
+      <article class="deal-card compact"><span class="deal-badge">Best Deal</span><div class="deal-top"><div class="deal-price">$100 OFF</div><h3 class="deal-name">Double Spring Repair</h3></div><div class="deal-body"><p class="deal-desc">Both springs replaced. Our most popular service.</p><div class="deal-code"><span>Coupon code</span><strong>SPRING100</strong></div></div></article>
+      <article class="deal-card compact"><div class="deal-top"><div class="deal-price">$599</div><h3 class="deal-name">LiftMaster Chain Drive Opener (7ft)</h3></div><div class="deal-body"><p class="deal-desc">Installed. Parts and installation included.</p><div class="deal-code"><span>Coupon code</span><strong>OPENER599</strong></div></div></article>
+      <article class="deal-card compact"><div class="deal-top"><div class="deal-price">$129</div><h3 class="deal-name">10x Nylon Rollers + Tune-Up</h3></div><div class="deal-body"><p class="deal-desc">Complete. Quieter door, full inspection and lube.</p><div class="deal-code"><span>Coupon code</span><strong>ROLLER129</strong></div></div></article>
+    </div>
+    <div class="deals-home-actions">
+      <a href="coupons.html" class="btn btn-orange">See All October Deals →</a>
+      <div class="deals-callbar"><span>Call <a href="tel:+15129474451">(512) 947-4451</a> and mention your code</span></div>
+      <p class="deal-fine">Deals expire October 31. Offers cannot be combined.</p>
     </div>
   </div>
 </section>
@@ -934,5 +956,6 @@ async function submitQuoteForm(e){
 </script>
 <script>/* analytics tags load after first interaction (or 5s) to keep the first paint fast */
 (function(){var d=0;function go(){if(d)return;d=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag("js",new Date());gtag("config","G-P3MF0KR48G");var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id=G-P3MF0KR48G";document.head.appendChild(g);var o={ti:"187261177",enableAutoSpaTracking:true},w=window,u="uetq";w[u]=w[u]||[];o.ts=(new Date).getTime();var n=document.createElement("script");n.src="https://bat.bing.net/bat.js?ti="+o.ti;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&"loaded"!==s&&"complete"!==s||(o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad"),n.onload=n.onreadystatechange=null)};document.head.appendChild(n);}["scroll","touchstart","mousemove","keydown","click"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});setTimeout(go,5000)})();</script>
+<script src="js/widgets.js" defer></script>
 </body>
 </html>
