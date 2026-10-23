@@ -92,7 +92,7 @@
 
     /* ---------- chat widget ---------- */
     var deals = DEALS_LIVE
-      ? '<div class="lr-msg">🎟️ Ask about our October specials: up to $100 off spring repairs!</div>'
+      ? '<div class="lr-msg">🎟️ Ask about our October specials: up to $79 off spring repairs!</div>'
       : '';
     var chatBtn = el('<button type="button" class="lr-chat-btn" aria-label="Open chat" aria-expanded="false" aria-controls="lr-panel">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>' +
@@ -159,7 +159,7 @@
       '<div class="lr-pop-card">' +
       '<button type="button" class="lr-x" aria-label="Close">×</button>' +
       '<div class="lr-pop-head"><span class="lr-pop-badge">October Only</span>' +
-      '<div class="lr-pop-amt">$50 to $100 OFF</div><div class="lr-pop-sub" id="lr-pop-title">Spring Repair - October Only</div></div>' +
+      '<div class="lr-pop-amt">$30 to $79 OFF</div><div class="lr-pop-sub" id="lr-pop-title">Spring Repair - October Only</div></div>' +
       '<div class="lr-pop-body" id="lr-pop-body">' +
       '<p>Enter your name and phone to unlock your coupon code.</p>' +
       '<form id="lr-pop-form" novalidate>' +
@@ -202,10 +202,10 @@
       var err = f.querySelector('.lr-err');
       if (!name || phone.replace(/\D/g, '').length < 7) { err.style.display = 'block'; return; }
       err.style.display = 'none';
-      sendLead('coupon-popup', { name: name, phone: phone, code: 'SPRING50' });
+      sendLead('coupon-popup', { name: name, phone: phone, code: 'SPRING30' });
       pop.querySelector('#lr-pop-body').innerHTML = '<div class="lr-thanks"><h3>Your coupon is unlocked!</h3>' +
-        '<div class="lr-code"><small>Your code</small><strong>SPRING50</strong></div>' +
-        '<p>Mention this code when you call for $50 off a single spring repair. Replacing both springs? Use <strong>SPRING100</strong> for $100 off. Cannot be combined with other offers. Expires October 31, 2026.</p>' +
+        '<div class="lr-code"><small>Your code</small><strong>SPRING30</strong></div>' +
+        '<p>Mention this code when you call for $30 off a single spring repair. Replacing both springs? Use <strong>SPRING79</strong> for $79 off. Cannot be combined with other offers. Expires October 31, 2026.</p>' +
         '<a class="lr-btn" href="' + TEL + '">Call Now &amp; Save</a>' +
         '<a class="lr-link" href="coupons.html">See all October deals</a></div>';
     });
