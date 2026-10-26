@@ -744,3 +744,5 @@ nav{background:rgba(255,255,255,.97)}
 .deals-callbar{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;background:var(--navy);color:#fff;border-radius:16px;padding:16px 22px;font-weight:600}
 .deals-callbar a{color:var(--orange-light);text-decoration:none;font-weight:700}
 @media(max-width:720px){.deals-grid{grid-template-columns:1fr}.deals-home{padding:72px 20px}}
+/* bulleted lists inside service sections */
+.svc-section ul{padding-left:22px;margin:0 0 14px}.svc-section li{color:var(--gray);line-height:1.7;font-size:15.5px;margin-bottom:6px}.svc-item ul{margin:8px 0 0}
