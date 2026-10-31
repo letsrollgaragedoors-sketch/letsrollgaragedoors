@@ -207,11 +207,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"></noscript>
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-solid-sub.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-brands-sub.woff2">
-<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/css/workorder.css?v=20261031">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -349,417 +346,456 @@
 </head>
 <body>
 
-<!-- STICKY CALL-NOW BAR -->
-<div class="sticky-cta">
-  <a href="tel:+15129474451"><i class="fas fa-phone-alt"></i>Call Now: (512) 947-4451<span class="sticky-cta-sub">- 24/7 Emergency Service</span></a>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<a class="callbar" href="tel:+15129474451"><svg class="ico"><use href="#i-phone"/></svg>Call Now: (512) 947-4451</a>
 
-<!-- ═══════════════════════════════════════════
-     MAIN WEBSITE
-═══════════════════════════════════════════ -->
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-left">
-      <div class="topbar-item"><i class="fas fa-phone-alt"></i><span>Call: <a href="tel:+15129474451">(512) 947-4451</a></span></div>
-      <div class="topbar-item"><i class="fas fa-envelope"></i><span><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></span></div>
-      <div class="topbar-item"><i class="fas fa-clock"></i><span>Mon-Sun · 24/7 Emergency Available</span></div>
-    </div>
-    <div class="topbar-social">
-      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
-      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
-    </div>
+<div class="strip">
+  <div class="wrap">
+    <span class="mono">Mon-Sun · 24/7 Emergency Available</span>
+    <span class="r"><a href="tel:+15129474451">(512) 947-4451</a><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></span>
   </div>
 </div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="gallery.html">Our Work</a></li>
-        <li><a href="coupons.html">Deals</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="/#areas">Areas</a></li>
-        <li><a href="/#faq">FAQ</a></li>
-      </ul>
-      <a href="tel:+15129474451" class="nav-phone"><i class="fas fa-phone-alt"></i>(512) 947-4451</a>
-      <a href="/#quote" class="nav-cta">Free Quote</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="/" class="nav-logo"><img src="/images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/gallery.html">Our Work</a></li>
+      <li><a href="/coupons.html">Deals</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/#areas">Areas</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+    <a href="tel:+15129474451" class="nav-phone"><svg class="ico"><use href="#i-phone"/></svg>(512) 947-4451</a>
+    <a href="/#quote" class="btn">Free Quote</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobile-menu">
-  <button class="mob-close" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
-  <a href="/#about" onclick="closeMobile()">About</a>
-  <a href="/#services" onclick="closeMobile()">Services</a>
-  <a href="gallery.html" onclick="closeMobile()">Our Work</a>
-  <a href="coupons.html" onclick="closeMobile()">Deals</a>
-  <a href="blog.html" onclick="closeMobile()">Blog</a>
-  <a href="/#areas" onclick="closeMobile()">Areas</a>
-  <a href="/#faq" onclick="closeMobile()">FAQ</a>
-  <a href="tel:+15129474451" class="m-phone"><i class="fas fa-phone-alt"></i> (512) 947-4451</a>
-  <a href="/#quote" class="m-cta" onclick="closeMobile()">Free Estimate</a>
+<div class="mmenu" id="mmenu">
+  <button class="x" id="mclose" aria-label="Close">&times;</button>
+  <a href="/#about">About</a>
+  <a href="/#services">Services</a>
+  <a href="/gallery.html">Our Work</a>
+  <a href="/coupons.html">Deals</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#areas">Areas</a>
+  <a href="/#faq">FAQ</a>
+  <a href="tel:+15129474451" class="mp">(512) 947-4451</a>
+  <a href="/#quote">Free Estimate</a>
 </div>
+
 <main id="main">
 
-<!-- BACK TO SERVICES BUTTON -->
-<div class="back-btn-wrap">
-  <a href="/#services" class="back-to-services"><i class="fas fa-arrow-left"></i> Back to Services</a>
-</div>
-
-<!-- SERVICE PAGE CONTENT -->
-
-<!-- SERVICE PAGE HERO -->
-<section class="svc-hero">
-  <div class="section-tag center">Austin, TX</div>
-  <h1>Garage Door Installation &amp; Replacement in Austin, TX</h1>
-  <p>Need a new garage door? We measure, take out the old door, put in the new one and set up the opener. Most installs are done in a single visit. You get a free quote and one clear price before we start.</p>
-  <div class="svc-hero-ctas">
-    <a href="tel:+15129474451" class="nav-cta" style="font-size:15px"><i class="fas fa-phone-alt"></i> Call (512) 947-4451</a>
-    <a href="/#quote" class="nav-cta" style="background:transparent;border:2px solid #fff;font-size:15px">Get a Free Quote</a>
-  </div>
-  <div class="svc-badges">
-    <span class="svc-badge"><i class="fas fa-check-circle"></i> Background-Checked &amp; Insured</span>
-    <span class="svc-badge"><i class="fas fa-clock"></i> Free Quotes</span>
-    <span class="svc-badge"><i class="fas fa-shield-alt"></i> Warrantied Work</span>
-    <span class="svc-badge"><i class="fas fa-star"></i> 5.0 Rated by Austin Homeowners</span>
-  </div>
-</section>
-
-<section class="svc-section">
-  <p>Maybe your door is beyond repair. Maybe you want better curb appeal, or a garage that stays cooler in August. Either way, a new garage door is one of the best upgrades you can make to a house. We install and replace garage doors across Austin and the surrounding area, and we do the whole job ourselves: measuring, removing the old door, installing the new one, setting the springs and tracks, and making sure the opener works with it.</p>
-  <p>Most installs take a few hours once the door is here. You see the price before we start, and the work is covered by our workmanship guarantee plus the manufacturer's warranty on the door. Scroll down to see real doors we have put in around Austin, or jump to the <a href="#price" style="color:var(--orange);font-weight:600">price breakdown</a>.</p>
-</section>
-
-<section class="svc-section" style="background:#fafafa;border-radius:14px" id="quick-answers">
-  <h2>Garage Door Installation in Austin: Quick Answers</h2>
-  <div class="svc-grid">
-    <div class="svc-item"><i class="fas fa-dollar-sign"></i><h3>How much does it cost?</h3><p>Most installed garage doors in Austin cost $900 to $2,500 or more, depending on size, style, insulation and windows.</p></div>
-    <div class="svc-item"><i class="fas fa-clock"></i><h3>How long does it take?</h3><p>Most single doors take about 3 to 5 hours, including removing the old door and balancing the new one.</p></div>
-    <div class="svc-item"><i class="fas fa-clipboard-check"></i><h3>What is included?</h3><p>Old door removal and disposal, the new door, springs, tracks, hardware and a final safety check. A new opener is quoted with the door if you need one.</p></div>
-    <div class="svc-item"><i class="fas fa-map-marker-alt"></i><h3>Where do you install?</h3><p>Austin and nearby: South, North, East and West Austin, Round Rock, Cedar Park, Pflugerville, Buda, Kyle, Manor, Leander, Georgetown, Lakeway, Hutto and Bastrop.</p></div>
-  </div>
-</section>
-
-<section class="svc-section" id="price">
-  <h2>How Much Does a New Garage Door Cost in Austin?</h2>
-  <p>Most new garage doors in Austin run <strong>$900 to $2,500 or more</strong>, installed. That is a wide range because doors vary a lot. Here is what moves the price:</p>
-  <ul>
-    <li><strong>Size.</strong> A single door costs less than a double or an oversize door.</li>
-    <li><strong>Style.</strong> Flat panel, raised panel, carriage house and modern flush designs are priced differently.</li>
-    <li><strong>Insulation.</strong> Insulated steel with a foam core costs more than a non-insulated door. It is also the upgrade most Austin homeowners ask for.</li>
-    <li><strong>Windows.</strong> Long windows and decorative glass add to the price.</li>
-    <li><strong>Finish and material.</strong> Colors, wood-look finishes and custom designs cost more than a standard white door.</li>
-    <li><strong>Opener.</strong> A new opener is quoted separately. See the <a href="liftmaster-garage-door-openers-austin.html" style="color:var(--orange);font-weight:600">LiftMaster openers</a> we install.</li>
-  </ul>
-  <p>We give you one price in writing before we touch anything. It covers taking out the old door, the new door, installation and hauling the old one away. If you want a number for your own house, send us the width, the height and a photo of your garage, and we will quote it. You can also <a href="/#quote" style="color:var(--orange);font-weight:600">request a free quote online</a>.</p>
-</section>
-
-<section class="svc-section" style="background:#fafafa;border-radius:14px" id="replace-or-repair">
-  <h2>Should You Replace Your Garage Door or Repair It?</h2>
-  <p>Repair it if one part is broken and the door is in good shape. Replace it if the door is badly damaged, old and failing in more than one place, or costs more to keep fixing than it is worth.</p>
-  <p>Signs it is time for a new door:</p>
-  <ul>
-    <li>Several panels are dented, cracked or sagging</li>
-    <li>The wood is rotting or the steel is rusting through</li>
-    <li>Repairs keep coming back</li>
-    <li>The garage gets very hot because the door has no insulation</li>
-    <li>You want a different look for the house</li>
-  </ul>
-  <p>Not sure? Call us and we will tell you honestly. If a repair will do, we will say so. Our guide on <a href="when-to-replace-garage-door-austin.html" style="color:var(--orange);font-weight:600">when to replace a garage door</a> goes into more detail, or see our <a href="garage-door-repair-austin.html" style="color:var(--orange);font-weight:600">garage door repair</a> page.</p>
-</section>
-
-<section class="svc-section" style="background:#fafafa;border-radius:14px">
-  <h2>What's Included</h2>
-  <div class="svc-grid">
-    <div class="svc-item"><i class="fas fa-th-large"></i><h3>Style Consultation</h3><p>Helping you choose a door style, carriage house, modern flush panel, or traditional raised panel, that fits your home's architecture.</p></div>
-<div class="svc-item"><i class="fas fa-layer-group"></i><h3>Material & Insulation Options</h3><p>Steel, wood composite, and aluminum doors available with varying insulation R-values. This is especially important in Austin's heat. We recommend polyurethane-core insulated doors for south- and west-facing garages.</p></div>
-<div class="svc-item"><i class="fas fa-trash-alt"></i><h3>Old Door Removal & Disposal</h3><p>Safe removal and disposal of your existing door, track, and hardware.</p></div>
-<div class="svc-item"><i class="fas fa-ruler-combined"></i><h3>Precision Installation</h3><p>Properly leveled tracks, balanced springs, and secure hardware for smooth, quiet operation.</p></div>
-<div class="svc-item"><i class="fas fa-cog"></i><h3>Opener Compatibility Check</h3><p>Verifying your existing opener works with the new door, or recommending a new opener if needed. <a href="liftmaster-garage-door-openers-austin.html" style="color:var(--orange);font-weight:600">Learn more about the LiftMaster openers we install &#8594;</a></p></div>
-<div class="svc-item"><i class="fas fa-clipboard-check"></i><h3>Final Walkthrough</h3><p>A full walkthrough of your new door's operation, maintenance tips, and warranty coverage.</p></div>
-  </div>
-</section>
-
-<section class="svc-section" id="design-your-door">
-  <h2>Design Your New Door</h2>
-  <p>Not sure which style fits your home? Use these free tools from our partner manufacturers to try different door styles, colors and window options on a sample home. It takes a few minutes and makes the decision a lot easier.</p>
-  <div class="svc-grid">
-    <div class="svc-item"><i class="fas fa-th-large"></i><h3>DoorLink Design Shop</h3><p>Upload a photo of your home or pick a sample home, then mix and match panel styles, colors and window layouts.</p><p><a href="https://doorlinkmfg.com/design-shop/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);font-weight:600">Open the Design Shop &#8594;</a> <span style="font-size:13px;color:var(--gray)">(opens in a new tab)</span></p></div>
-    <div class="svc-item"><i class="fas fa-door-closed"></i><h3>CHI DoorVisions</h3><p>See CHI overhead doors on different home styles, with plenty of design options to try.</p><p><a href="https://doorvisions.chiohd.com" target="_blank" rel="noopener noreferrer" style="color:var(--orange);font-weight:600">Open DoorVisions &#8594;</a> <span style="font-size:13px;color:var(--gray)">(opens in a new tab)</span></p></div>
-  </div>
-  <p style="margin-top:20px">Found a style you love? <a href="tel:+15129474451" style="color:var(--orange);font-weight:600">Call us</a> or <a href="/#quote" style="color:var(--orange);font-weight:600">request a free quote</a>, and we will handle the rest.</p>
-</section>
-
-<section class="svc-section" id="recent-installs">
-  <h2>Recent Garage Door Installations in Austin and Nearby</h2>
-  <p>These are real doors we installed, not stock photos. Each one started with a free estimate, and we handled the old door removal, the new door, and the opener setup.</p>
-  <div class="svc-grid">
-    <div class="svc-item"><figure style="margin:0 0 12px"><img src="images/install-mueller.webp" alt="New 8x7 DoorLink Ozark 3700 insulated garage door in cypress with long windows, Mueller, Austin TX" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;aspect-ratio:4/3;object-fit:cover"></figure><h3>Mueller, Austin</h3><p style="font-size:13px;margin-bottom:6px">October 22, 2026</p><p>A fresh door for a new build: an 8'×7' steel-back insulated door with long windows, a DoorLink Ozark 3700 in cypress. We also installed a LiftMaster 2220L chain drive opener.</p></div>
-    <div class="svc-item"><figure style="margin:0 0 12px"><img src="images/install-paige.webp" alt="New black flush 18x8 insulated steel garage door with windows, Paige TX" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;aspect-ratio:4/3;object-fit:cover"></figure><h3>Paige, TX</h3><p style="font-size:13px;margin-bottom:6px">September 20, 2026</p><p>An 18'×8' replacement with a side mount opener. A steel-back insulated black flush door with windows, a big modern upgrade.</p></div>
-    <div class="svc-item"><figure style="margin:0 0 12px"><img src="images/install-cedar-creek.webp" alt="New 10x7 white insulated carriage style garage door, Cedar Creek TX" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;aspect-ratio:4/3;object-fit:cover"></figure><h3>Cedar Creek, TX</h3><p style="font-size:13px;margin-bottom:6px">September 12, 2026</p><p>A 10'×7' insulated carriage style door in white, fitted from scratch on a new construction home.</p></div>
-    <div class="svc-item"><figure style="margin:0 0 12px"><img src="images/install-easton-park.webp" alt="New 16x7 black carriage style garage door with windows, Easton Park, Austin TX" width="800" height="600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;aspect-ratio:4/3;object-fit:cover"></figure><h3>Easton Park, Austin</h3><p style="font-size:13px;margin-bottom:6px">June 9, 2026</p><p>The old door was wrecked by a broken spring. We replaced it with a 16'×7' black carriage style door with windows across the top, a huge curb appeal upgrade.</p></div>
-  </div>
-  <p style="margin-top:18px">See the before and after photos for each job on our <a href="gallery.html" style="color:var(--orange);font-weight:600">Our Work</a> page. Putting in a new door and a new opener together? Read about the <a href="liftmaster-garage-door-openers-austin.html" style="color:var(--orange);font-weight:600">LiftMaster openers we install</a>, or <a href="/#quote" style="color:var(--orange);font-weight:600">request a free quote</a>.</p>
-</section>
-
-<section class="svc-section" id="install-reviews">
-  <h2>What Austin Homeowners Say About Our Installs</h2>
-  <div class="svc-grid">
-    <div class="svc-item"><p>"I couldn't have asked for a better experience with Let's Roll Garage Doors. Their pricing was great, and the communication throughout the entire process was outstanding. The installers showed up on time, were friendly and professional, and did an excellent job. They were respectful of my property and cleaned everything up when they were finished. From the initial quote to the completed installation, everything went smoothly. Great pricing, great communication, and quality work. I would definitely recommend Let's Roll Garage Doors to anyone needing garage door work. 5 stars!"</p><p><strong>Demonio Blanco</strong>, Google review</p></div>
-    <div class="svc-item"><p>"David was awesome. He was very good about communicating the entire process and did a very professional installation. Could not be happier! ... I know who I'll call if I need a garage door in the future."</p><p><strong>S Johnson</strong>, Google review</p></div>
-  </div>
-  <p style="margin-top:18px">Read more reviews on <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" style="color:var(--orange);font-weight:600">Google</a>, or see the photos on our <a href="gallery.html" style="color:var(--orange);font-weight:600">Our Work</a> page.</p>
-</section>
-
-<section class="svc-section">
-  <h2>Our Process</h2>
-  <div class="svc-steps">
-    <div class="svc-step"><div class="svc-step-num"></div><div class="svc-step-body"><h3>Free In-Home or Phone Consultation</h3><p>We discuss your style preferences, budget, and any specific needs like insulation or noise reduction.</p></div></div>
-<div class="svc-step"><div class="svc-step-num"></div><div class="svc-step-body"><h3>Door Selection & Quote</h3><p>We give you options and one clear price in writing, so you can pick the best fit.</p></div></div>
-<div class="svc-step"><div class="svc-step-num"></div><div class="svc-step-body"><h3>Scheduled Installation</h3><p>Most installs finish in one visit, usually 3 to 5 hours once your door is here.</p></div></div>
-<div class="svc-step"><div class="svc-step-num"></div><div class="svc-step-body"><h3>Final Inspection & Walkthrough</h3><p>We test the door, balance the springs, and walk you through care and warranty details.</p></div></div>
-  </div>
-</section>
-
-<section class="svc-section" style="background:#fafafa;border-radius:14px">
-  <h2>Why Austin Homeowners Choose Let's Roll for Garage Door Installation</h2>
-  <div class="svc-grid">
-    <div class="svc-item"><i class="fas fa-swatchbook"></i><h3>Wide Style Selection</h3><p>From classic raised-panel steel doors to modern flush designs, we carry options to match any home.</p></div>
-<div class="svc-item"><i class="fas fa-dollar-sign"></i><h3>One Clear Price</h3><p>You see the full price before we start. No surprise charges on installation day.</p></div>
-<div class="svc-item"><i class="fas fa-award"></i><h3>Manufacturer + Workmanship Warranty</h3><p>New doors are backed by manufacturer warranties plus our own installation guarantee.</p></div>
-<div class="svc-item"><i class="fas fa-calendar-check"></i><h3>Clean, On-Time Crews</h3><p>Our crew shows up when we say, treats your property with respect and cleans up when the job is done.</p></div>
-  </div>
-</section>
-
-<section class="svc-section">
-  <div class="brands-strip">
-    <p>We install doors from all major manufacturers</p>
-    <div class="brands-strip-grid">
-      <span class="brand-chip">Doorlink</span>
-      <span class="brand-chip">CHI Overhead Doors</span>
-      <span class="brand-chip">Amarr</span>
-      <span class="brand-chip">Wayne-Dalton</span>
+<!-- HERO: photo bleeds off the right, headline is label tape across it, work-order ticket tilted on top -->
+<section class="hero">
+  <figure class="hero-photo">
+    <img src="/images/install-mueller.webp" alt="New 8x7 DoorLink Ozark 3700 insulated garage door in cypress with long windows, Mueller, Austin TX" width="800" height="600" fetchpriority="high">
+  </figure>
+  <aside class="ticket" aria-label="Job summary">
+    <div class="hd mono"><span>Work order</span><span>Austin, TX</span></div>
+    <dl>
+      <dt>Installed price</dt><dd>$900 to $2,500+</dd>
+      <dt>Time on site</dt><dd>3 to 5 hours</dd>
+    </dl>
+    <div class="perf"><span>One price, in writing, before we start</span></div>
+  </aside>
+  <p class="hero-cap mono">Mueller, Austin · DoorLink Ozark 3700 in cypress</p>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="mono tag" style="background:var(--accent);color:var(--navy)">Austin, TX</p>
+      <h1>
+        <span class="l1">Garage Door</span>
+        <span class="l2">Installation</span>
+        <span class="l3">&amp; Replacement</span>
+        <span class="l4">in Austin, TX</span>
+      </h1>
+    </div>
+    <div class="hero-foot">
+      <p>Need a new garage door? We measure, take out the old door, put in the new one and set up the opener. Most installs are done in a single visit. You get a free quote and one clear price before we start.</p>
+      <div class="call">
+        <a href="tel:+15129474451" class="btn"><svg class="ico"><use href="#i-phone"/></svg>Call (512) 947-4451</a>
+        <a href="/#quote" class="lnk">Or get a free quote</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="svc-section" style="background:#fafafa;border-radius:14px" id="where-we-install">
-  <h2>Where We Install Garage Doors in Austin</h2>
-  <p>We are based in Austin and install doors all over the metro area. Here is where we work most.</p>
-  <p><strong>South Austin.</strong> Along Brodie Lane, Slaughter Lane and Manchaca Road, including Circle C Ranch, Shady Hollow and Onion Creek. See our page for <a href="garage-door-repair-south-austin.html" style="color:var(--orange);font-weight:600">garage door repair and installation in South Austin</a>.</p>
-  <p><strong>East Austin.</strong> Mueller, Easton Park and the neighborhoods around them. We recently put a new insulated door on a Mueller build, and the photos are above. More on the <a href="garage-door-repair-east-austin.html" style="color:var(--orange);font-weight:600">East Austin</a> page.</p>
-  <p><strong>North and West Austin.</strong> We cover both, with pages for <a href="garage-door-repair-north-austin.html" style="color:var(--orange);font-weight:600">North Austin</a> and <a href="garage-door-repair-west-austin.html" style="color:var(--orange);font-weight:600">West Austin</a>.</p>
-  <p><strong>Buda and Kyle.</strong> Growing neighborhoods along IH-35, like Sunfield in Buda and 6 Creeks in Kyle. See <a href="garage-door-repair-buda.html" style="color:var(--orange);font-weight:600">Buda</a> and <a href="garage-door-repair-kyle.html" style="color:var(--orange);font-weight:600">Kyle</a>.</p>
-  <p>We also install in Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, Lakeway, Hutto, Manor and Bastrop. Pick your city below.</p>
-  <div class="svc-areas-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:18px">
-    <a href="garage-door-repair-south-austin.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">South Austin</a>
-    <a href="garage-door-repair-north-austin.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">North Austin</a>
-    <a href="garage-door-repair-east-austin.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">East Austin</a>
-    <a href="garage-door-repair-west-austin.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">West Austin</a>
-    <a href="garage-door-repair-round-rock.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Round Rock</a>
-    <a href="garage-door-repair-cedar-park.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Cedar Park</a>
-    <a href="garage-door-repair-pflugerville.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Pflugerville</a>
-    <a href="garage-door-repair-buda.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Buda</a>
-    <a href="garage-door-repair-kyle.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Kyle</a>
-    <a href="garage-door-repair-manor.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Manor</a>
-    <a href="garage-door-repair-leander.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Leander</a>
-    <a href="garage-door-repair-georgetown.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Georgetown</a>
-    <a href="garage-door-repair-lakeway.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Lakeway</a>
-    <a href="garage-door-repair-hutto.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Hutto</a>
-    <a href="garage-door-repair-bastrop.html" class="svc-area-pill" style="background:#f4f4f4;border-radius:6px;padding:8px 14px;font-size:14px;color:#0f2557;font-weight:600;text-decoration:none">Bastrop</a>
-  </div>
-  <h3 style="margin-top:28px">Austin heat and your garage door</h3>
-  <p>Austin summers are hard on garages. If your garage is attached, faces south or west, or sits under a bedroom, an insulated door makes a real difference. Read our guide to <a href="garage-door-insulated-doors-austin.html" style="color:var(--orange);font-weight:600">insulated garage doors in Austin</a> and how <a href="garage-door-austin-heat-humidity.html" style="color:var(--orange);font-weight:600">heat and humidity affect your door</a>. If you have an HOA, check its door rules before you choose a style, and send them to us so we can match what is allowed.</p>
-</section>
+<div class="wrap">
+  <ul class="proof">
+    <li>Background-Checked &amp; Insured</li>
+    <li>Free Quotes</li>
+    <li>Warrantied Work</li>
+    <li>5.0 Rated by Austin Homeowners</li>
+  </ul>
+</div>
 
-<section class="svc-section" id="installation-faq">
-  <h2>Garage Door Installation Questions, Answered</h2>
-  <!-- TODO: Dudu to confirm install lead time (quote same day, install within a day or two) -->
-  <div class="svc-faq">
-    <div class="svc-faq-item"><h3>How much does a new garage door cost installed in Austin?</h3><p>Most installed garage doors in Austin cost between $900 and $2,500 or more. The price depends on size, style, insulation and windows. We give you one price in writing before we start.</p></div>
-    <div class="svc-faq-item"><h3>How long does garage door installation take?</h3><p>Most single doors take about 3 to 5 hours, including removing the old door, installing the new one and balancing it. Double doors, and jobs with a new opener, can take longer.</p></div>
-    <div class="svc-faq-item"><h3>What is the difference between garage door installation and replacement?</h3><p>In most homes it is the same job. Replacement means we take out your old door and put in a new one. Installation also covers new construction, where there is no door yet. Either way we handle the whole job.</p></div>
-    <div class="svc-faq-item"><h3>Should I repair or replace my garage door?</h3><p>Repair it if one part is broken and the door is in good shape. Replace it if the panels are badly damaged, the door is old and failing in more than one place, or repairs keep coming back. We will tell you honestly which one makes sense.</p></div>
-    <div class="svc-faq-item"><h3>Will a new garage door work with my existing opener?</h3><p>Often yes. Heavier insulated doors sometimes need a stronger opener, and we check before we quote. If you need a new opener, we install LiftMaster openers.</p></div>
-    <div class="svc-faq-item"><h3>Is an insulated garage door worth it in Austin?</h3><p>For most Austin homes, yes. It matters most if the garage is attached, faces south or west, or sits under a bedroom. An insulated steel door with a polyurethane foam core keeps the garage noticeably cooler in summer, and it is stiffer and quieter than a thin door.</p></div>
-    <div class="svc-faq-item"><h3>How soon can you install a new door?</h3><p>We can often give you a quote the same day. Standard doors can usually be installed within a day or two of approving the quote. Special colors, sizes and custom designs can take longer because the door has to be ordered.</p></div>
-    <div class="svc-faq-item"><h3>Do you remove and haul away my old door?</h3><p>Yes. Removing and disposing of the old door, track and hardware is part of the job.</p></div>
-    <div class="svc-faq-item"><h3>What warranty comes with a new garage door?</h3><p>New doors carry the manufacturer's warranty, and our installation work is covered by our workmanship guarantee. Terms vary by door, and we go over them with you before we start.</p></div>
-    <div class="svc-faq-item"><h3>Can I design my door before I buy?</h3><p>Yes. Free design tools from DoorLink and CHI let you try styles, colors and windows on a sample home or a photo of your house. The links are in the Design Your New Door section above.</p></div>
-    <div class="svc-faq-item"><h3>Which areas do you serve for garage door installation?</h3><p>We install across Austin and nearby cities, including South, North, East and West Austin, Round Rock, Cedar Park, Pflugerville, Buda, Kyle, Manor, Leander, Georgetown, Lakeway, Hutto and Bastrop.</p></div>
+<!-- 01 OVERVIEW -->
+<section class="sec">
+  <div class="wrap ov rv">
+    <p>Maybe your door is beyond repair. Maybe you want better curb appeal, or a garage that stays cooler in August. Either way, a new garage door is one of the best upgrades you can make to a house. We install and replace garage doors across Austin and the surrounding area, and we do the whole job ourselves: measuring, removing the old door, installing the new one, setting the springs and tracks, and making sure the opener works with it.</p>
+    <p>Most installs take a few hours once the door is here. You see the price before we start, and the work is covered by our workmanship guarantee plus the manufacturer's warranty on the door. Scroll down to see real doors we have put in around Austin, or jump to the <a href="#price" class="lnk">price breakdown</a>.</p>
   </div>
 </section>
 
-<section class="svc-cta-band">
-  <h2>Ready for a New Garage Door?</h2>
-  <p>Call us or send a quote request. We will tell you what your door will cost before we start.</p>
-  <a href="tel:+15129474451" class="nav-cta" style="font-size:16px"><i class="fas fa-phone-alt"></i> Call (512) 947-4451</a>
-  <p style="margin-top:14px"><a href="/#quote" style="color:#fff;text-decoration:underline">Or request a free quote online</a></p>
-</section>
-
-<section class="svc-related">
-  <h2>Explore Our Other Services</h2>
-  <div class="svc-related-grid">
-    <a href="off-track-garage-door-repair-austin.html" class="svc-related-link">Off-Track Garage Door Repair in Austin →</a>
-    <a href="garage-door-wont-open-austin.html" class="svc-related-link">Garage Door Won't Open, Austin TX →</a>
-    <a href="garage-door-repair-austin.html" class="svc-related-link">Garage Door Repair in Austin, TX →</a>
-<a href="garage-door-spring-repair-austin.html" class="svc-related-link">Garage Door Spring Repair Austin →</a>
-<a href="garage-door-cable-repair-austin.html" class="svc-related-link">Garage Door Cable Repair Austin →</a>
-<a href="garage-door-opener-repair-austin.html" class="svc-related-link">Garage Door Opener Repair Austin →</a>
-<a href="garage-door-repair-south-austin.html" class="svc-related-link">Garage Door Repair, South Austin →</a>
-<a href="garage-door-tune-up-austin.html" class="svc-related-link">Garage Door Tune-Up Austin, TX →</a>
-<a href="garage-door-sensor-alignment-austin.html" class="svc-related-link">Garage Door Sensor Alignment Austin →</a>
-<a href="garage-door-manual-release-austin.html" class="svc-related-link">Garage Door Manual Release Guide →</a>
-<a href="emergency-garage-door-repair-austin.html" class="svc-related-link">24/7 Emergency Garage Door Repair Austin →</a>
-<a href="garage-door-roller-replacement-austin.html" class="svc-related-link">Garage Door Roller Replacement Austin →</a>
-<a href="same-day-garage-door-service-austin.html" class="svc-related-link">Same-Day Garage Door Service →</a>
-<a href="garage-door-repair-cost-austin.html" class="svc-related-link">Garage Door Repair Cost Guide →</a>
-<a href="garage-door-spring-warning-signs-austin.html" class="svc-related-link">Broken Spring Warning Signs →</a>
-<a href="garage-door-maintenance-tips-austin.html" class="svc-related-link">Maintenance Tips Guide →</a>
-<a href="smart-garage-door-openers-austin.html" class="svc-related-link">Garage Door Opener Guide →</a>
-<a href="garage-door-insulated-doors-austin.html" class="svc-related-link">Insulated Garage Doors →</a>
+<!-- 02 QUICK ANSWERS: a filled-in form -->
+<section class="sec kraft" id="quick-answers">
+  <div class="wrap">
+    <span class="tag mono">Form 02 · Quick answers</span>
+    <h2 class="rv">Garage Door Installation in Austin: Quick Answers</h2>
+    <div class="form rv">
+      <div class="field"><div class="k"><b aria-hidden="true">$900&ndash;2,500+</b></div><div class="v"><h3>How much does it cost?</h3><p>Most installed garage doors in Austin cost $900 to $2,500 or more, depending on size, style, insulation and windows.</p></div></div>
+      <div class="field"><div class="k"><b aria-hidden="true">3&ndash;5 hrs</b></div><div class="v"><h3>How long does it take?</h3><p>Most single doors take about 3 to 5 hours, including removing the old door and balancing the new one.</p></div></div>
+      <div class="field"><div class="k"><b aria-hidden="true">Whole job</b></div><div class="v"><h3>What is included?</h3><p>Old door removal and disposal, the new door, springs, tracks, hardware and a final safety check. A new opener is quoted with the door if you need one.</p></div></div>
+      <div class="field"><div class="k"><b aria-hidden="true">Metro Austin</b></div><div class="v"><h3>Where do you install?</h3><p>Austin and nearby: South, North, East and West Austin, Round Rock, Cedar Park, Pflugerville, Buda, Kyle, Manor, Leander, Georgetown, Lakeway, Hutto and Bastrop.</p></div></div>
+    </div>
   </div>
 </section>
 
+<!-- 03 PRICE -->
+<section class="sec navy" id="price">
+  <div class="wrap">
+    <span class="tag mono">03 · Price</span>
+    <h2 class="rv" style="font-size:clamp(1.8rem,3.4vw,3.2rem);max-width:22ch">How Much Does a New Garage Door Cost in Austin?</h2>
+    <div class="price-top rv">
+      <p class="stamp" aria-hidden="true">$900&ndash;$2,500<i>+</i></p>
+      <p class="stamp-note" aria-hidden="true">Installed</p>
+    </div>
+    <div class="price-grid">
+      <div class="txt rv">
+        <p>Most new garage doors in Austin run <strong>$900 to $2,500 or more</strong>, installed. That is a wide range because doors vary a lot. Here is what moves the price:</p>
+        <p>We give you one price in writing before we touch anything. It covers taking out the old door, the new door, installation and hauling the old one away. If you want a number for your own house, send us the width, the height and a photo of your garage, and we will quote it. You can also <a href="/#quote" class="lnk">request a free quote online</a>.</p>
+      </div>
+      <ul class="levers rv">
+        <li><strong>Size.</strong><span>A single door costs less than a double or an oversize door.</span></li>
+        <li><strong>Style.</strong><span>Flat panel, raised panel, carriage house and modern flush designs are priced differently.</span></li>
+        <li><strong>Insulation.</strong><span>Insulated steel with a foam core costs more than a non-insulated door. It is also the upgrade most Austin homeowners ask for.</span></li>
+        <li><strong>Windows.</strong><span>Long windows and decorative glass add to the price.</span></li>
+        <li><strong>Finish and material.</strong><span>Colors, wood-look finishes and custom designs cost more than a standard white door.</span></li>
+        <li><strong>Opener.</strong><span>A new opener is quoted separately. See the <a href="/liftmaster-garage-door-openers-austin.html" class="lnk">LiftMaster openers</a> we install.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 REPAIR OR REPLACE: a checklist -->
+<section class="sec" id="replace-or-repair">
+  <div class="wrap">
+    <div class="rr">
+      <div class="l rv">
+        <span class="tag mono">04 · Repair or replace</span>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,3.6rem)">Should You Replace Your Garage Door or Repair It?</h2>
+        <p>Repair it if one part is broken and the door is in good shape. Replace it if the door is badly damaged, old and failing in more than one place, or costs more to keep fixing than it is worth.</p>
+      </div>
+      <div class="check rv">
+        <span class="mono">Signs it is time for a new door:</span>
+        <ul>
+          <li>Several panels are dented, cracked or sagging</li>
+          <li>The wood is rotting or the steel is rusting through</li>
+          <li>Repairs keep coming back</li>
+          <li>The garage gets very hot because the door has no insulation</li>
+          <li>You want a different look for the house</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note rv">Not sure? Call us and we will tell you honestly. If a repair will do, we will say so. Our guide on <a href="/when-to-replace-garage-door-austin.html" class="lnk">when to replace a garage door</a> goes into more detail, or see our <a href="/garage-door-repair-austin.html" class="lnk">garage door repair</a> page.</p>
+  </div>
+</section>
+
+<!-- 05 WHAT'S INCLUDED: invoice -->
+<section class="sec kraft">
+  <div class="wrap">
+    <span class="tag mono">05 · Scope of work</span>
+    <h2 class="rv">What's Included</h2>
+    <div class="inv rv">
+      <div class="inv-h mono"><span>No.</span><span>Line item</span><span>Status</span></div>
+      <div class="inv-r"><span class="n">01</span><div><h3>Style Consultation</h3><p>Helping you choose a door style, carriage house, modern flush panel, or traditional raised panel, that fits your home's architecture.</p></div><span class="ok"><b>Included</b></span></div>
+      <div class="inv-r"><span class="n">02</span><div><h3>Material &amp; Insulation Options</h3><p>Steel, wood composite, and aluminum doors available with varying insulation R-values. This is especially important in Austin's heat. We recommend polyurethane-core insulated doors for south- and west-facing garages.</p></div><span class="ok"><b>Included</b></span></div>
+      <div class="inv-r"><span class="n">03</span><div><h3>Old Door Removal &amp; Disposal</h3><p>Safe removal and disposal of your existing door, track, and hardware.</p></div><span class="ok"><b>Included</b></span></div>
+      <div class="inv-r"><span class="n">04</span><div><h3>Precision Installation</h3><p>Properly leveled tracks, balanced springs, and secure hardware for smooth, quiet operation.</p></div><span class="ok"><b>Included</b></span></div>
+      <div class="inv-r"><span class="n">05</span><div><h3>Opener Compatibility Check</h3><p>Verifying your existing opener works with the new door, or recommending a new opener if needed. <a href="/liftmaster-garage-door-openers-austin.html" class="lnk">Learn more about the LiftMaster openers we install &#8594;</a></p></div><span class="ok"><b>Included</b></span></div>
+      <div class="inv-r"><span class="n">06</span><div><h3>Final Walkthrough</h3><p>A full walkthrough of your new door's operation, maintenance tips, and warranty coverage.</p></div><span class="ok"><b>Included</b></span></div>
+      <div class="inv-f"><span>One price, in writing</span><span>Before we start</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 DESIGN TOOLS -->
+<section class="sec" id="design-your-door">
+  <div class="wrap">
+    <span class="tag mono">06 · Design</span>
+    <h2 class="rv" style="font-size:clamp(1.9rem,3.6vw,3.6rem)">Design Your New Door</h2>
+    <p class="rv" style="margin-top:1rem;max-width:60ch;font-size:1.15rem">Not sure which style fits your home? Use these free tools from our partner manufacturers to try different door styles, colors and window options on a sample home. It takes a few minutes and makes the decision a lot easier.</p>
+    <div class="tools rv">
+      <a class="tool" href="https://doorlinkmfg.com/design-shop/" target="_blank" rel="noopener noreferrer">
+        <h3>DoorLink Design Shop</h3><p>Upload a photo of your home or pick a sample home, then mix and match panel styles, colors and window layouts.</p>
+        <span class="go">Open the Design Shop <svg class="ico"><use href="#i-arrow"/></svg><span class="sr">(opens in a new tab)</span></span>
+      </a>
+      <a class="tool" href="https://doorvisions.chiohd.com" target="_blank" rel="noopener noreferrer">
+        <h3>CHI DoorVisions</h3><p>See CHI overhead doors on different home styles, with plenty of design options to try.</p>
+        <span class="go">Open DoorVisions <svg class="ico"><use href="#i-arrow"/></svg><span class="sr">(opens in a new tab)</span></span>
+      </a>
+    </div>
+    <p class="after rv">Found a style you love? <a href="tel:+15129474451" class="lnk">Call us</a> or <a href="/#quote" class="lnk">request a free quote</a>, and we will handle the rest.</p>
+  </div>
+</section>
+
+<!-- 07 RECENT INSTALLS: sideways strip -->
+<section class="sec kraft" id="recent-installs" style="padding-bottom:clamp(40px,5vw,72px)">
+  <div class="wrap">
+    <span class="tag mono">07 · Field work</span>
+    <div class="strip-h">
+      <h2 class="rv" style="max-width:20ch">Recent Garage Door Installations in Austin and Nearby</h2>
+      <p class="mono" aria-hidden="true">Scroll sideways &rarr;</p>
+    </div>
+    <p class="rv" style="margin-top:1rem;max-width:60ch;font-size:1.15rem">These are real doors we installed, not stock photos. Each one started with a free estimate, and we handled the old door removal, the new door, and the opener setup.</p>
+  </div>
+  <div class="reel" tabindex="0" role="region" aria-label="Recent installations">
+    <article class="r1"><figure><img src="/images/install-mueller.webp" alt="New 8x7 DoorLink Ozark 3700 insulated garage door in cypress with long windows, Mueller, Austin TX" width="800" height="600" loading="lazy" decoding="async"></figure><h3>Mueller, Austin</h3><span class="d mono">October 22, 2026</span><p class="t">A fresh door for a new build: an 8'×7' steel-back insulated door with long windows, a DoorLink Ozark 3700 in cypress. We also installed a LiftMaster 2220L chain drive opener.</p></article>
+    <article class="r2"><figure><img src="/images/install-paige.webp" alt="New black flush 18x8 insulated steel garage door with windows, Paige TX" width="800" height="600" loading="lazy" decoding="async"></figure><h3>Paige, TX</h3><span class="d mono">September 20, 2026</span><p class="t">An 18'×8' replacement with a side mount opener. A steel-back insulated black flush door with windows, a big modern upgrade.</p></article>
+    <article class="r3"><figure><img src="/images/install-cedar-creek.webp" alt="New 10x7 white insulated carriage style garage door, Cedar Creek TX" width="800" height="600" loading="lazy" decoding="async"></figure><h3>Cedar Creek, TX</h3><span class="d mono">September 12, 2026</span><p class="t">A 10'×7' insulated carriage style door in white, fitted from scratch on a new construction home.</p></article>
+    <article class="r4"><figure><img src="/images/install-easton-park.webp" alt="New 16x7 black carriage style garage door with windows, Easton Park, Austin TX" width="800" height="600" loading="lazy" decoding="async"></figure><h3>Easton Park, Austin</h3><span class="d mono">June 9, 2026</span><p class="t">The old door was wrecked by a broken spring. We replaced it with a 16'×7' black carriage style door with windows across the top, a huge curb appeal upgrade.</p></article>
+  </div>
+  <div class="wrap">
+    <p class="rv" style="max-width:62ch">See the before and after photos for each job on our <a href="/gallery.html" class="lnk">Our Work</a> page. Putting in a new door and a new opener together? Read about the <a href="/liftmaster-garage-door-openers-austin.html" class="lnk">LiftMaster openers we install</a>, or <a href="/#quote" class="lnk">request a free quote</a>.</p>
+  </div>
+</section>
+
+<!-- 08 REVIEWS -->
+<section class="sec navy" id="install-reviews">
+  <div class="wrap">
+    <span class="tag mono">08 · Proof</span>
+    <h2 class="rv" style="font-size:clamp(1.8rem,3.4vw,3.2rem);max-width:24ch">What Austin Homeowners Say About Our Installs</h2>
+    <div class="rev">
+      <div class="q1 rv"><p class="q">"I couldn't have asked for a better experience with Let's Roll Garage Doors. Their pricing was great, and the communication throughout the entire process was outstanding. The installers showed up on time, were friendly and professional, and did an excellent job. They were respectful of my property and cleaned everything up when they were finished. From the initial quote to the completed installation, everything went smoothly. Great pricing, great communication, and quality work. I would definitely recommend Let's Roll Garage Doors to anyone needing garage door work. 5 stars!"</p><span class="who"><strong>Demonio Blanco</strong>, Google review</span></div>
+      <div class="q2 rv"><p class="q">"David was awesome. He was very good about communicating the entire process and did a very professional installation. Could not be happier! ... I know who I'll call if I need a garage door in the future."</p><span class="who"><strong>S Johnson</strong>, Google review</span></div>
+    </div>
+    <p class="rev-after rv">Read more reviews on <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" class="lnk">Google</a>, or see the photos on our <a href="/gallery.html" class="lnk">Our Work</a> page.</p>
+  </div>
+</section>
+
+<!-- 09 PROCESS -->
+<section class="sec">
+  <div class="wrap">
+    <span class="tag mono">09 · Process</span>
+    <h2 class="rv">Our Process</h2>
+    <div class="line">
+      <div class="s rv"><h3>Free In-Home or Phone Consultation</h3><p>We discuss your style preferences, budget, and any specific needs like insulation or noise reduction.</p></div>
+      <div class="s rv"><h3>Door Selection &amp; Quote</h3><p>We give you options and one clear price in writing, so you can pick the best fit.</p></div>
+      <div class="s rv"><h3>Scheduled Installation</h3><p>Most installs finish in one visit, usually 3 to 5 hours once your door is here.</p></div>
+      <div class="s rv"><h3>Final Inspection &amp; Walkthrough</h3><p>We test the door, balance the springs, and walk you through care and warranty details.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 WHY -->
+<section class="sec kraft">
+  <div class="wrap">
+    <span class="tag mono">10 · Why us</span>
+    <h2 class="rv" style="font-size:clamp(1.5rem,2.6vw,2.4rem);max-width:30ch">Why Austin Homeowners Choose Let's Roll for Garage Door Installation</h2>
+    <div class="why rv">
+      <div class="b"><h3>Wide Style Selection</h3><p>From classic raised-panel steel doors to modern flush designs, we carry options to match any home.</p></div>
+      <div class="b"><h3>One Clear Price</h3><p>You see the full price before we start. No surprise charges on installation day.</p></div>
+      <div class="b"><h3>Manufacturer + Workmanship Warranty</h3><p>New doors are backed by manufacturer warranties plus our own installation guarantee.</p></div>
+      <div class="b"><h3>Clean, On-Time Crews</h3><p>Our crew shows up when we say, treats your property with respect and cleans up when the job is done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="brands" aria-label="Manufacturers we install">
+  <div class="wrap">
+    <p class="mono">We install doors from all major manufacturers</p>
+    <div class="stamps" aria-hidden="true"><span>Doorlink</span><span>CHI Overhead Doors</span><span>Amarr</span><span>Wayne-Dalton</span></div>
+    <p class="sr">Doorlink, CHI Overhead Doors, Amarr, Wayne-Dalton</p>
+  </div>
+</section>
+
+<!-- 11 AREAS: route sheet -->
+<section class="sec" id="where-we-install">
+  <div class="wrap">
+    <span class="tag mono">11 · Coverage</span>
+    <h2 class="rv">Where We Install Garage Doors in Austin</h2>
+    <div class="areas-intro rv">
+      <p class="wide">We are based in Austin and install doors all over the metro area. Here is where we work most.</p>
+      <p><strong>South Austin.</strong> Along Brodie Lane, Slaughter Lane and Manchaca Road, including Circle C Ranch, Shady Hollow and Onion Creek. See our page for <a href="/garage-door-repair-south-austin.html" class="lnk">garage door repair and installation in South Austin</a>.</p>
+      <p><strong>East Austin.</strong> Mueller, Easton Park and the neighborhoods around them. We recently put a new insulated door on a Mueller build, and the photos are above. More on the <a href="/garage-door-repair-east-austin.html" class="lnk">East Austin</a> page.</p>
+      <p><strong>North and West Austin.</strong> We cover both, with pages for <a href="/garage-door-repair-north-austin.html" class="lnk">North Austin</a> and <a href="/garage-door-repair-west-austin.html" class="lnk">West Austin</a>.</p>
+      <p><strong>Buda and Kyle.</strong> Growing neighborhoods along IH-35, like Sunfield in Buda and 6 Creeks in Kyle. See <a href="/garage-door-repair-buda.html" class="lnk">Buda</a> and <a href="/garage-door-repair-kyle.html" class="lnk">Kyle</a>.</p>
+      <p class="wide">We also install in Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, Lakeway, Hutto, Manor and Bastrop. Pick your city below.</p>
+    </div>
+    <nav class="cities rv" aria-label="Service areas">
+      <a href="/garage-door-repair-south-austin.html">South Austin</a>
+      <a href="/garage-door-repair-north-austin.html">North Austin</a>
+      <a href="/garage-door-repair-east-austin.html">East Austin</a>
+      <a href="/garage-door-repair-west-austin.html">West Austin</a>
+      <a href="/garage-door-repair-round-rock.html">Round Rock</a>
+      <a href="/garage-door-repair-cedar-park.html">Cedar Park</a>
+      <a href="/garage-door-repair-pflugerville.html">Pflugerville</a>
+      <a href="/garage-door-repair-buda.html">Buda</a>
+      <a href="/garage-door-repair-kyle.html">Kyle</a>
+      <a href="/garage-door-repair-manor.html">Manor</a>
+      <a href="/garage-door-repair-leander.html">Leander</a>
+      <a href="/garage-door-repair-georgetown.html">Georgetown</a>
+      <a href="/garage-door-repair-lakeway.html">Lakeway</a>
+      <a href="/garage-door-repair-hutto.html">Hutto</a>
+      <a href="/garage-door-repair-bastrop.html">Bastrop</a>
+    </nav>
+    <div class="heat rv">
+      <h3>Austin heat and your garage door</h3>
+      <p>Austin summers are hard on garages. If your garage is attached, faces south or west, or sits under a bedroom, an insulated door makes a real difference. Read our guide to <a href="/garage-door-insulated-doors-austin.html" class="lnk">insulated garage doors in Austin</a> and how <a href="/garage-door-austin-heat-humidity.html" class="lnk">heat and humidity affect your door</a>. If you have an HOA, check its door rules before you choose a style, and send them to us so we can match what is allowed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 FAQ -->
+<section class="sec kraft" id="installation-faq">
+  <div class="wrap faq">
+    <div class="hd rv"><span class="tag mono">12 · Questions</span><h2 style="font-size:clamp(1.8rem,3.2vw,3.2rem)">Garage Door Installation Questions, Answered</h2></div>
+    <div class="rv">
+      <details open><summary><h3>How much does a new garage door cost installed in Austin?</h3></summary><p>Most installed garage doors in Austin cost between $900 and $2,500 or more. The price depends on size, style, insulation and windows. We give you one price in writing before we start.</p></details>
+      <details><summary><h3>How long does garage door installation take?</h3></summary><p>Most single doors take about 3 to 5 hours, including removing the old door, installing the new one and balancing it. Double doors, and jobs with a new opener, can take longer.</p></details>
+      <details><summary><h3>What is the difference between garage door installation and replacement?</h3></summary><p>In most homes it is the same job. Replacement means we take out your old door and put in a new one. Installation also covers new construction, where there is no door yet. Either way we handle the whole job.</p></details>
+      <details><summary><h3>Should I repair or replace my garage door?</h3></summary><p>Repair it if one part is broken and the door is in good shape. Replace it if the panels are badly damaged, the door is old and failing in more than one place, or repairs keep coming back. We will tell you honestly which one makes sense.</p></details>
+      <details><summary><h3>Will a new garage door work with my existing opener?</h3></summary><p>Often yes. Heavier insulated doors sometimes need a stronger opener, and we check before we quote. If you need a new opener, we install LiftMaster openers.</p></details>
+      <details><summary><h3>Is an insulated garage door worth it in Austin?</h3></summary><p>For most Austin homes, yes. It matters most if the garage is attached, faces south or west, or sits under a bedroom. An insulated steel door with a polyurethane foam core keeps the garage noticeably cooler in summer, and it is stiffer and quieter than a thin door.</p></details>
+      <details><summary><h3>How soon can you install a new door?</h3></summary><p>We can often give you a quote the same day. Standard doors can usually be installed within a day or two of approving the quote. Special colors, sizes and custom designs can take longer because the door has to be ordered.</p></details>
+      <details><summary><h3>Do you remove and haul away my old door?</h3></summary><p>Yes. Removing and disposing of the old door, track and hardware is part of the job.</p></details>
+      <details><summary><h3>What warranty comes with a new garage door?</h3></summary><p>New doors carry the manufacturer's warranty, and our installation work is covered by our workmanship guarantee. Terms vary by door, and we go over them with you before we start.</p></details>
+      <details><summary><h3>Can I design my door before I buy?</h3></summary><p>Yes. Free design tools from DoorLink and CHI let you try styles, colors and windows on a sample home or a photo of your house. The links are in the Design Your New Door section above.</p></details>
+      <details><summary><h3>Which areas do you serve for garage door installation?</h3></summary><p>We install across Austin and nearby cities, including South, North, East and West Austin, Round Rock, Cedar Park, Pflugerville, Buda, Kyle, Manor, Leander, Georgetown, Lakeway, Hutto and Bastrop.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta-in" style="padding-top:18px">
+    <div>
+      <h2>Ready for a New Garage Door?</h2>
+      <p>Call us or send a quote request. We will tell you what your door will cost before we start.</p>
+    </div>
+    <div>
+      <a href="tel:+15129474451" class="tel"><svg class="ico" style="width:.6em;height:.6em"><use href="#i-phone"/></svg>(512) 947-4451</a>
+      <a href="/#quote" class="oq lnk">Or request a free quote online</a>
+    </div>
+  </div>
+</section>
+
+<section class="related">
+  <div class="wrap">
+    <h2 style="font-size:clamp(1.6rem,2.6vw,2.4rem)">Explore Our Other Services</h2>
+    <ul>
+      <li><a href="/off-track-garage-door-repair-austin.html">Off-Track Garage Door Repair in Austin</a></li>
+      <li><a href="/garage-door-wont-open-austin.html">Garage Door Won't Open, Austin TX</a></li>
+      <li><a href="/garage-door-repair-austin.html">Garage Door Repair in Austin, TX</a></li>
+      <li><a href="/garage-door-spring-repair-austin.html">Garage Door Spring Repair Austin</a></li>
+      <li><a href="/garage-door-cable-repair-austin.html">Garage Door Cable Repair Austin</a></li>
+      <li><a href="/garage-door-opener-repair-austin.html">Garage Door Opener Repair Austin</a></li>
+      <li><a href="/garage-door-repair-south-austin.html">Garage Door Repair, South Austin</a></li>
+      <li><a href="/garage-door-tune-up-austin.html">Garage Door Tune-Up Austin, TX</a></li>
+      <li><a href="/garage-door-sensor-alignment-austin.html">Garage Door Sensor Alignment Austin</a></li>
+      <li><a href="/garage-door-manual-release-austin.html">Garage Door Manual Release Guide</a></li>
+      <li><a href="/emergency-garage-door-repair-austin.html">24/7 Emergency Garage Door Repair Austin</a></li>
+      <li><a href="/garage-door-roller-replacement-austin.html">Garage Door Roller Replacement Austin</a></li>
+      <li><a href="/same-day-garage-door-service-austin.html">Same-Day Garage Door Service</a></li>
+      <li><a href="/garage-door-repair-cost-austin.html">Garage Door Repair Cost Guide</a></li>
+      <li><a href="/garage-door-spring-warning-signs-austin.html">Broken Spring Warning Signs</a></li>
+      <li><a href="/garage-door-maintenance-tips-austin.html">Maintenance Tips Guide</a></li>
+      <li><a href="/smart-garage-door-openers-austin.html">Garage Door Opener Guide</a></li>
+      <li><a href="/garage-door-insulated-doors-austin.html">Insulated Garage Doors</a></li>
+    </ul>
+  </div>
+</section>
 
 </main>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async"></div>
-      <p>Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img src="/images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async">
+        <p style="max-width:32ch">Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/#areas">Service Areas</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#quote">Free Estimate</a></li>
+          <li><a href="/warranty-terms.html">Warranty Terms</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/garage-door-repair-austin.html">Garage Door Repair</a></li>
+          <li><a href="/garage-door-installation-austin.html">Door Installation</a></li>
+          <li><a href="/garage-door-opener-repair-austin.html">Opener Repair &amp; Install</a></li>
+          <li><a href="/garage-door-spring-repair-austin.html">Spring Replacement</a></li>
+          <li><a href="/garage-door-cable-repair-austin.html">Cable Repair</a></li>
+          <li><a href="/emergency-garage-door-repair-austin.html">24/7 Emergency</a></li>
+          <li><a href="/same-day-garage-door-service-austin.html">Same-Day Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Service Areas</h3>
+        <ul class="areas">
+          <li><a href="/garage-door-repair-south-austin.html">South Austin</a></li>
+          <li><a href="/garage-door-repair-north-austin.html">North Austin</a></li>
+          <li><a href="/garage-door-repair-east-austin.html">East Austin</a></li>
+          <li><a href="/garage-door-repair-west-austin.html">West Austin</a></li>
+          <li><a href="/garage-door-repair-round-rock.html">Round Rock</a></li>
+          <li><a href="/garage-door-repair-cedar-park.html">Cedar Park</a></li>
+          <li><a href="/garage-door-repair-pflugerville.html">Pflugerville</a></li>
+          <li><a href="/garage-door-repair-buda.html">Buda</a></li>
+          <li><a href="/garage-door-repair-georgetown.html">Georgetown</a></li>
+          <li><a href="/garage-door-repair-kyle.html">Kyle</a></li>
+          <li><a href="/garage-door-repair-lakeway.html">Lakeway</a></li>
+          <li><a href="/garage-door-repair-leander.html">Leander</a></li>
+          <li><a href="/garage-door-repair-hutto.html">Hutto</a></li>
+          <li><a href="/garage-door-repair-manor.html">Manor</a></li>
+          <li><a href="/garage-door-repair-bastrop.html">Bastrop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:+15129474451" style="font-family:var(--display);font-size:1.5rem;color:var(--bg)">(512) 947-4451</a><br><span class="mono" style="font-size:11px">24/7 Emergency Line</span></p>
+        <p style="margin-top:12px"><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p>
+        <p style="margin-top:12px">720 Airport Blvd #1280<br>Austin, TX 78702</p>
+        <p style="margin-top:12px"><strong style="color:var(--bg)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="/#services"><i class="fas fa-chevron-right"></i>Services</a></li>
-        <li><a href="blog.html"><i class="fas fa-chevron-right"></i>Blog</a></li>
-        <li><a href="/#areas"><i class="fas fa-chevron-right"></i>Service Areas</a></li>
-        <li><a href="/#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
-        <li><a href="/#quote"><i class="fas fa-chevron-right"></i>Free Estimate</a></li>
-        <li><a href="warranty-terms.html"><i class="fas fa-chevron-right"></i>Warranty Terms</a></li>
-        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>Garage Door Repair</a></li>
-        <li><a href="garage-door-installation-austin.html"><i class="fas fa-chevron-right"></i>Door Installation</a></li>
-        <li><a href="garage-door-opener-repair-austin.html"><i class="fas fa-chevron-right"></i>Opener Repair &amp; Install</a></li>
-        <li><a href="garage-door-spring-repair-austin.html"><i class="fas fa-chevron-right"></i>Spring Replacement</a></li>
-        <li><a href="garage-door-cable-repair-austin.html"><i class="fas fa-chevron-right"></i>Cable Repair</a></li>
-        <li><a href="emergency-garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>24/7 Emergency</a></li>
-        <li><a href="same-day-garage-door-service-austin.html"><i class="fas fa-chevron-right"></i>Same-Day Service</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Service Areas</h3>
-      <ul>
-        <li><a href="garage-door-repair-south-austin.html"><i class="fas fa-chevron-right"></i>South Austin</a></li>
-        <li><a href="garage-door-repair-north-austin.html"><i class="fas fa-chevron-right"></i>North Austin</a></li>
-        <li><a href="garage-door-repair-east-austin.html"><i class="fas fa-chevron-right"></i>East Austin</a></li>
-        <li><a href="garage-door-repair-west-austin.html"><i class="fas fa-chevron-right"></i>West Austin</a></li>
-        <li><a href="garage-door-repair-round-rock.html"><i class="fas fa-chevron-right"></i>Round Rock</a></li>
-        <li><a href="garage-door-repair-cedar-park.html"><i class="fas fa-chevron-right"></i>Cedar Park</a></li>
-        <li><a href="garage-door-repair-pflugerville.html"><i class="fas fa-chevron-right"></i>Pflugerville</a></li>
-        <li><a href="garage-door-repair-buda.html"><i class="fas fa-chevron-right"></i>Buda</a></li>
-        <li><a href="garage-door-repair-georgetown.html"><i class="fas fa-chevron-right"></i>Georgetown</a></li>
-        <li><a href="garage-door-repair-kyle.html"><i class="fas fa-chevron-right"></i>Kyle</a></li>
-        <li><a href="garage-door-repair-lakeway.html"><i class="fas fa-chevron-right"></i>Lakeway</a></li>
-        <li><a href="garage-door-repair-leander.html"><i class="fas fa-chevron-right"></i>Leander</a></li>
-        <li><a href="garage-door-repair-hutto.html"><i class="fas fa-chevron-right"></i>Hutto</a></li>
-        <li><a href="garage-door-repair-manor.html"><i class="fas fa-chevron-right"></i>Manor</a></li>
-        <li><a href="garage-door-repair-bastrop.html"><i class="fas fa-chevron-right"></i>Bastrop</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+15129474451">(512) 947-4451</a><br><span style="font-size:12px;color:var(--gray)">24/7 Emergency Line</span></p></div>
-      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p></div>
-      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p style="color:var(--gray)">720 Airport Blvd #1280<br>Austin, TX 78702</p></div>
-      <div class="footer-contact-item"><i class="fas fa-clock"></i><p style="color:var(--gray)"><strong style="color:var(--black)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
-    <div class="footer-social">
-      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
-      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+    <div class="f-bottom">
+      <p>© 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
+      <div class="s2">
+        <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+        <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer">Yelp Reviews</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script>
-// Mobile menu
-const ham=document.getElementById('hamburger'),mMenu=document.getElementById('mobile-menu'),mClose=document.getElementById('mob-close');
-function openMobile(){mMenu.classList.add('open');document.body.style.overflow='hidden';ham.classList.add('open');ham.setAttribute('aria-expanded','true')}
-function closeMobile(){mMenu.classList.remove('open');document.body.style.overflow='';ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}
-ham.addEventListener('click',openMobile);
-mClose.addEventListener('click',closeMobile);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMobile()}});
-
-
-// FAQ accordion
-function toggleFaq(el){
-  const item=el.parentElement,isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false')});
-  if(!isOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
-}
-document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(q)}})});
-
-// Form, submits to Web3Forms (real lead delivery to letsrollgaragedoors@gmail.com)
-async function submitQuoteForm(e){
-  e.preventDefault();
-  const form = document.getElementById('quote-form');
-  const btn = form.querySelector('.form-submit');
-  const originalText = btn.textContent;
-
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      btn.textContent = '✓ Request Sent!';
-      btn.style.background = '#1a7a3a';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 5000);
-    } else {
-      throw new Error(data.message || 'Submission failed');
-    }
-  } catch (err) {
-    btn.textContent = 'Error, Try Again';
-    btn.style.background = '#c0392b';
-    btn.disabled = false;
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-    }, 4000);
-  }
-  return false;
-}
+document.documentElement.classList.add('js');
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mmenu'),c=document.getElementById('mclose');
+  function set(o){m.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';b.setAttribute('aria-expanded',o)}
+  b.addEventListener('click',function(){set(true)});c.addEventListener('click',function(){set(false)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
 </script>
 <!-- ═══════════════════════════════════════════
      ARTICLE PAGES (hidden by default)
@@ -768,6 +804,6 @@ async function submitQuoteForm(e){
 <!-- Article 1: Spring Warning Signs -->
 <script>/* analytics tags load after first interaction (or 5s) to keep the first paint fast */
 (function(){var d=0;function go(){if(d)return;d=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag("js",new Date());gtag("config","G-P3MF0KR48G");var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id=G-P3MF0KR48G";document.head.appendChild(g);var o={ti:"187261177",enableAutoSpaTracking:true},w=window,u="uetq";w[u]=w[u]||[];o.ts=(new Date).getTime();var n=document.createElement("script");n.src="https://bat.bing.net/bat.js?ti="+o.ti;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&"loaded"!==s&&"complete"!==s||(o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad"),n.onload=n.onreadystatechange=null)};document.head.appendChild(n);}["scroll","touchstart","mousemove","keydown","click"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});setTimeout(go,5000)})();</script>
-<script src="js/widgets.js" defer></script>
+<script src="/js/widgets.js" defer></script>
 </body>
 </html>

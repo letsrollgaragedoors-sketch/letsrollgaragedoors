@@ -1,0 +1,6 @@
+/* Color variant: verdigris (oxidized copper green-teal). Load after redesign.css. */
+:root{
+  --accent:#0f6b66;
+  --accent-d:#0a4f4b;
+  --accent-l:#5fd6c8;
+}

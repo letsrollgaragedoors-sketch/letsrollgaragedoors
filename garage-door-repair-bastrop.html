@@ -229,92 +229,115 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"></noscript>
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-solid-sub.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-brands-sub.woff2">
-<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/css/workorder.css?v=20261031">
 
 </head>
 <body>
 
-<!-- STICKY CALL-NOW BAR -->
-<div class="sticky-cta">
-  <a href="tel:+15129474451"><i class="fas fa-phone-alt"></i>Call Now: (512) 947-4451<span class="sticky-cta-sub">- 24/7 Emergency Service</span></a>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<a class="callbar" href="tel:+15129474451"><svg class="ico"><use href="#i-phone"/></svg>Call Now: (512) 947-4451</a>
 
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="gallery.html">Our Work</a></li>
-        <li><a href="coupons.html">Deals</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="/#areas">Areas</a></li>
-        <li><a href="/#faq">FAQ</a></li>
-      </ul>
-      <a href="tel:+15129474451" class="nav-phone"><i class="fas fa-phone-alt"></i>(512) 947-4451</a>
-      <a href="/#quote" class="nav-cta">Free Quote</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<div class="strip">
+  <div class="wrap">
+    <span class="mono">Mon-Sun · 24/7 Emergency Available</span>
+    <span class="r"><a href="tel:+15129474451">(512) 947-4451</a><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></span>
+  </div>
+</div>
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="/" class="nav-logo"><img src="/images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/gallery.html">Our Work</a></li>
+      <li><a href="/coupons.html">Deals</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/#areas">Areas</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+    <a href="tel:+15129474451" class="nav-phone"><svg class="ico"><use href="#i-phone"/></svg>(512) 947-4451</a>
+    <a href="/#quote" class="btn">Free Quote</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobile-menu">
-  <button class="mob-close" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
-  <a href="/#about" onclick="closeMobile()">About</a>
-  <a href="/#services" onclick="closeMobile()">Services</a>
-  <a href="gallery.html" onclick="closeMobile()">Our Work</a>
-  <a href="coupons.html" onclick="closeMobile()">Deals</a>
-  <a href="blog.html" onclick="closeMobile()">Blog</a>
-  <a href="/#areas" onclick="closeMobile()">Areas</a>
-  <a href="/#faq" onclick="closeMobile()">FAQ</a>
-  <a href="tel:+15129474451" class="m-phone"><i class="fas fa-phone-alt"></i> (512) 947-4451</a>
-  <a href="/#quote" class="m-cta" onclick="closeMobile()">Free Estimate</a>
+<div class="mmenu" id="mmenu">
+  <button class="x" id="mclose" aria-label="Close">&times;</button>
+  <a href="/#about">About</a>
+  <a href="/#services">Services</a>
+  <a href="/gallery.html">Our Work</a>
+  <a href="/coupons.html">Deals</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#areas">Areas</a>
+  <a href="/#faq">FAQ</a>
+  <a href="tel:+15129474451" class="mp">(512) 947-4451</a>
+  <a href="/#quote">Free Estimate</a>
 </div>
+
 <main id="main">
 
 <!-- BACK TO SERVICES BUTTON -->
-<div class="back-btn-wrap">
-  <a href="/#services" class="back-to-services"><i class="fas fa-arrow-left"></i> Back to Services</a>
-</div>
-
 <!-- SERVICE PAGE CONTENT -->
 
 <!-- SERVICE PAGE HERO -->
-<section class="svc-hero">
-  <div class="section-tag center">Bastrop, TX</div>
-  <h1>Garage Door Repair in Bastrop, TX</h1>
-  <p>Spring trouble in Tahitian Village? Door stuck in ColoVista? We serve every Bastrop neighborhood with same-day garage door repair - springs, cables, openers, and more.</p>
-  <div class="svc-hero-ctas">
-    <a href="tel:+15129474451" class="nav-cta" style="font-size:15px"><i class="fas fa-phone-alt"></i> Call (512) 947-4451</a>
-    <a href="/#quote" class="nav-cta" style="background:transparent;border:2px solid #fff;font-size:15px">Get a Free Quote</a>
-  </div>
-  <div class="svc-badges">
-    <span class="svc-badge"><i class="fas fa-check-circle"></i> Background-Checked &amp; Insured</span>
-    <span class="svc-badge"><i class="fas fa-clock"></i> Same-Day Service</span>
-    <span class="svc-badge"><i class="fas fa-shield-alt"></i> Warrantied Work</span>
-    <span class="svc-badge"><i class="fas fa-star"></i> 5.0 Rated by Austin Homeowners</span>
+<section class="hero">
+  <figure class="hero-photo">
+    <img src="/images/job5-after-1.webp" alt="Garage door work by Let&#x27;s Roll Garage Doors: Garage Door Repair in Bastrop, TX" width="800" height="600" fetchpriority="high">
+  </figure>
+  <aside class="ticket" aria-label="Job summary">
+    <div class="hd mono"><span>Work order</span><span>Austin, TX</span></div>
+    <dl>
+      <dt>Hours</dt><dd>24/7 emergency</dd>
+      <dt>Call</dt><dd>(512) 947-4451</dd>
+    </dl>
+    <div class="perf"><span>Background-Checked &amp; Insured · Same-Day Service</span></div>
+  </aside>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="mono tag" style="background:var(--accent);color:var(--navy)">Bastrop, TX</p>
+      <h1>
+        <span class="l1">Garage Door</span>
+        <span class="l2">Repair</span>
+        <span class="l4">in Bastrop, TX</span>
+      </h1>
+    </div>
+    <div class="hero-foot">
+      <p>Spring trouble in Tahitian Village? Door stuck in ColoVista? We serve every Bastrop neighborhood with same-day garage door repair - springs, cables, openers, and more.</p>
+      <div class="call">
+        <a href="tel:+15129474451" class="btn"><svg class="ico"><use href="#i-phone"/></svg>Call (512) 947-4451</a>
+        <a href="/#quote" class="lnk">Or get a free quote</a>
+      </div>
+    </div>
   </div>
 </section>
+<div class="wrap">
+  <ul class="proof">
+    <li>Background-Checked &amp; Insured</li>
+    <li>Same-Day Service</li>
+    <li>Warrantied Work</li>
+    <li>5.0 Rated by Austin Homeowners</li>
+  </ul>
+</div>
+
 
 <section class="svc-section">
   <p>Bastrop sits along the Colorado River in the Lost Pines region, with a mix of historic homes near the downtown historic district and newer construction spread through wooded, large-lot neighborhoods like Tahitian Village and ColoVista. Let's Roll Garage Doors provides same-day garage door repair in Bastrop, TX, with technicians dispatched from the Austin area.</p>
 <p>We serve all of Bastrop including <strong>Tahitian Village, Hunter's Crossing, ColoVista, Pine Forest, and the Old Town Bastrop historic district</strong> - zip code 78602. Many homes in Bastrop's older, wooded neighborhoods have detached garages and long driveways, and pine sap, pollen, and falling needles build up on tracks and rollers faster than in more open subdivisions - something we check on every service call.</p>
 </section>
 
-<section class="svc-section" style="background:#fafafa;border-radius:14px">
+<section class="svc-section">
   <h2>Garage Door Services in Bastrop, TX</h2>
   <div class="svc-grid">
-    <div class="svc-item"><i class="fas fa-compress-arrows-alt"></i><h3>Spring Replacement</h3><p>Safe torsion and extension spring replacement, the most common repair we handle. <a href="garage-door-spring-repair-austin.html" style="color:var(--orange);font-weight:600">Learn more →</a></p></div>
-<div class="svc-item"><i class="fas fa-grip-lines"></i><h3>Cable Repair</h3><p>Snapped or frayed lift cables replaced same-day. <a href="garage-door-cable-repair-austin.html" style="color:var(--orange);font-weight:600">Learn more →</a></p></div>
-<div class="svc-item"><i class="fas fa-microchip"></i><h3>Opener Repair &amp; Install</h3><p>LiftMaster, Chamberlain, Genie, and Craftsman openers serviced and installed. <a href="garage-door-opener-repair-austin.html" style="color:var(--orange);font-weight:600">Learn more →</a></p></div>
+    <div class="svc-item"><i class="fas fa-compress-arrows-alt"></i><h3>Spring Replacement</h3><p>Safe torsion and extension spring replacement, the most common repair we handle. <a href="/garage-door-spring-repair-austin.html" class="lnk">Learn more →</a></p></div>
+<div class="svc-item"><i class="fas fa-grip-lines"></i><h3>Cable Repair</h3><p>Snapped or frayed lift cables replaced same-day. <a href="/garage-door-cable-repair-austin.html" class="lnk">Learn more →</a></p></div>
+<div class="svc-item"><i class="fas fa-microchip"></i><h3>Opener Repair &amp; Install</h3><p>LiftMaster, Chamberlain, Genie, and Craftsman openers serviced and installed. <a href="/garage-door-opener-repair-austin.html" class="lnk">Learn more →</a></p></div>
 <div class="svc-item"><i class="fas fa-exclamation-triangle"></i><h3>Doors Off Track</h3><p>Rollers re-seated, bent track straightened, and the cause corrected so it doesn't repeat.</p></div>
-<div class="svc-item"><i class="fas fa-tools"></i><h3>Tune-Ups &amp; Maintenance</h3><p>Lubrication, balance checks, and safety inspections to prevent breakdowns. <a href="garage-door-tune-up-austin.html" style="color:var(--orange);font-weight:600">Learn more →</a></p></div>
-<div class="svc-item"><i class="fas fa-door-closed"></i><h3>New Door Installation</h3><p>Full replacement doors for Bastrop homes - from the wooded lots of Tahitian Village to newer builds in ColoVista and Hunter's Crossing. <a href="garage-door-installation-austin.html" style="color:var(--orange);font-weight:600">Learn more →</a></p></div>
+<div class="svc-item"><i class="fas fa-tools"></i><h3>Tune-Ups &amp; Maintenance</h3><p>Lubrication, balance checks, and safety inspections to prevent breakdowns. <a href="/garage-door-tune-up-austin.html" class="lnk">Learn more →</a></p></div>
+<div class="svc-item"><i class="fas fa-door-closed"></i><h3>New Door Installation</h3><p>Full replacement doors for Bastrop homes - from the wooded lots of Tahitian Village to newer builds in ColoVista and Hunter's Crossing. <a href="/garage-door-installation-austin.html" class="lnk">Learn more →</a></p></div>
   </div>
 </section>
 
@@ -328,7 +351,7 @@
   </div>
 </section>
 
-<section class="svc-section" style="background:#fafafa;border-radius:14px">
+<section class="svc-section">
   <h2>Why Bastrop Homeowners Choose Let's Roll</h2>
   <div class="svc-grid">
     <div class="svc-item"><i class="fas fa-map-marker-alt"></i><h3>We Know the Area</h3><p>From Tahitian Village's wooded, long-driveway lots to the newer builds in ColoVista and Hunter's Crossing, we know what Bastrop garages are working with.</p></div>
@@ -341,11 +364,11 @@
 <section class="svc-section">
   <h2>Frequently Asked Questions</h2>
   <div class="svc-faq">
-    <div class="svc-faq-item"><h3>How fast can you get to Bastrop?</h3><p>We offer same-day appointments across Bastrop, including zip code 78602. For emergencies, call (512) 947-4451 and we'll dispatch the next available technician.</p></div>
-<div class="svc-faq-item"><h3>Do you service Tahitian Village, ColoVista, and Hunter's Crossing?</h3><p>Yes. We cover all of Bastrop including Tahitian Village, Hunter's Crossing, ColoVista, Pine Forest, and the Old Town Bastrop historic district.</p></div>
-<div class="svc-faq-item"><h3>Why do garage doors in Bastrop's wooded neighborhoods need extra attention?</h3><p>Neighborhoods like Tahitian Village sit among the Lost Pines, and pine sap, pollen, and falling needles collect on tracks and rollers faster than in more open subdivisions. We clean and lubricate these components on every tune-up to keep the door running smoothly.</p></div>
-<div class="svc-faq-item"><h3>Do you offer same-day service in Bastrop?</h3><p>Yes. Same-day appointments are available across Bastrop for most repair types - springs, cables, openers, rollers, and off-track doors. Call (512) 947-4451 to check availability.</p></div>
-<div class="svc-faq-item"><h3>Do you offer emergency garage door repair in Bastrop?</h3><p>Yes, our emergency line is answered 24/7. If your door won't close or a vehicle is trapped inside, call (512) 947-4451 any time.</p></div>
+    <details><summary><h3>How fast can you get to Bastrop?</h3></summary><p>We offer same-day appointments across Bastrop, including zip code 78602. For emergencies, call (512) 947-4451 and we'll dispatch the next available technician.</p></details>
+<details><summary><h3>Do you service Tahitian Village, ColoVista, and Hunter's Crossing?</h3></summary><p>Yes. We cover all of Bastrop including Tahitian Village, Hunter's Crossing, ColoVista, Pine Forest, and the Old Town Bastrop historic district.</p></details>
+<details><summary><h3>Why do garage doors in Bastrop's wooded neighborhoods need extra attention?</h3></summary><p>Neighborhoods like Tahitian Village sit among the Lost Pines, and pine sap, pollen, and falling needles collect on tracks and rollers faster than in more open subdivisions. We clean and lubricate these components on every tune-up to keep the door running smoothly.</p></details>
+<details><summary><h3>Do you offer same-day service in Bastrop?</h3></summary><p>Yes. Same-day appointments are available across Bastrop for most repair types - springs, cables, openers, rollers, and off-track doors. Call (512) 947-4451 to check availability.</p></details>
+<details><summary><h3>Do you offer emergency garage door repair in Bastrop?</h3></summary><p>Yes, our emergency line is answered 24/7. If your door won't close or a vehicle is trapped inside, call (512) 947-4451 any time.</p></details>
   </div>
 </section>
 
@@ -358,161 +381,117 @@
 <section class="svc-related">
   <h2>Explore Our Other Services</h2>
   <div class="svc-related-grid">
-    <a href="off-track-garage-door-repair-austin.html" class="svc-related-link">Off-Track Door Repair &#8594;</a>
-    <a href="garage-door-wont-open-austin.html" class="svc-related-link">Garage Door Won't Open &#8594;</a>
-    <a href="garage-door-repair-austin.html" class="svc-related-link">Garage Door Repair →</a>
-<a href="garage-door-spring-repair-austin.html" class="svc-related-link">Spring Repair →</a>
-<a href="garage-door-cable-repair-austin.html" class="svc-related-link">Cable Repair →</a>
-<a href="garage-door-opener-repair-austin.html" class="svc-related-link">Opener Repair →</a>
-<a href="garage-door-installation-austin.html" class="svc-related-link">New Installation →</a>
-<a href="garage-door-tune-up-austin.html" class="svc-related-link">Tune-Up &amp; Maintenance →</a>
-<a href="garage-door-sensor-alignment-austin.html" class="svc-related-link">Sensor Alignment Guide →</a>
-<a href="garage-door-manual-release-austin.html" class="svc-related-link">Manual Release Guide →</a>
-<a href="emergency-garage-door-repair-austin.html" class="svc-related-link">24/7 Emergency Garage Door Repair →</a>
-<a href="garage-door-roller-replacement-austin.html" class="svc-related-link">Garage Door Roller Replacement →</a>
-<a href="same-day-garage-door-service-austin.html" class="svc-related-link">Same-Day Garage Door Service →</a>
-<a href="garage-door-repair-cost-austin.html" class="svc-related-link">Garage Door Repair Cost Guide →</a>
-<a href="garage-door-spring-warning-signs-austin.html" class="svc-related-link">Broken Spring Warning Signs →</a>
-<a href="garage-door-maintenance-tips-austin.html" class="svc-related-link">Maintenance Tips Guide →</a>
-<a href="smart-garage-door-openers-austin.html" class="svc-related-link">Garage Door Opener Guide →</a>
-<a href="garage-door-insulated-doors-austin.html" class="svc-related-link">Insulated Garage Doors →</a>
+    <a href="/off-track-garage-door-repair-austin.html" class="svc-related-link">Off-Track Door Repair &#8594;</a>
+    <a href="/garage-door-wont-open-austin.html" class="svc-related-link">Garage Door Won't Open &#8594;</a>
+    <a href="/garage-door-repair-austin.html" class="svc-related-link">Garage Door Repair →</a>
+<a href="/garage-door-spring-repair-austin.html" class="svc-related-link">Spring Repair →</a>
+<a href="/garage-door-cable-repair-austin.html" class="svc-related-link">Cable Repair →</a>
+<a href="/garage-door-opener-repair-austin.html" class="svc-related-link">Opener Repair →</a>
+<a href="/garage-door-installation-austin.html" class="svc-related-link">New Installation →</a>
+<a href="/garage-door-tune-up-austin.html" class="svc-related-link">Tune-Up &amp; Maintenance →</a>
+<a href="/garage-door-sensor-alignment-austin.html" class="svc-related-link">Sensor Alignment Guide →</a>
+<a href="/garage-door-manual-release-austin.html" class="svc-related-link">Manual Release Guide →</a>
+<a href="/emergency-garage-door-repair-austin.html" class="svc-related-link">24/7 Emergency Garage Door Repair →</a>
+<a href="/garage-door-roller-replacement-austin.html" class="svc-related-link">Garage Door Roller Replacement →</a>
+<a href="/same-day-garage-door-service-austin.html" class="svc-related-link">Same-Day Garage Door Service →</a>
+<a href="/garage-door-repair-cost-austin.html" class="svc-related-link">Garage Door Repair Cost Guide →</a>
+<a href="/garage-door-spring-warning-signs-austin.html" class="svc-related-link">Broken Spring Warning Signs →</a>
+<a href="/garage-door-maintenance-tips-austin.html" class="svc-related-link">Maintenance Tips Guide →</a>
+<a href="/smart-garage-door-openers-austin.html" class="svc-related-link">Garage Door Opener Guide →</a>
+<a href="/garage-door-insulated-doors-austin.html" class="svc-related-link">Insulated Garage Doors →</a>
   </div>
 </section>
 
 
 </main>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async"></div>
-      <p>Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img src="/images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async">
+        <p style="max-width:32ch">Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/#areas">Service Areas</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#quote">Free Estimate</a></li>
+          <li><a href="/warranty-terms.html">Warranty Terms</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/garage-door-repair-austin.html">Garage Door Repair</a></li>
+          <li><a href="/garage-door-installation-austin.html">Door Installation</a></li>
+          <li><a href="/garage-door-opener-repair-austin.html">Opener Repair &amp; Install</a></li>
+          <li><a href="/garage-door-spring-repair-austin.html">Spring Replacement</a></li>
+          <li><a href="/garage-door-cable-repair-austin.html">Cable Repair</a></li>
+          <li><a href="/emergency-garage-door-repair-austin.html">24/7 Emergency</a></li>
+          <li><a href="/same-day-garage-door-service-austin.html">Same-Day Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Service Areas</h3>
+        <ul class="areas">
+          <li><a href="/garage-door-repair-south-austin.html">South Austin</a></li>
+          <li><a href="/garage-door-repair-north-austin.html">North Austin</a></li>
+          <li><a href="/garage-door-repair-east-austin.html">East Austin</a></li>
+          <li><a href="/garage-door-repair-west-austin.html">West Austin</a></li>
+          <li><a href="/garage-door-repair-round-rock.html">Round Rock</a></li>
+          <li><a href="/garage-door-repair-cedar-park.html">Cedar Park</a></li>
+          <li><a href="/garage-door-repair-pflugerville.html">Pflugerville</a></li>
+          <li><a href="/garage-door-repair-buda.html">Buda</a></li>
+          <li><a href="/garage-door-repair-georgetown.html">Georgetown</a></li>
+          <li><a href="/garage-door-repair-kyle.html">Kyle</a></li>
+          <li><a href="/garage-door-repair-lakeway.html">Lakeway</a></li>
+          <li><a href="/garage-door-repair-leander.html">Leander</a></li>
+          <li><a href="/garage-door-repair-hutto.html">Hutto</a></li>
+          <li><a href="/garage-door-repair-manor.html">Manor</a></li>
+          <li><a href="/garage-door-repair-bastrop.html">Bastrop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:+15129474451" style="font-family:var(--display);font-size:1.5rem;color:var(--bg)">(512) 947-4451</a><br><span class="mono" style="font-size:11px">24/7 Emergency Line</span></p>
+        <p style="margin-top:12px"><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p>
+        <p style="margin-top:12px">720 Airport Blvd #1280<br>Austin, TX 78702</p>
+        <p style="margin-top:12px"><strong style="color:var(--bg)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="/#services"><i class="fas fa-chevron-right"></i>Services</a></li>
-        <li><a href="blog.html"><i class="fas fa-chevron-right"></i>Blog</a></li>
-        <li><a href="/#areas"><i class="fas fa-chevron-right"></i>Service Areas</a></li>
-        <li><a href="/#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
-        <li><a href="/#quote"><i class="fas fa-chevron-right"></i>Free Estimate</a></li>
-        <li><a href="warranty-terms.html"><i class="fas fa-chevron-right"></i>Warranty Terms</a></li>
-        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>Garage Door Repair</a></li>
-        <li><a href="garage-door-installation-austin.html"><i class="fas fa-chevron-right"></i>Door Installation</a></li>
-        <li><a href="garage-door-opener-repair-austin.html"><i class="fas fa-chevron-right"></i>Opener Repair &amp; Install</a></li>
-        <li><a href="garage-door-spring-repair-austin.html"><i class="fas fa-chevron-right"></i>Spring Replacement</a></li>
-        <li><a href="garage-door-cable-repair-austin.html"><i class="fas fa-chevron-right"></i>Cable Repair</a></li>
-        <li><a href="emergency-garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>24/7 Emergency</a></li>
-        <li><a href="same-day-garage-door-service-austin.html"><i class="fas fa-chevron-right"></i>Same-Day Service</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Service Areas</h3>
-      <ul>
-        <li><a href="garage-door-repair-south-austin.html"><i class="fas fa-chevron-right"></i>South Austin</a></li>
-        <li><a href="garage-door-repair-north-austin.html"><i class="fas fa-chevron-right"></i>North Austin</a></li>
-        <li><a href="garage-door-repair-east-austin.html"><i class="fas fa-chevron-right"></i>East Austin</a></li>
-        <li><a href="garage-door-repair-west-austin.html"><i class="fas fa-chevron-right"></i>West Austin</a></li>
-        <li><a href="garage-door-repair-round-rock.html"><i class="fas fa-chevron-right"></i>Round Rock</a></li>
-        <li><a href="garage-door-repair-cedar-park.html"><i class="fas fa-chevron-right"></i>Cedar Park</a></li>
-        <li><a href="garage-door-repair-pflugerville.html"><i class="fas fa-chevron-right"></i>Pflugerville</a></li>
-        <li><a href="garage-door-repair-buda.html"><i class="fas fa-chevron-right"></i>Buda</a></li>
-        <li><a href="garage-door-repair-georgetown.html"><i class="fas fa-chevron-right"></i>Georgetown</a></li>
-        <li><a href="garage-door-repair-kyle.html"><i class="fas fa-chevron-right"></i>Kyle</a></li>
-        <li><a href="garage-door-repair-lakeway.html"><i class="fas fa-chevron-right"></i>Lakeway</a></li>
-        <li><a href="garage-door-repair-leander.html"><i class="fas fa-chevron-right"></i>Leander</a></li>
-        <li><a href="garage-door-repair-hutto.html"><i class="fas fa-chevron-right"></i>Hutto</a></li>
-        <li><a href="garage-door-repair-manor.html"><i class="fas fa-chevron-right"></i>Manor</a></li>
-        <li><a href="garage-door-repair-bastrop.html"><i class="fas fa-chevron-right"></i>Bastrop</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+15129474451">(512) 947-4451</a><br><span style="font-size:12px;color:var(--gray)">24/7 Emergency Line</span></p></div>
-      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p></div>
-      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p style="color:var(--gray)">720 Airport Blvd #1280<br>Austin, TX 78702</p></div>
-      <div class="footer-contact-item"><i class="fas fa-clock"></i><p style="color:var(--gray)"><strong style="color:var(--black)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
-    <div class="footer-social">
-      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
-      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+    <div class="f-bottom">
+      <p>© 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
+      <div class="s2">
+        <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+        <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer">Yelp Reviews</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script>
-// Mobile menu
-const ham=document.getElementById('hamburger'),mMenu=document.getElementById('mobile-menu'),mClose=document.getElementById('mob-close');
-function openMobile(){mMenu.classList.add('open');document.body.style.overflow='hidden';ham.classList.add('open');ham.setAttribute('aria-expanded','true')}
-function closeMobile(){mMenu.classList.remove('open');document.body.style.overflow='';ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}
-ham.addEventListener('click',openMobile);
-mClose.addEventListener('click',closeMobile);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMobile()}});
-
-
-// FAQ accordion
-function toggleFaq(el){
-  const item=el.parentElement,isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false')});
-  if(!isOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
-}
-document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(q)}})});
-
-// Form, submits to Web3Forms (real lead delivery to letsrollgaragedoors@gmail.com)
-async function submitQuoteForm(e){
-  e.preventDefault();
-  const form = document.getElementById('quote-form');
-  const btn = form.querySelector('.form-submit');
-  const originalText = btn.textContent;
-
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      btn.textContent = '✓ Request Sent!';
-      btn.style.background = '#1a7a3a';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 5000);
-    } else {
-      throw new Error(data.message || 'Submission failed');
-    }
-  } catch (err) {
-    btn.textContent = 'Error, Try Again';
-    btn.style.background = '#c0392b';
-    btn.disabled = false;
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-    }, 4000);
-  }
-  return false;
-}
+document.documentElement.classList.add('js');
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mmenu'),c=document.getElementById('mclose');
+  function set(o){m.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';b.setAttribute('aria-expanded',o)}
+  b.addEventListener('click',function(){set(true)});c.addEventListener('click',function(){set(false)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
 </script>
 <script>/* analytics tags load after first interaction (or 5s) to keep the first paint fast */
 (function(){var d=0;function go(){if(d)return;d=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag("js",new Date());gtag("config","G-P3MF0KR48G");var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id=G-P3MF0KR48G";document.head.appendChild(g);var o={ti:"187261177",enableAutoSpaTracking:true},w=window,u="uetq";w[u]=w[u]||[];o.ts=(new Date).getTime();var n=document.createElement("script");n.src="https://bat.bing.net/bat.js?ti="+o.ti;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&"loaded"!==s&&"complete"!==s||(o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad"),n.onload=n.onreadystatechange=null)};document.head.appendChild(n);}["scroll","touchstart","mousemove","keydown","click"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});setTimeout(go,5000)})();</script>
-<script src="js/widgets.js" defer></script>
+<script src="/js/widgets.js" defer></script>
 </body>
 </html>
