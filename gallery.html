@@ -12,75 +12,72 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"></noscript>
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-solid-sub.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/fa-brands-sub.woff2">
-<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/css/workorder.css?v=20261031">
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-left">
-      <div class="topbar-item"><a href="tel:+15129474451"><i class="fas fa-phone-alt"></i><span>Call: (512) 947-4451</span></a></div>
-      <div class="topbar-item"><a href="mailto:letsrollgaragedoors@gmail.com"><i class="fas fa-envelope"></i><span>letsrollgaragedoors@gmail.com</span></a></div>
-      <div class="topbar-item"><i class="fas fa-clock"></i><span>Mon-Sun · 24/7 Emergency Available</span></div>
-    </div>
-    <div class="topbar-social">
-      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
-      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<a class="callbar" href="tel:+15129474451"><svg class="ico"><use href="#i-phone"/></svg>Call Now: (512) 947-4451</a>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="mono">Mon-Sun · 24/7 Emergency Available</span>
+    <span class="r"><a href="tel:+15129474451">(512) 947-4451</a><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></span>
   </div>
 </div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" fetchpriority="high" width="194" height="60"></a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="gallery.html" class="active">Our Work</a></li>
-        <li><a href="coupons.html">Deals</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#areas">Areas</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-      </ul>
-      <a href="tel:+15129474451" class="nav-phone"><i class="fas fa-phone-alt"></i>(512) 947-4451</a>
-      <a href="index.html#quote" class="nav-cta">Free Quote</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="/" class="nav-logo"><img src="/images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="194" height="60"></a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/gallery.html">Our Work</a></li>
+      <li><a href="/coupons.html">Deals</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/#areas">Areas</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+    <a href="tel:+15129474451" class="nav-phone"><svg class="ico"><use href="#i-phone"/></svg>(512) 947-4451</a>
+    <a href="/#quote" class="btn">Free Quote</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobile-menu">
-  <button class="mob-close" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
-  <a href="index.html#about" onclick="closeMobile()">About</a>
-  <a href="index.html#services" onclick="closeMobile()">Services</a>
-  <a href="gallery.html" onclick="closeMobile()">Our Work</a>
-  <a href="coupons.html" onclick="closeMobile()">Deals</a>
-  <a href="blog.html" onclick="closeMobile()">Blog</a>
-  <a href="index.html#areas" onclick="closeMobile()">Areas</a>
-  <a href="index.html#faq" onclick="closeMobile()">FAQ</a>
-  <a href="tel:+15129474451" class="m-phone"><i class="fas fa-phone-alt"></i> (512) 947-4451</a>
-  <a href="index.html#quote" class="m-cta" onclick="closeMobile()">Free Estimate</a>
+<div class="mmenu" id="mmenu">
+  <button class="x" id="mclose" aria-label="Close">&times;</button>
+  <a href="/#about">About</a>
+  <a href="/#services">Services</a>
+  <a href="/gallery.html">Our Work</a>
+  <a href="/coupons.html">Deals</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/#areas">Areas</a>
+  <a href="/#faq">FAQ</a>
+  <a href="tel:+15129474451" class="mp">(512) 947-4451</a>
+  <a href="/#quote">Free Estimate</a>
 </div>
+
 <main id="main">
 
 <!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="section-tag">Our Work</div>
-    <h1>Real Jobs. <span>Real Results.</span></h1>
-    <p>Before &amp; after photos from garage door repairs and installations across Austin and surrounding areas.</p>
+<section class="hero plain">
+  <div class="wrap hero-grid">
+    <div>
+      
+      <p class="mono tag" style="background:var(--accent);color:var(--navy)">Our Work</p>
+      <h1>
+        <span class="l1">Real Jobs. Real</span>
+        <span class="l2">Results.</span>
+      </h1>
+    </div>
+    <div class="hero-foot"><p>Before &amp; after photos from garage door repairs and installations across Austin and surrounding areas.</p></div>
   </div>
+  
 </section>
+
 
 <!-- GALLERY -->
 <section class="gallery-section">
@@ -95,15 +92,15 @@
           <div class="photo-col">
             <div class="photo-col-label before-label">Before</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job7-before-1.webp" alt="Before - empty garage opening on new construction home, Mueller Austin TX" loading="lazy" data-lb data-caption="Before · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job7-before-2.webp" alt="Before - interior view of empty garage opening, Mueller Austin TX" loading="lazy" data-lb data-caption="Before · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job7-before-1.webp" alt="Before - empty garage opening on new construction home, Mueller Austin TX" loading="lazy" data-lb data-caption="Before · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job7-before-2.webp" alt="Before - interior view of empty garage opening, Mueller Austin TX" loading="lazy" data-lb data-caption="Before · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
             </div>
           </div>
           <div class="photo-col">
             <div class="photo-col-label after-label">After</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job7-after-1.webp" alt="After - new 8x7 DoorLink Ozark 3700 insulated garage door in cypress with long windows, Mueller Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job7-after-2.webp" alt="After - inside view of new garage door with LiftMaster 2220L chain drive opener installed, Mueller Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job7-after-1.webp" alt="After - new 8x7 DoorLink Ozark 3700 insulated garage door in cypress with long windows, Mueller Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job7-after-2.webp" alt="After - inside view of new garage door with LiftMaster 2220L chain drive opener installed, Mueller Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Mueller, Austin TX" width="1200" height="1600" decoding="async"></div>
             </div>
           </div>
         </div>
@@ -122,15 +119,15 @@
           <div class="photo-col">
             <div class="photo-col-label before-label">Before</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job5-before-1.webp" alt="Before - old garage door exterior Paige TX" loading="lazy" data-lb data-caption="Before · Door Replacement · Paige, TX" width="1290" height="962" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job5-before-2.webp" alt="Before - interior view of old garage door Paige TX" loading="lazy" data-lb data-caption="Before · Door Replacement · Paige, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job5-before-1.webp" alt="Before - old garage door exterior Paige TX" loading="lazy" data-lb data-caption="Before · Door Replacement · Paige, TX" width="1290" height="962" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job5-before-2.webp" alt="Before - interior view of old garage door Paige TX" loading="lazy" data-lb data-caption="Before · Door Replacement · Paige, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
           <div class="photo-col">
             <div class="photo-col-label after-label">After</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job5-after-1.webp" alt="After - new black flush steel insulated garage door interior view" loading="lazy" data-lb data-caption="After · Door Replacement · Paige, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job5-after-2.webp" alt="After - stunning black flush 18x8 garage door with windows exterior Paige TX" loading="lazy" data-lb data-caption="After · Door Replacement · Paige, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job5-after-1.webp" alt="After - new black flush steel insulated garage door interior view" loading="lazy" data-lb data-caption="After · Door Replacement · Paige, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job5-after-2.webp" alt="After - stunning black flush 18x8 garage door with windows exterior Paige TX" loading="lazy" data-lb data-caption="After · Door Replacement · Paige, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
         </div>
@@ -148,15 +145,15 @@
           <div class="photo-col">
             <div class="photo-col-label before-label">Before</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job3-before-1.webp" alt="Before - garage opening without door Cedar Creek TX" loading="lazy" data-lb data-caption="Before · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job3-before-2.webp" alt="Before - interior view of empty garage opening" loading="lazy" data-lb data-caption="Before · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job3-before-1.webp" alt="Before - garage opening without door Cedar Creek TX" loading="lazy" data-lb data-caption="Before · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job3-before-2.webp" alt="Before - interior view of empty garage opening" loading="lazy" data-lb data-caption="Before · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
           <div class="photo-col">
             <div class="photo-col-label after-label">After</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job3-after-1.webp" alt="After - new white insulated garage door installed interior view" loading="lazy" data-lb data-caption="After · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job3-after-2.webp" alt="After - new 10x7 white carriage style garage door exterior Cedar Creek TX" loading="lazy" data-lb data-caption="After · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job3-after-1.webp" alt="After - new white insulated garage door installed interior view" loading="lazy" data-lb data-caption="After · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job3-after-2.webp" alt="After - new 10x7 white carriage style garage door exterior Cedar Creek TX" loading="lazy" data-lb data-caption="After · New Door Install · Cedar Creek, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
         </div>
@@ -176,15 +173,15 @@
           <div class="photo-col">
             <div class="photo-col-label before-label">Before</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job1-before-1.webp" alt="Before - garage door with worn springs Austin TX" loading="lazy" data-lb data-caption="Before · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job1-before-2.webp" alt="Before - old worn torsion springs removed" loading="lazy" data-lb data-caption="Before · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job1-before-1.webp" alt="Before - garage door with worn springs Austin TX" loading="lazy" data-lb data-caption="Before · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job1-before-2.webp" alt="Before - old worn torsion springs removed" loading="lazy" data-lb data-caption="Before · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
           <div class="photo-col">
             <div class="photo-col-label after-label">After</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job1-after-1.webp" alt="After - new torsion springs installed Austin TX" loading="lazy" data-lb data-caption="After · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job1-after-2.webp" alt="After - garage door fully operational after tune-up" loading="lazy" data-lb data-caption="After · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job1-after-1.webp" alt="After - new torsion springs installed Austin TX" loading="lazy" data-lb data-caption="After · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job1-after-2.webp" alt="After - garage door fully operational after tune-up" loading="lazy" data-lb data-caption="After · Spring Replacement · Austin, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
         </div>
@@ -204,15 +201,15 @@
           <div class="photo-col">
             <div class="photo-col-label before-label">Before</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job2-before-1.webp" alt="Before - 40-year-old rotten wood garage door Austin TX" loading="lazy" data-lb data-caption="Before · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job2-before-2.webp" alt="Before - deteriorated wood garage door exterior view" loading="lazy" data-lb data-caption="Before · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job2-before-1.webp" alt="Before - 40-year-old rotten wood garage door Austin TX" loading="lazy" data-lb data-caption="Before · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job2-before-2.webp" alt="Before - deteriorated wood garage door exterior view" loading="lazy" data-lb data-caption="Before · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
           <div class="photo-col">
             <div class="photo-col-label after-label">After</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job2-after-1.webp" alt="After - new modern garage door installed interior view Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job2-after-2.webp" alt="After - new 16x7 modern garage door exterior view Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job2-after-1.webp" alt="After - new modern garage door installed interior view Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job2-after-2.webp" alt="After - new 16x7 modern garage door exterior view Austin TX" loading="lazy" data-lb data-caption="After · New Door Install · Austin, TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
         </div>
@@ -232,15 +229,15 @@
           <div class="photo-col">
             <div class="photo-col-label before-label">Before</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job4-before-1.webp" alt="Before - garage door damaged by broken spring malfunction interior view" loading="lazy" data-lb data-caption="Before · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job4-before-2.webp" alt="Before - severely damaged garage door exterior Easton Park Austin TX" loading="lazy" data-lb data-caption="Before · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job4-before-1.webp" alt="Before - garage door damaged by broken spring malfunction interior view" loading="lazy" data-lb data-caption="Before · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job4-before-2.webp" alt="Before - severely damaged garage door exterior Easton Park Austin TX" loading="lazy" data-lb data-caption="Before · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
           <div class="photo-col">
             <div class="photo-col-label after-label">After</div>
             <div class="photo-col-photos">
-              <div class="photo-slot"><img src="images/job4-after-1.webp" alt="After - new black carriage style garage door with windows exterior view" loading="lazy" data-lb data-caption="After · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
-              <div class="photo-slot"><img src="images/job4-after-2.webp" alt="After - stunning black 16x7 carriage door with top windows Easton Park Austin TX" loading="lazy" data-lb data-caption="After · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job4-after-1.webp" alt="After - new black carriage style garage door with windows exterior view" loading="lazy" data-lb data-caption="After · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
+              <div class="photo-slot"><img src="/images/job4-after-2.webp" alt="After - stunning black 16x7 carriage door with top windows Easton Park Austin TX" loading="lazy" data-lb data-caption="After · Door Replacement · Easton Park, Austin TX" width="1600" height="1200" decoding="async"></div>
             </div>
           </div>
         </div>
@@ -263,78 +260,80 @@
   <p>Same-day service across Austin. Call or text anytime — 24/7.</p>
   <div class="cta-btns">
     <a href="tel:+15129474451" class="btn btn-orange"><i class="fas fa-phone-alt"></i>Call (512) 947-4451</a>
-    <a href="index.html#quote" class="btn btn-outline-white"><i class="fas fa-clipboard-list"></i>Get a Free Quote</a>
+    <a href="/index.html#quote" class="btn btn-outline-white"><i class="fas fa-clipboard-list"></i>Get a Free Quote</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 </main>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="images/img-63f59f98af3e.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async"></div>
-      <p>Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img src="/images/img-63f59f98af3e-transparent.webp" alt="Let's Roll Garage Doors" width="280" height="90" loading="lazy" decoding="async">
+        <p style="max-width:32ch">Austin, TX's trusted garage door repair and installation team. Background-checked, insured, and available 24/7 for your peace of mind.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/#areas">Service Areas</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#quote">Free Estimate</a></li>
+          <li><a href="/warranty-terms.html">Warranty Terms</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/garage-door-repair-austin.html">Garage Door Repair</a></li>
+          <li><a href="/garage-door-installation-austin.html">Door Installation</a></li>
+          <li><a href="/garage-door-opener-repair-austin.html">Opener Repair &amp; Install</a></li>
+          <li><a href="/garage-door-spring-repair-austin.html">Spring Replacement</a></li>
+          <li><a href="/garage-door-cable-repair-austin.html">Cable Repair</a></li>
+          <li><a href="/emergency-garage-door-repair-austin.html">24/7 Emergency</a></li>
+          <li><a href="/same-day-garage-door-service-austin.html">Same-Day Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Service Areas</h3>
+        <ul class="areas">
+          <li><a href="/garage-door-repair-south-austin.html">South Austin</a></li>
+          <li><a href="/garage-door-repair-north-austin.html">North Austin</a></li>
+          <li><a href="/garage-door-repair-east-austin.html">East Austin</a></li>
+          <li><a href="/garage-door-repair-west-austin.html">West Austin</a></li>
+          <li><a href="/garage-door-repair-round-rock.html">Round Rock</a></li>
+          <li><a href="/garage-door-repair-cedar-park.html">Cedar Park</a></li>
+          <li><a href="/garage-door-repair-pflugerville.html">Pflugerville</a></li>
+          <li><a href="/garage-door-repair-buda.html">Buda</a></li>
+          <li><a href="/garage-door-repair-georgetown.html">Georgetown</a></li>
+          <li><a href="/garage-door-repair-kyle.html">Kyle</a></li>
+          <li><a href="/garage-door-repair-lakeway.html">Lakeway</a></li>
+          <li><a href="/garage-door-repair-leander.html">Leander</a></li>
+          <li><a href="/garage-door-repair-hutto.html">Hutto</a></li>
+          <li><a href="/garage-door-repair-manor.html">Manor</a></li>
+          <li><a href="/garage-door-repair-bastrop.html">Bastrop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:+15129474451" style="font-family:var(--display);font-size:1.5rem;color:var(--bg)">(512) 947-4451</a><br><span class="mono" style="font-size:11px">24/7 Emergency Line</span></p>
+        <p style="margin-top:12px"><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p>
+        <p style="margin-top:12px">720 Airport Blvd #1280<br>Austin, TX 78702</p>
+        <p style="margin-top:12px"><strong style="color:var(--bg)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="/#services"><i class="fas fa-chevron-right"></i>Services</a></li>
-        <li><a href="blog.html"><i class="fas fa-chevron-right"></i>Blog</a></li>
-        <li><a href="/#areas"><i class="fas fa-chevron-right"></i>Service Areas</a></li>
-        <li><a href="/#faq"><i class="fas fa-chevron-right"></i>FAQ</a></li>
-        <li><a href="/#quote"><i class="fas fa-chevron-right"></i>Free Estimate</a></li>
-        <li><a href="warranty-terms.html"><i class="fas fa-chevron-right"></i>Warranty Terms</a></li>
-        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>Garage Door Repair</a></li>
-        <li><a href="garage-door-installation-austin.html"><i class="fas fa-chevron-right"></i>Door Installation</a></li>
-        <li><a href="garage-door-opener-repair-austin.html"><i class="fas fa-chevron-right"></i>Opener Repair &amp; Install</a></li>
-        <li><a href="garage-door-spring-repair-austin.html"><i class="fas fa-chevron-right"></i>Spring Replacement</a></li>
-        <li><a href="garage-door-cable-repair-austin.html"><i class="fas fa-chevron-right"></i>Cable Repair</a></li>
-        <li><a href="emergency-garage-door-repair-austin.html"><i class="fas fa-chevron-right"></i>24/7 Emergency</a></li>
-        <li><a href="same-day-garage-door-service-austin.html"><i class="fas fa-chevron-right"></i>Same-Day Service</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Service Areas</h3>
-      <ul>
-        <li><a href="garage-door-repair-south-austin.html"><i class="fas fa-chevron-right"></i>South Austin</a></li>
-        <li><a href="garage-door-repair-north-austin.html"><i class="fas fa-chevron-right"></i>North Austin</a></li>
-        <li><a href="garage-door-repair-east-austin.html"><i class="fas fa-chevron-right"></i>East Austin</a></li>
-        <li><a href="garage-door-repair-west-austin.html"><i class="fas fa-chevron-right"></i>West Austin</a></li>
-        <li><a href="garage-door-repair-round-rock.html"><i class="fas fa-chevron-right"></i>Round Rock</a></li>
-        <li><a href="garage-door-repair-cedar-park.html"><i class="fas fa-chevron-right"></i>Cedar Park</a></li>
-        <li><a href="garage-door-repair-pflugerville.html"><i class="fas fa-chevron-right"></i>Pflugerville</a></li>
-        <li><a href="garage-door-repair-buda.html"><i class="fas fa-chevron-right"></i>Buda</a></li>
-        <li><a href="garage-door-repair-georgetown.html"><i class="fas fa-chevron-right"></i>Georgetown</a></li>
-        <li><a href="garage-door-repair-kyle.html"><i class="fas fa-chevron-right"></i>Kyle</a></li>
-        <li><a href="garage-door-repair-lakeway.html"><i class="fas fa-chevron-right"></i>Lakeway</a></li>
-        <li><a href="garage-door-repair-leander.html"><i class="fas fa-chevron-right"></i>Leander</a></li>
-        <li><a href="garage-door-repair-hutto.html"><i class="fas fa-chevron-right"></i>Hutto</a></li>
-        <li><a href="garage-door-repair-manor.html"><i class="fas fa-chevron-right"></i>Manor</a></li>
-        <li><a href="garage-door-repair-bastrop.html"><i class="fas fa-chevron-right"></i>Bastrop</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+15129474451">(512) 947-4451</a><br><span style="font-size:12px;color:var(--gray)">24/7 Emergency Line</span></p></div>
-      <div class="footer-contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:letsrollgaragedoors@gmail.com">letsrollgaragedoors@gmail.com</a></p></div>
-      <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p style="color:var(--gray)">720 Airport Blvd #1280<br>Austin, TX 78702</p></div>
-      <div class="footer-contact-item"><i class="fas fa-clock"></i><p style="color:var(--gray)"><strong style="color:var(--black)">Mon-Sun: 24 Hours</strong><br>Emergency Always Available</p></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
-    <div class="footer-social">
-      <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews"><i class="fab fa-google"></i></a>
-      <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp Reviews"><i class="fab fa-yelp"></i></a>
+    <div class="f-bottom">
+      <p>© 2026 Let's Roll Garage Doors · Austin, TX · All rights reserved.</p>
+      <div class="s2">
+        <a href="https://www.facebook.com/share/1CHrf2ZkQh/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/letsrollgaragedoors?igsh=Y2liOWdmbzZmNTk1&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://share.google/8CnpaeiZKektg4PJ9" target="_blank" rel="noopener noreferrer">Google Reviews</a>
+        <a href="https://www.yelp.com/biz/let-s-roll-garage-doors-austin?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer">Yelp Reviews</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -354,52 +353,22 @@
 </div>
 
 <script>
-  // Mobile menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobClose = document.getElementById('mob-close');
-  function closeMobile(){mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false')}
-  hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',mobileMenu.classList.contains('open'))});
-  mobClose.addEventListener('click',closeMobile);
-
-  // Lightbox
-  const lbImages = Array.from(document.querySelectorAll('[data-lb]'));
-  const lb = document.getElementById('lb');
-  const lbImg = document.getElementById('lb-img');
-  const lbCaption = document.getElementById('lb-caption');
-  let current = 0;
-
-  function openLb(index) {
-    current = index;
-    const img = lbImages[current];
-    lbImg.src = img.src;
-    lbImg.alt = img.alt;
-    lbCaption.textContent = img.dataset.caption || '';
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLb() {
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function showNext() { openLb((current + 1) % lbImages.length); }
-  function showPrev() { openLb((current - 1 + lbImages.length) % lbImages.length); }
-
-  lbImages.forEach((img, i) => img.addEventListener('click', () => openLb(i)));
-  document.getElementById('lb-close').addEventListener('click', closeLb);
-  document.getElementById('lb-next').addEventListener('click', showNext);
-  document.getElementById('lb-prev').addEventListener('click', showPrev);
-  lb.addEventListener('click', e => { if(e.target === lb) closeLb(); });
-  document.addEventListener('keydown', e => {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLb();
-    if (e.key === 'ArrowRight') showNext();
-    if (e.key === 'ArrowLeft') showPrev();
-  });
+document.documentElement.classList.add('js');
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mmenu'),c=document.getElementById('mclose');
+  function set(o){m.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';b.setAttribute('aria-expanded',o)}
+  b.addEventListener('click',function(){set(true)});c.addEventListener('click',function(){set(false)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
 </script>
 
 <script>/* analytics tags load after first interaction (or 5s) to keep the first paint fast */
 (function(){var d=0;function go(){if(d)return;d=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag("js",new Date());gtag("config","G-P3MF0KR48G");var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id=G-P3MF0KR48G";document.head.appendChild(g);}["scroll","touchstart","mousemove","keydown","click"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});setTimeout(go,5000)})();</script>
-<script src="js/widgets.js" defer></script>
+<script src="/js/widgets.js" defer></script>
 </body>
 </html>
