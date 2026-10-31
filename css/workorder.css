@@ -716,3 +716,8 @@ main{counter-reset:sec}
 .deal-urgency{margin-top:24px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .navy-tag{background:var(--navy)!important;color:var(--bg)!important}
 .btn-orange,.btn-navy,.btn-outline-white{background:var(--accent);color:var(--navy)}
+/* back button on location pages */
+.back-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:0 0 18px;padding:8px 16px;background:var(--bg);border:3px solid var(--navy);box-shadow:4px 4px 0 var(--navy);color:var(--navy);text-decoration:none;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s}
+.back-btn::before{content:"\2190";font-family:var(--body);font-size:1.1rem;line-height:1}
+.back-btn:hover{background:var(--accent);transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--navy);text-decoration:none}
+.back-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--navy)}

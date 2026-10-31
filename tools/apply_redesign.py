@@ -24,7 +24,7 @@ PHONE = '+15129474451'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">\n'
-         '<link rel="stylesheet" href="/css/workorder.css?v=20261102">')
+         '<link rel="stylesheet" href="/css/workorder.css?v=20261103">')
 
 HERO_BY_KEY = [  # filename keyword -> hero photo
     ('spring', 'garage-door-both-springs-broken-austin-tx.jpg'),
@@ -112,6 +112,9 @@ def build_hero(sec, fname, idx):
     img = next((v for k, v in HERO_BY_KEY if k in fname), None) or ROTATE[idx % len(ROTATE)]
     alt = html.escape(f"Garage door work by Let's Roll Garage Doors: {text(h1)}", quote=True)
     perf = ' · '.join(badges[:2]) if badges else 'Background-checked &amp; insured'
+    # city / area pages get a "back" button in the top-left, like the old "Back to Services" link
+    is_loc = re.fullmatch(r'garage-door-repair-(?!austin\.html|cost-austin\.html).+\.html', fname) is not None
+    back = '<a href="/#areas" class="back-link back-btn">Back to Service Areas</a>\n      ' if is_loc else ''
     proof = ''
     if badges:
         proof = '<div class="wrap">\n  <ul class="proof">\n' + ''.join(f'    <li>{b}</li>\n' for b in badges) + '  </ul>\n</div>\n'
@@ -129,7 +132,7 @@ def build_hero(sec, fname, idx):
   </aside>
   <div class="wrap hero-grid">
     <div>
-      <p class="mono tag" style="background:var(--accent);color:var(--navy)">{tag}</p>
+      {back}<p class="mono tag" style="background:var(--accent);color:var(--navy)">{tag}</p>
       <h1>
         {split_h1(h1)}
       </h1>
