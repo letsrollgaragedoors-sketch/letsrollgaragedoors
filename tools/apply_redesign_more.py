@@ -6,7 +6,7 @@ stylesheet, nav, footer and scripts, build a plain (photo-less) hero from the pa
 and turn the FAQ accordions into <details>. Run from the repo root:  python tools/apply_redesign_more.py
 """
 import re, html
-from apply_redesign import git_head, load_chrome, FONTS, text, build_hero
+from apply_redesign import edit_copy, git_head, load_chrome, FONTS, text, build_hero
 
 ARTICLES = ['garage-door-austin-heat-humidity', 'garage-door-insulated-doors-austin',
             'garage-door-maintenance-tips-austin', 'garage-door-repair-cost-austin',
@@ -30,9 +30,14 @@ def shell(path, build_main, chrome):
     main = re.sub(r'(href|src)="(?!https?:|tel:|mailto:|#|/|data:)([^"]+)"', r'\1="/\2"', main)
     tail = body[b + 7:]
     tail = re.sub(r'<footer>.*?</footer>', lambda _: footer, tail, count=1, flags=re.S)
-    tail = re.sub(r'<script>\s*// Mobile menu.*?</script>', lambda _: script, tail, count=1, flags=re.S)
-    tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js"')
-    open(path, 'w', encoding='utf-8', newline='\n').write(head + '</head>\n<body>\n' + top + main + tail)
+    def swap_script(m):
+        out = script
+        if '// Lightbox' in m.group(0):  # gallery: keep the photo viewer code, drop only the old menu code
+            out += '\n<script>\n' + m.group(0)[m.group(0).index('// Lightbox'):]
+        return out
+    tail = re.sub(r'<script>\s*// Mobile menu.*?</script>', swap_script, tail, count=1, flags=re.S)
+    tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js?v=20261101"')
+    open(path, 'w', encoding='utf-8', newline='\n').write(edit_copy(head + '</head>\n<body>\n' + top + main + tail))
 
 
 def strips(h, budget=20):

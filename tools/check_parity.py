@@ -4,10 +4,11 @@ Usage: python tools/check_parity.py page1.html page2.html ...   (chrome text is 
 import re, sys, html, subprocess
 from collections import Counter
 
-def git_head(p): return subprocess.run(['git','show','HEAD:'+p],capture_output=True,text=True,encoding='utf-8').stdout
+def git_head(p): return subprocess.run(['git','show','a491293:'+p],capture_output=True,text=True,encoding='utf-8').stdout
 def norm_head(t): return re.sub(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?(homepage\.css|workorder\.css)[^>]*>','',t[:t.index('</head>')],flags=re.S)
 def main(t):
-    a=t.index('<main'); b=t.index('</main>'); return t[a:b]
+    a=t.index('<main'); b=t.index('</main>'); m=t[a:b]
+    return re.sub(r'<div class="(?:back-btn-wrap|process-num)">.*?</div>','',m,flags=re.S)  # intentionally replaced by the new design
 def words(t):
     t=re.sub(r'<script.*?</script>|<style.*?</style>|<!--.*?-->','',t,flags=re.S)
     t=html.unescape(re.sub(r'<[^>]+>',' ',t)).lower()

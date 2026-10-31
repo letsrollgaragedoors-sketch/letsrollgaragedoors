@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
 """Convert the svc-* service pages to the Design B ("work order") layout.
 
-Reads each page from git HEAD (so it is safe to re-run), keeps the <head> and all JSON-LD untouched,
+Reads each page from the original-site commit (safe to re-run), keeps the <head> and all JSON-LD untouched,
 swaps the stylesheet, nav, hero, FAQ markup and footer, and leaves the page body copy as it is.
 Chrome (nav / footer / scripts) is taken from redesign/garage-door-installation-austin-workorder.html.
 Run from the repo root:  python tools/apply_redesign.py
 """
 import re, subprocess, glob, os, html
 
+# copy edits applied on top of the original text (keep in one place so re-running the tools keeps them)
+CONTENT_EDITS = [('$469', '$499')]  # two-spring replacement now starts at $499
+
+
+def edit_copy(s):
+    for a, b in CONTENT_EDITS:
+        s = s.replace(a, b)
+    return s
+
+
+ORIGINAL = 'a491293'  # last commit of the pre-redesign site; converters always start from it
 DRAFT = 'tools/design-b-source.html'
 PHONE = '+15129474451'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -32,7 +43,7 @@ ROTATE = ['install-paige.webp', 'install-easton-park.webp', 'install-cedar-creek
 
 
 def git_head(path):
-    return subprocess.run(['git', 'show', 'HEAD:' + path], capture_output=True, text=True,
+    return subprocess.run(['git', 'show', ORIGINAL + ':' + path], capture_output=True, text=True,
                           encoding='utf-8', check=True).stdout
 
 
@@ -89,6 +100,15 @@ def build_hero(sec, fname, idx):
     h1 = re.search(r'<h1>(.*?)</h1>', sec, re.S).group(1).strip()
     paras = ''.join(f'<p>{p}</p>' for p in re.findall(r'<p>(.*?)</p>', sec, re.S))
     badges = [text(b) for b in re.findall(r'<span class="svc-badge">(.*?)</span>', sec, re.S)]
+    deal = ''
+    bx = re.search(r'<div style="display:inline-block;background:rgba\(255,255,255,\.1\)[^"]*">(.*?)</div>\s*(?=<div class="svc-hero-ctas">|<div class="svc-badges">|</section>)', sec, re.S)
+    if bx:
+        parts = re.findall(r'<div[^>]*>(.*?)</div>', bx.group(1), re.S)
+        parts = [re.sub(r'\s*style="[^"]*"', '', re.sub(r'<i [^>]*></i>\s*', '', x)).strip() for x in parts]
+        label, value, note = (parts + ['', '', ''])[:3]
+        deal = f'<div class="hero-deal"><span class="mono">{label}</span><b>{value}</b><small>{note}</small></div>'
+    ctas = re.findall(r'<a href="([^"]+)" class="nav-cta"[^>]*>(.*?)</a>', sec, re.S)
+    alt_href, alt_text = (ctas[1][0], text(ctas[1][1])) if len(ctas) > 1 else ('/#quote', 'Get a Free Quote')
     img = next((v for k, v in HERO_BY_KEY if k in fname), None) or ROTATE[idx % len(ROTATE)]
     alt = html.escape(f"Garage door work by Let's Roll Garage Doors: {text(h1)}", quote=True)
     perf = ' · '.join(badges[:2]) if badges else 'Background-checked &amp; insured'
@@ -116,9 +136,10 @@ def build_hero(sec, fname, idx):
     </div>
     <div class="hero-foot">
       {paras}
+      {deal}
       <div class="call">
         <a href="tel:{PHONE}" class="btn"><svg class="ico"><use href="#i-phone"/></svg>Call (512) 947-4451</a>
-        <a href="/#quote" class="lnk">Or get a free quote</a>
+        <a href="{alt_href}" class="lnk">{alt_text}</a>
       </div>
     </div>
   </div>
@@ -155,9 +176,9 @@ def convert(path, idx, chrome):
     tail = body[body.index('</main>') + 7:]
     tail = re.sub(r'<footer>.*?</footer>', lambda _: footer, tail, count=1, flags=re.S)
     tail = re.sub(r'<script>\s*// Mobile menu.*?</script>', lambda _: script, tail, count=1, flags=re.S)
-    tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js"')
+    tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js?v=20261101"')
     new = head + '</head>\n<body>\n' + top + main + tail
-    open(path, 'w', encoding='utf-8', newline='\n').write(new)
+    open(path, 'w', encoding='utf-8', newline='\n').write(edit_copy(new))
 
 
 if __name__ == '__main__':

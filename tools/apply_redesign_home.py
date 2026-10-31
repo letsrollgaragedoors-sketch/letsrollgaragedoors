@@ -6,7 +6,7 @@ all section copy; rebuilds the layout with the work-order components. The H1 is 
 Run from the repo root:  python tools/apply_redesign_home.py
 """
 import re, html
-from apply_redesign import git_head, load_chrome, FONTS, text
+from apply_redesign import edit_copy, git_head, load_chrome, FONTS, text
 
 H1_LINES = [('l1', 'Garage Door Trouble'), ('l2', 'in Austin?'), ('l3', "Let's Roll.")]
 HERO_IMG = 'install-easton-park.webp'
@@ -59,7 +59,9 @@ def build(src):
     spans = '\n        '.join(f'<span class="{c}">{t}</span>' for c, t in H1_LINES)
     trust = re.findall(r'<span class="trust-item-text">(.*?)</span>', old, re.S)
     out = [f'''<section class="hero home" id="home">
-  <figure class="hero-photo"><img src="/images/{HERO_IMG}" alt="New black carriage-style garage door with windows installed by Let's Roll Garage Doors, Easton Park, Austin TX" width="800" height="600" fetchpriority="high"></figure>
+  <figure class="hero-photo"><img src="/images/{HERO_IMG}" alt="New black carriage-style garage door with windows installed by Let's Roll Garage Doors, Easton Park, Austin TX" width="800" height="600" fetchpriority="high">
+    <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="/videos/hero-bg.mp4" type="video/mp4"></video></figure>
+  <script id="hero-video-loader">window.addEventListener("load",function(){{var v=document.querySelector(".hero-video");if(!v)return;var c=navigator.connection;if(!matchMedia("(min-width:769px)").matches||matchMedia("(prefers-reduced-motion:reduce)").matches||(c&&c.saveData))return;var s=v.querySelector("source[data-src]");if(!s)return;s.src=s.getAttribute("data-src");v.load();var p=v.play();if(p&&p.then)p.then(function(){{v.classList.add("on")}}).catch(function(){{}})}});</script>
   <div class="wrap hero-grid">
     <div>
       <p class="mono tag" style="background:var(--accent);color:var(--navy)">{eyebrow}</p>
@@ -265,10 +267,10 @@ def build(src):
         i, j = js.index('// Mobile menu'), js.index('// Form')
         return '<script>\n' + js[:i] + js[j:] + '</script>\n' + script
     tail = re.sub(r'<script>(\s*// Mobile menu.*?)</script>', fix_script, tail, count=1, flags=re.S)
-    tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js"')
+    tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js?v=20261101"')
     return head + '</head>\n<body>\n' + top + main + tail
 
 
 if __name__ == '__main__':
-    open('index.html', 'w', encoding='utf-8', newline='\n').write(build(git_head('index.html')))
+    open('index.html', 'w', encoding='utf-8', newline='\n').write(edit_copy(build(git_head('index.html'))))
     print('index.html converted')
