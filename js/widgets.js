@@ -1,4 +1,4 @@
-/* Let's Roll Garage Doors: October coupon pop-up + floating chat widget.
+/* Let's Roll Garage Doors: coupon pop-up + floating chat widget.
    Loaded with defer on every page. Styles are injected here so no extra CSS request blocks rendering. */
 (function () {
   'use strict';
@@ -7,7 +7,7 @@
   var PHONE = '(512) 947-4451';
   var ACCESS_KEY = '04548151-caf0-4166-b696-19dafbd20e6e'; // same Web3Forms key as the quote form
   var SEND_TO_EMAIL = true; // set to false to only console.log leads
-  var DEALS_END = new Date('2026-11-01T00:00:00-05:00').getTime(); // deals run through Oct 31, 2026
+  var DEALS_END = new Date('2026-11-12T00:00:00-06:00').getTime(); // deals run through Nov 11, 2026
   var DEALS_LIVE = Date.now() < DEALS_END;
   var POPUP_DELAY = 6000;
   var TEASER_DELAY = 5000;
@@ -92,7 +92,7 @@
 
     /* ---------- chat widget ---------- */
     var deals = DEALS_LIVE
-      ? '<div class="lr-msg">🎟️ Ask about our October specials: up to $79 off spring repairs!</div>'
+      ? '<div class="lr-msg">🎟️ Ask about our current specials: up to $79 off spring repairs!</div>'
       : '';
     var chatBtn = el('<button type="button" class="lr-chat-btn" aria-label="Open chat" aria-expanded="false" aria-controls="lr-panel">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>' +
@@ -150,7 +150,7 @@
       var body = panel.querySelector('.lr-panel-body');
       body.innerHTML = '<div class="lr-thanks"><h3>Thanks, ' + name.replace(/[<>&"]/g, '') + '!</h3>' +
         '<p>We got your message and will reach out shortly. Need us right now? Call <a href="' + TEL + '" style="color:var(--orange,#c24c07);font-weight:700">' + PHONE + '</a>.</p>' +
-        (DEALS_LIVE ? '<a class="lr-btn" href="coupons.html">View October Deals →</a>' : '<a class="lr-btn" href="' + TEL + '">Call ' + PHONE + '</a>') + '</div>';
+        (DEALS_LIVE ? '<a class="lr-btn" href="coupons.html">View Current Deals →</a>' : '<a class="lr-btn" href="' + TEL + '">Call ' + PHONE + '</a>') + '</div>';
     });
 
     /* ---------- coupon pop-up ---------- */
@@ -158,17 +158,17 @@
     var pop = el('<div class="lr-pop" id="lr-pop" role="dialog" aria-modal="true" aria-labelledby="lr-pop-title" hidden>' +
       '<div class="lr-pop-card">' +
       '<button type="button" class="lr-x" aria-label="Close">×</button>' +
-      '<div class="lr-pop-head"><span class="lr-pop-badge">October Only</span>' +
-      '<div class="lr-pop-amt">$30 to $79 OFF</div><div class="lr-pop-sub" id="lr-pop-title">Spring Repair - October Only</div></div>' +
+      '<div class="lr-pop-head"><span class="lr-pop-badge">Limited Time</span>' +
+      '<div class="lr-pop-amt">$30 to $79 OFF</div><div class="lr-pop-sub" id="lr-pop-title">Spring Repair Specials</div></div>' +
       '<div class="lr-pop-body" id="lr-pop-body">' +
       '<p>Enter your name and phone to unlock your coupon code.</p>' +
       '<form id="lr-pop-form" novalidate>' +
       '<input class="lr-field" name="name" type="text" placeholder="Your name" autocomplete="name" required>' +
       '<input class="lr-field" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" inputmode="tel" required>' +
       '<div class="lr-err" role="alert">Please add your name and a phone number.</div>' +
-      '<button type="submit" class="lr-btn">Unlock My October Deals</button>' +
+      '<button type="submit" class="lr-btn">Unlock My Deals</button>' +
       '<button type="button" class="lr-link" data-dismiss>No thanks, I\'ll pay full price</button></form></div>' +
-      '<div class="lr-pop-foot">Ends October 31 - limited availability</div></div></div>');
+      '<div class="lr-pop-foot">Ends November 11 - limited availability</div></div></div>');
     document.body.appendChild(pop);
 
     var lastFocus = null;
@@ -205,9 +205,9 @@
       sendLead('coupon-popup', { name: name, phone: phone, code: 'SPRING30' });
       pop.querySelector('#lr-pop-body').innerHTML = '<div class="lr-thanks"><h3>Your coupon is unlocked!</h3>' +
         '<div class="lr-code"><small>Your code</small><strong>SPRING30</strong></div>' +
-        '<p>Mention this code when you call for $30 off a single spring repair. Replacing both springs? Use <strong>SPRING79</strong> for $79 off. Cannot be combined with other offers. Expires October 31, 2026.</p>' +
+        '<p>Mention this code when you call for $30 off a single spring repair. Replacing both springs? Use <strong>SPRING79</strong> for $79 off. Cannot be combined with other offers. Expires November 11, 2026.</p>' +
         '<a class="lr-btn" href="' + TEL + '">Call Now &amp; Save</a>' +
-        '<a class="lr-link" href="coupons.html">See all October deals</a></div>';
+        '<a class="lr-link" href="coupons.html">See all current deals</a></div>';
     });
     setTimeout(openPop, POPUP_DELAY);
   }
