@@ -721,3 +721,5 @@ main{counter-reset:sec}
 .back-btn::before{content:"\2190";font-family:var(--body);font-size:1.1rem;line-height:1}
 .back-btn:hover{background:var(--accent);transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--navy);text-decoration:none}
 .back-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--navy)}
+/* city landmark heroes: keep the sign / tower text clear by parking the card low */
+@media (min-width:901px){.hero.city .ticket{top:auto;bottom:56px}}

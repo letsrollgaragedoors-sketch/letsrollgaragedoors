@@ -24,7 +24,13 @@ PHONE = '+15129474451'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">\n'
-         '<link rel="stylesheet" href="/css/workorder.css?v=20261103">')
+         '<link rel="stylesheet" href="/css/workorder.css?v=20261104">')
+
+CITY_PHOTOS = {  # location page -> (file, width, height, alt, object-position)
+    'garage-door-repair-manor.html': ('city-manor-water-tower.webp', 800, 400, 'Manor, Texas water tower seen from above', '50% 40%'),
+    'garage-door-repair-georgetown.html': ('city-georgetown-water-tower.webp', 800, 1067, 'Georgetown, Texas water tower', '50% 28%'),
+    'garage-door-repair-buda.html': ('city-buda-welcome-sign.webp', 2000, 926, 'Welcome to Buda, Texas sign on the I-35 overpass', '58% 50%'),
+}
 
 HERO_BY_KEY = [  # filename keyword -> hero photo
     ('spring', 'garage-door-both-springs-broken-austin-tx.jpg'),
@@ -111,6 +117,10 @@ def build_hero(sec, fname, idx):
     alt_href, alt_text = (ctas[1][0], text(ctas[1][1])) if len(ctas) > 1 else ('/#quote', 'Get a Free Quote')
     img = next((v for k, v in HERO_BY_KEY if k in fname), None) or ROTATE[idx % len(ROTATE)]
     alt = html.escape(f"Garage door work by Let's Roll Garage Doors: {text(h1)}", quote=True)
+    iw, ih, pos = 800, 600, ''
+    if fname in CITY_PHOTOS:
+        img, iw, ih, alt, pos = CITY_PHOTOS[fname]
+        pos = f' style="object-position:{pos}"'
     perf = ' · '.join(badges[:2]) if badges else 'Background-checked &amp; insured'
     # city / area pages get a "back" button in the top-left, like the old "Back to Services" link
     is_loc = re.fullmatch(r'garage-door-repair-(?!austin\.html|cost-austin\.html).+\.html', fname) is not None
@@ -118,9 +128,10 @@ def build_hero(sec, fname, idx):
     proof = ''
     if badges:
         proof = '<div class="wrap">\n  <ul class="proof">\n' + ''.join(f'    <li>{b}</li>\n' for b in badges) + '  </ul>\n</div>\n'
-    return f'''<section class="hero">
+    cls = 'hero city' if fname in CITY_PHOTOS else 'hero'
+    return f'''<section class="{cls}">
   <figure class="hero-photo">
-    <img src="/images/{img}" alt="{alt}" width="800" height="600" fetchpriority="high">
+    <img src="/images/{img}" alt="{alt}" width="{iw}" height="{ih}"{pos} fetchpriority="high">
   </figure>
   <aside class="ticket" aria-label="Job summary">
     <div class="hd mono"><span>Work order</span><span>Austin, TX</span></div>
