@@ -29,6 +29,7 @@ def shell(path, build_main, chrome):
     main = build_main(body[a:b + 7])
     main = re.sub(r'(href|src)="(?!https?:|tel:|mailto:|#|/|data:)([^"]+)"', r'\1="/\2"', main)
     tail = body[b + 7:]
+    tail = re.sub(r'<!-- STICKY CALL BAR[^>]*-->\s*<div class="sticky-call">.*?</div>\s*', '', tail, flags=re.S)
     tail = re.sub(r'<footer>.*?</footer>', lambda _: footer, tail, count=1, flags=re.S)
     def swap_script(m):
         out = script
@@ -121,7 +122,19 @@ def gallery_main(main):
     tag = text(re.search(r'<div class="section-tag[^>]*>(.*?)</div>', ph.group(0), re.S).group(1))
     h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', ph.group(0), re.S).group(1))
     p = re.search(r'<p>(.*?)</p>', ph.group(0), re.S).group(1)
-    return main.replace(ph.group(0), plain_hero(tag, h1, foot=f'<div class="hero-foot"><p>{p}</p></div>'), 1)
+    main = main.replace(ph.group(0), plain_hero(tag, h1, foot=f'<div class="hero-foot"><p>{p}</p></div>'), 1)
+    cs = re.search(r'<section class="cta-strip">.*?</section>', main, re.S)
+    if cs:
+        h2 = re.search(r'<h2>(.*?)</h2>', cs.group(0), re.S).group(1)
+        sub = re.search(r'<p>(.*?)</p>', cs.group(0), re.S).group(1)
+        call = re.search(r'<a href="(tel:[^"]+)"[^>]*>(.*?)</a>', cs.group(0), re.S)
+        quote = re.search(r'<a href="([^"]+)" class="btn btn-outline-white">(.*?)</a>', cs.group(0), re.S)
+        band = ('<section class="svc-cta-band">\n'
+                f'  <h2>{h2}</h2>\n  <p>{sub}</p>\n'
+                f'  <a href="{call.group(1)}" class="nav-cta">{text(call.group(2))}</a>\n'
+                f'  <p><a href="{quote.group(1)}">{text(quote.group(2))}</a></p>\n</section>')
+        main = main.replace(cs.group(0), band, 1)
+    return main
 
 
 def same_day_main(main):

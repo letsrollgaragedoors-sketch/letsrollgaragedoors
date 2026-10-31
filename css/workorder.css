@@ -707,3 +707,12 @@ main{counter-reset:sec}
 .hero-deal b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.15;margin:4px 0}
 .hero-deal b span{font-family:var(--body);font-size:.8rem;font-weight:600}
 .hero-deal small{display:block;font-size:.88rem}
+/* ===== clean-up: legacy blocks that had no styles after the redesign ===== */
+.lede{font-size:clamp(1.1rem,1.5vw,1.4rem);line-height:1.5;max-width:44ch}
+.claim-box{border:3px solid var(--navy);background:var(--kraft);box-shadow:8px 8px 0 var(--navy);padding:22px 26px;margin:2em 0;max-width:68ch}
+.claim-box h3{margin-top:0}
+.claim-box p{margin-top:.6em}
+.claim-box .btn{margin-top:14px}
+.deal-urgency{margin-top:24px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.navy-tag{background:var(--navy)!important;color:var(--bg)!important}
+.btn-orange,.btn-navy,.btn-outline-white{background:var(--accent);color:var(--navy)}
