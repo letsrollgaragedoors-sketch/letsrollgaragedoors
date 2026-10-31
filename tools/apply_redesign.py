@@ -8,7 +8,7 @@ Run from the repo root:  python tools/apply_redesign.py
 """
 import re, subprocess, glob, os, html
 
-DRAFT = 'redesign/garage-door-installation-austin-workorder.html'
+DRAFT = 'tools/design-b-source.html'
 PHONE = '+15129474451'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
