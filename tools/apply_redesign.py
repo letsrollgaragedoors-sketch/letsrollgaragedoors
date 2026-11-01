@@ -25,7 +25,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">\n'
          '<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>\n'
-         '<link rel="stylesheet" href="/css/workorder.css?v=20261106">')
+         '<link rel="stylesheet" href="/css/workorder.css?v=20261107">')
 
 CARD_TOP = {'garage-door-repair-lakeway.html', 'garage-door-repair-bastrop.html'}
 CITY_PHOTOS = {  # location page -> (file, width, height, alt, object-position)
