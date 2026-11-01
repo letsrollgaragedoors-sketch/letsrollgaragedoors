@@ -34,6 +34,18 @@ def clean_links(s):
     return ICON.sub('', s)
 
 
+LOOP_JS = '''<script>
+(function(){var t=document.getElementById('quotes-track'),b=document.getElementById('q-toggle');if(!t)return;
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){if(b)b.hidden=true;return}
+[].slice.call(t.children).forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');t.appendChild(k)});
+var half=t.scrollWidth/2;t.style.setProperty('--qdur',Math.max(40,Math.round(half/55))+'s');
+t.parentNode.classList.add('running');t.classList.add('run');
+if(b)b.addEventListener('click',function(){var p=t.classList.toggle('paused');b.setAttribute('aria-pressed',p);b.textContent=p?'Play reviews':'Pause reviews'});
+})();
+</script>
+'''
+
+
 def build(src):
     top, footer, script, _ = load_chrome()
     m0 = re.search(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?homepage\.css[^>]*>', src, re.S)
@@ -156,12 +168,12 @@ def build(src):
     badge = ICON.sub('', badge)
     cards = re.findall(r'<article class="testimonial-card">.*?</article>', s, re.S)
     qs = []
-    for c in cards:
+    for qi, c in enumerate(cards):
         q = g(r'<blockquote>(.*?)</blockquote>', c).group(1)
         av = g(r'<div class="author-avatar">(.*?)</div>', c).group(1)
         nm = g(r'<div class="author-name">(.*?)</div>', c).group(1)
         lc = g(r'<div class="author-loc">(.*?)</div>', c).group(1)
-        qs.append(f'<article class="q-card"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>{q}</blockquote><div class="q-by"><span class="q-av">{av}</span><span><b>{nm}</b><br>{lc}</span></div></article>')
+        qs.append(f'<article class="q-card q-v{qi % 3}"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>{q}</blockquote><div class="q-by"><span class="q-av">{av}</span><span><b>{nm}</b><br>{lc}</span></div></article>')
     out.append(f'''<section class="sec kraft" id="reviews">
   <div class="wrap">
     <span class="tag mono rv">{tag}</span>
@@ -169,8 +181,11 @@ def build(src):
     <p class="rv" style="margin-top:1.2rem">{badge}</p>
   </div>
   <div class="quotes" tabindex="0" role="region" aria-label="Customer reviews">
+    <div class="quotes-track" id="quotes-track">
 ''' + '\n'.join(qs) + '''
+    </div>
   </div>
+  <div class="wrap"><button type="button" class="q-toggle mono" id="q-toggle" aria-pressed="false">Pause reviews</button></div>
 </section>''')
 
     # ---- deals
@@ -268,6 +283,7 @@ def build(src):
         return '<script>\n' + js[:i] + js[j:] + '</script>\n' + script
     tail = re.sub(r'<script>(\s*// Mobile menu.*?)</script>', fix_script, tail, count=1, flags=re.S)
     tail = tail.replace('src="js/widgets.js"', 'src="/js/widgets.js?v=20261101"')
+    tail = tail.replace('</body>', LOOP_JS + '</body>', 1)
     return head + '</head>\n<body>\n' + top + main + tail
 
 

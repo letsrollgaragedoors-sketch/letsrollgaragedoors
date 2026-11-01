@@ -632,8 +632,8 @@ main{counter-reset:sec}
 /* reviews strip */
 .quotes{display:flex;gap:clamp(18px,2.4vw,32px);overflow-x:auto;scroll-snap-type:x mandatory;padding:clamp(28px,3vw,44px) var(--gut) 40px max(var(--gut),calc((100vw - 1280px)/2));scroll-padding-left:max(var(--gut),calc((100vw - 1280px)/2));scrollbar-color:var(--navy) var(--kraft)}
 .q-card{flex:0 0 min(84vw,430px);scroll-snap-align:start;background:#fff;border:3px solid var(--navy);box-shadow:8px 8px 0 var(--navy);padding:22px 24px;display:flex;flex-direction:column;gap:14px}
-.q-card:nth-child(3n+2){background:var(--accent);margin-top:28px;transform:rotate(.8deg)}
-.q-card:nth-child(3n+3){background:var(--bg);transform:rotate(-.7deg)}
+.q-v1{background:var(--accent);margin-top:28px;transform:rotate(.8deg)}
+.q-v2{background:var(--bg);transform:rotate(-.7deg)}
 .q-card blockquote{margin:0;font-size:1.02rem;line-height:1.5;font-weight:500}
 .q-card .stars{font-size:1.1rem;letter-spacing:.1em}
 .q-by{margin-top:auto;display:flex;gap:12px;align-items:center;font-size:.9rem}
@@ -659,7 +659,7 @@ main{counter-reset:sec}
   .stat:nth-child(even){transform:none}
   .stats-row{justify-content:flex-start}
   .about-photo{margin-right:14px}
-  .q-card:nth-child(3n+2){margin-top:0}
+  .q-v1{margin-top:0}
 }
 @media (max-width:600px){.form-row{grid-template-columns:1fr}}
 @media (max-width:600px){
@@ -730,3 +730,13 @@ main{counter-reset:sec}
   .hero.home .hero-photo{left:0;width:auto}
   .hero.home .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,33,61,.38) 0%,rgba(16,33,61,.12) 55%,rgba(16,33,61,0) 100%);pointer-events:none}
 }
+
+/* reviews: continuous loop (JS adds .running / .run; without JS or with reduced motion it stays a swipeable strip) */
+.quotes-track{display:flex;gap:clamp(18px,2.4vw,32px);width:max-content;padding-right:clamp(18px,2.4vw,32px)}
+.quotes.running{overflow:hidden}
+.quotes-track.run{animation:qscroll var(--qdur,80s) linear infinite}
+.quotes-track.paused,.quotes:hover .quotes-track.run,.quotes:focus-within .quotes-track.run{animation-play-state:paused}
+@keyframes qscroll{to{transform:translateX(-50%)}}
+.q-toggle{margin-top:6px;min-height:44px;padding:8px 16px;background:var(--bg);color:var(--navy);border:3px solid var(--navy);cursor:pointer;box-shadow:4px 4px 0 var(--navy);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.q-toggle:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--navy);background:var(--accent)}
+@media (prefers-reduced-motion:reduce){.quotes-track.run{animation:none}.q-toggle{display:none}}
