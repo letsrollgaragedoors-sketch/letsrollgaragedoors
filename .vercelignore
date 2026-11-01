@@ -1,0 +1,8 @@
+# internal build tools and notes: keep them in git but off the live site
+tools/
+blog-fixes-patch.md
+patch_phase3b_links.py
+skills-lock.json
+.agents/
+.claude/
+videos/letsroll-promo/
