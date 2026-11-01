@@ -28,6 +28,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
 
 CARD_TOP = {'garage-door-repair-lakeway.html', 'garage-door-repair-bastrop.html'}
 CITY_PHOTOS = {  # location page -> (file, width, height, alt, object-position)
+    'garage-door-repair-east-austin.html': ('city-east-austin.webp', 1600, 583, 'Downtown Austin skyline and the Lady Bird Lake boardwalk at sunset', '63% 50%'),
     'garage-door-repair-manor.html': ('city-manor-water-tower.webp', 800, 400, 'Manor, Texas water tower seen from above', '50% 40%'),
     'garage-door-repair-georgetown.html': ('city-georgetown-water-tower.webp', 800, 1067, 'Georgetown, Texas water tower', '50% 28%'),
     'garage-door-repair-buda.html': ('city-buda-welcome-sign.webp', 2000, 926, 'Welcome to Buda, Texas sign on the I-35 overpass', '58% 50%'),
