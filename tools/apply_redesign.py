@@ -24,7 +24,7 @@ PHONE = '+15129474451'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">\n'
-         '<link rel="stylesheet" href="/css/workorder.css?v=20261104">')
+         '<link rel="stylesheet" href="/css/workorder.css?v=20261105">')
 
 CARD_TOP = {'garage-door-repair-lakeway.html', 'garage-door-repair-bastrop.html'}
 CITY_PHOTOS = {  # location page -> (file, width, height, alt, object-position)
@@ -137,7 +137,10 @@ def build_hero(sec, fname, idx):
     perf = ' · '.join(badges[:2]) if badges else 'Background-checked &amp; insured'
     # city / area pages get a "back" button in the top-left, like the old "Back to Services" link
     is_loc = re.fullmatch(r'garage-door-repair-(?!austin\.html|cost-austin\.html).+\.html', fname) is not None
-    back = '<a href="/#areas" class="back-link back-btn">Back to Service Areas</a>\n      ' if is_loc else ''
+    if is_loc:
+        back = '<a href="/#areas" class="back-link back-btn">Back to Service Areas</a>\n      '
+    else:  # every other page built here is a service page (or the deals page): same "Back to Services" link the old pages had
+        back = '<a href="/#services" class="back-link back-btn">Back to Services</a>\n      '
     proof = ''
     if badges:
         proof = '<div class="wrap">\n  <ul class="proof">\n' + ''.join(f'    <li>{b}</li>\n' for b in badges) + '  </ul>\n</div>\n'
