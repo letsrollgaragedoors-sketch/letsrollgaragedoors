@@ -59,9 +59,9 @@ def build(src):
     spans = '\n        '.join(f'<span class="{c}">{t}</span>' for c, t in H1_LINES)
     trust = re.findall(r'<span class="trust-item-text">(.*?)</span>', old, re.S)
     out = [f'''<section class="hero home" id="home">
-  <figure class="hero-photo"><img src="/images/{HERO_IMG}" alt="New black carriage-style garage door with windows installed by Let's Roll Garage Doors, Easton Park, Austin TX" width="800" height="600" fetchpriority="high">
+  <figure class="hero-photo"><picture><source media="(max-width:768px)" srcset="/images/hero-poster-m.webp"><img src="/images/hero-poster.webp" alt="A newly installed garage door and open garage at a home in Austin, TX" width="1280" height="720" fetchpriority="high"></picture>
     <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="/videos/hero-bg.mp4" type="video/mp4"></video></figure>
-  <script id="hero-video-loader">window.addEventListener("load",function(){{var v=document.querySelector(".hero-video");if(!v)return;var c=navigator.connection;if(!matchMedia("(min-width:769px)").matches||matchMedia("(prefers-reduced-motion:reduce)").matches||(c&&c.saveData))return;var s=v.querySelector("source[data-src]");if(!s)return;s.src=s.getAttribute("data-src");v.load();var p=v.play();if(p&&p.then)p.then(function(){{v.classList.add("on")}}).catch(function(){{}})}});</script>
+  <script id="hero-video-loader">window.addEventListener("load",function(){{var v=document.querySelector(".hero-video");if(!v)return;var c=navigator.connection;if(matchMedia("(prefers-reduced-motion:reduce)").matches||(c&&(c.saveData||/(^|-)2g$/.test(c.effectiveType||""))))return;var s=v.querySelector("source[data-src]");if(!s)return;s.src=s.getAttribute("data-src");v.load();var p=v.play();if(p&&p.then)p.then(function(){{v.classList.add("on")}}).catch(function(){{}})}});</script>
   <div class="wrap hero-grid">
     <div>
       <p class="mono tag" style="background:var(--accent);color:var(--navy)">{eyebrow}</p>

@@ -24,7 +24,7 @@ PHONE = '+15129474451'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">\n'
-         '<link rel="stylesheet" href="/css/workorder.css?v=20261105">')
+         '<link rel="stylesheet" href="/css/workorder.css?v=20261106">')
 
 CARD_TOP = {'garage-door-repair-lakeway.html', 'garage-door-repair-bastrop.html'}
 CITY_PHOTOS = {  # location page -> (file, width, height, alt, object-position)
