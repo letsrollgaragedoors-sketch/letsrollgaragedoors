@@ -26,10 +26,19 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">\n'
          '<link rel="stylesheet" href="/css/workorder.css?v=20261104">')
 
+CARD_TOP = {'garage-door-repair-lakeway.html', 'garage-door-repair-bastrop.html'}
 CITY_PHOTOS = {  # location page -> (file, width, height, alt, object-position)
     'garage-door-repair-manor.html': ('city-manor-water-tower.webp', 800, 400, 'Manor, Texas water tower seen from above', '50% 40%'),
     'garage-door-repair-georgetown.html': ('city-georgetown-water-tower.webp', 800, 1067, 'Georgetown, Texas water tower', '50% 28%'),
     'garage-door-repair-buda.html': ('city-buda-welcome-sign.webp', 2000, 926, 'Welcome to Buda, Texas sign on the I-35 overpass', '58% 50%'),
+    'garage-door-repair-round-rock.html': ('city-round-rock.webp', 600, 600, 'Round Rock, Texas water tower and downtown seen from above', '30% 40%'),
+    'garage-door-repair-cedar-park.html': ('city-cedar-park-tower.webp', 612, 341, 'Cedar Park, Texas water tower under storm clouds', '50% 50%'),
+    'garage-door-repair-pflugerville.html': ('city-pflugerville.webp', 764, 432, 'Pflugerville, Texas water tower above the neighborhoods', '0% 50%'),
+    'garage-door-repair-kyle.html': ('city-kyle.webp', 1600, 785, 'City of Kyle, Texas water tower above a neighborhood', '26% 50%'),
+    'garage-door-repair-leander.html': ('city-leander.webp', 1600, 1067, 'City of Leander, Texas water tower', '42% 40%'),
+    'garage-door-repair-hutto.html': ('city-hutto.webp', 1600, 1199, 'Hutto, Texas water tower above a neighborhood', '40% 38%'),
+    'garage-door-repair-lakeway.html': ('city-lakeway.webp', 375, 250, 'Welcome to Lakeway, Texas sign with a sailboat logo', '62% 50%'),
+    'garage-door-repair-bastrop.html': ('city-bastrop.webp', 1600, 1067, 'Bastrop, Texas water tower with the Lost Pines mural', '85% 55%'),
 }
 
 HERO_BY_KEY = [  # filename keyword -> hero photo
@@ -128,7 +137,8 @@ def build_hero(sec, fname, idx):
     proof = ''
     if badges:
         proof = '<div class="wrap">\n  <ul class="proof">\n' + ''.join(f'    <li>{b}</li>\n' for b in badges) + '  </ul>\n</div>\n'
-    cls = 'hero city' if fname in CITY_PHOTOS else 'hero'
+    # photos with lettering low in the frame keep the card at the top; the rest park it low
+    cls = 'hero city' if fname in CITY_PHOTOS and fname not in CARD_TOP else 'hero'
     return f'''<section class="{cls}">
   <figure class="hero-photo">
     <img src="/images/{img}" alt="{alt}" width="{iw}" height="{ih}"{pos} fetchpriority="high">
