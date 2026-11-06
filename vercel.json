@@ -57,6 +57,21 @@
   ],
   "redirects": [
     {
+      "source": "/garage-door-wont-close-austin.html",
+      "destination": "/garage-door-wont-open-close-austin.html",
+      "permanent": true
+    },
+    {
+      "source": "/garage-door-wont-open-austin.html",
+      "destination": "/garage-door-wont-open-close-austin.html",
+      "permanent": true
+    },
+    {
+      "source": "/garage-door-tune-up-maintenance-austin.html",
+      "destination": "/garage-door-tune-up-austin.html",
+      "permanent": true
+    },
+    {
       "source": "/tools/:path*",
       "destination": "/",
       "permanent": false

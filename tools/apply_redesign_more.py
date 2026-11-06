@@ -10,7 +10,7 @@ from apply_redesign import edit_copy, git_head, load_chrome, FONTS, text, build_
 
 ARTICLES = ['garage-door-austin-heat-humidity', 'garage-door-insulated-doors-austin',
             'garage-door-maintenance-tips-austin', 'garage-door-repair-cost-austin',
-            'garage-door-spring-warning-signs-austin', 'garage-door-tune-up-maintenance-austin',
+            'garage-door-spring-warning-signs-austin',
             'garage-door-wont-open-close-austin', 'smart-garage-door-openers-austin',
             'what-breaks-garage-doors-austin-by-season', 'when-to-replace-garage-door-austin']
 LEGAL = ['about', 'privacy-policy', 'warranty-terms']

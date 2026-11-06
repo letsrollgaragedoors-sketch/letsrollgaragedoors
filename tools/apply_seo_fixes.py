@@ -19,7 +19,6 @@ PHONE = '+15129474451'
 
 DESCRIPTIONS = {
     'index.html': "Same-day & 24/7 garage door repair in Austin, TX. Springs, openers and new doors. Background-checked & insured. Free estimate: (512) 947-4451.",
-    'garage-door-wont-open-austin.html': "Garage door won't open in Austin? We repair broken springs, cables, rollers, openers and tracks. Same-day service. Call (512) 947-4451.",
     'same-day-garage-door-service-austin.html': "Need your garage door fixed today? Same-day service across Austin, TX for springs, cables, openers, off-track doors and more. Call (512) 947-4451.",
     'garage-door-maintenance-tips-austin.html': "Five garage door maintenance tasks Austin homeowners can do in under 30 minutes: lubrication, balance, seals, hardware and safety sensors.",
     'garage-door-spring-warning-signs-austin.html': "A broken torsion spring is one of the most dangerous garage door failures. Learn the 7 warning signs every Austin homeowner should know.",
