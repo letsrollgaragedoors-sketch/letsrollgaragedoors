@@ -57,6 +57,11 @@
   ],
   "redirects": [
     {
+      "source": "/coupons.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/garage-door-wont-close-austin.html",
       "destination": "/garage-door-wont-open-close-austin.html",
       "permanent": true

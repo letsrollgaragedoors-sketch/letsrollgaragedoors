@@ -1,4 +1,4 @@
-/* Let's Roll Garage Doors: coupon pop-up + floating chat widget.
+/* Let's Roll Garage Doors: floating chat widget.
    Loaded with defer on every page. Styles are injected here so no extra CSS request blocks rendering. */
 (function () {
   'use strict';
@@ -7,9 +7,6 @@
   var PHONE = '(512) 947-4451';
   var ACCESS_KEY = '04548151-caf0-4166-b696-19dafbd20e6e'; // same Web3Forms key as the quote form
   var SEND_TO_EMAIL = true; // set to false to only console.log leads
-  var DEALS_END = new Date('2026-11-12T00:00:00-06:00').getTime(); // deals run through Nov 11, 2026
-  var DEALS_LIVE = Date.now() < DEALS_END;
-  var POPUP_DELAY = 6000;
   var TEASER_DELAY = 5000;
   var TEASER_HIDE = 8000;
 
@@ -47,9 +44,6 @@
     document.head.appendChild(st);
 
     /* ---------- chat widget ---------- */
-    var deals = DEALS_LIVE
-      ? '<div class="lr-msg">🎟️ Ask about our current specials: up to $79 off spring repairs!</div>'
-      : '';
     var chatBtn = el('<button type="button" class="lr-chat-btn" aria-label="Open chat" aria-expanded="false" aria-controls="lr-panel">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>' +
       '<span class="lr-dot" aria-hidden="true"></span></button>');
@@ -58,7 +52,7 @@
       '<div class="lr-panel-head"><strong>Let\'s Roll Garage Doors</strong><span>🟢 We typically reply in minutes</span>' +
       '<button type="button" class="lr-x" aria-label="Close chat">×</button></div>' +
       '<div class="lr-panel-body">' +
-      '<div class="lr-msg">Hey! 👋 Thanks for stopping by. Tell us what\'s going on with your garage door and we\'ll get back to you ASAP.</div>' + deals +
+      '<div class="lr-msg">Hey! 👋 Thanks for stopping by. Tell us what\'s going on with your garage door and we\'ll get back to you ASAP.</div>' +
       '<form id="lr-chat-form" novalidate>' +
       '<input class="lr-field" name="name" type="text" placeholder="Your name" autocomplete="name" required>' +
       '<input class="lr-field" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" inputmode="tel" required>' +
@@ -90,8 +84,7 @@
     teaser.addEventListener('click', openChat);
 
     teaserTimer = setTimeout(function () {
-      var popOpen = document.getElementById('lr-pop') && !document.getElementById('lr-pop').hidden;
-      if (panel.classList.contains('lr-open') || popOpen) return;
+      if (panel.classList.contains('lr-open')) return;
       teaser.classList.add('lr-on');
       hideTimer = setTimeout(hideTeaser, TEASER_HIDE);
     }, TEASER_DELAY);
@@ -106,66 +99,8 @@
       var body = panel.querySelector('.lr-panel-body');
       body.innerHTML = '<div class="lr-thanks"><h3>Thanks, ' + name.replace(/[<>&"]/g, '') + '!</h3>' +
         '<p>We got your message and will reach out shortly. Need us right now? Call <a href="' + TEL + '" style="color:var(--orange,#c24c07);font-weight:700">' + PHONE + '</a>.</p>' +
-        (DEALS_LIVE ? '<a class="lr-btn" href="coupons.html">View Current Deals →</a>' : '<a class="lr-btn" href="' + TEL + '">Call ' + PHONE + '</a>') + '</div>';
+        '<a class="lr-btn" href="' + TEL + '">Call ' + PHONE + '</a></div>';
     });
-
-    /* ---------- coupon pop-up ---------- */
-    if (!DEALS_LIVE || store(true, 'lrPopSeen')) return;
-    var pop = el('<div class="lr-pop" id="lr-pop" role="dialog" aria-modal="true" aria-labelledby="lr-pop-title" hidden>' +
-      '<div class="lr-pop-card">' +
-      '<button type="button" class="lr-x" aria-label="Close">×</button>' +
-      '<div class="lr-pop-head"><span class="lr-pop-badge">Limited Time</span>' +
-      '<div class="lr-pop-amt">$30 to $79 OFF</div><div class="lr-pop-sub" id="lr-pop-title">Spring Repair Specials</div></div>' +
-      '<div class="lr-pop-body" id="lr-pop-body">' +
-      '<p>Enter your name and phone to unlock your coupon code.</p>' +
-      '<form id="lr-pop-form" novalidate>' +
-      '<input class="lr-field" name="name" type="text" placeholder="Your name" autocomplete="name" required>' +
-      '<input class="lr-field" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" inputmode="tel" required>' +
-      '<div class="lr-err" role="alert">Please add your name and a phone number.</div>' +
-      '<button type="submit" class="lr-btn">Unlock My Deals</button>' +
-      '<button type="button" class="lr-link" data-dismiss>No thanks, I\'ll pay full price</button></form></div>' +
-      '<div class="lr-pop-foot">Ends November 11 - limited availability</div></div></div>');
-    document.body.appendChild(pop);
-
-    var lastFocus = null;
-    function openPop() {
-      if (panel.classList.contains('lr-open')) { setTimeout(openPop, 4000); return; }
-      hideTeaser();
-      lastFocus = document.activeElement;
-      pop.hidden = false;
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(function () { pop.classList.add('lr-show'); });
-      var f = pop.querySelector('input[name=name]');
-      if (f) f.focus();
-      store(false, 'lrPopSeen', '1');
-    }
-    function closePop() {
-      pop.classList.remove('lr-show');
-      document.body.style.overflow = '';
-      setTimeout(function () { pop.hidden = true; }, 220);
-      if (lastFocus && lastFocus.focus) try { lastFocus.focus(); } catch (e) {}
-    }
-    pop.addEventListener('click', function (e) { if (e.target === pop) closePop(); });
-    pop.querySelector('.lr-x').addEventListener('click', closePop);
-    pop.querySelector('[data-dismiss]').addEventListener('click', closePop);
-    document.addEventListener('keydown', function (e) {
-      if (e.key !== 'Escape') return;
-      if (!pop.hidden) closePop(); else if (panel.classList.contains('lr-open')) closeChat();
-    });
-    pop.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var f = e.target, name = f.name.value.trim(), phone = f.phone.value.trim();
-      var err = f.querySelector('.lr-err');
-      if (!name || phone.replace(/\D/g, '').length < 7) { err.style.display = 'block'; return; }
-      err.style.display = 'none';
-      sendLead('coupon-popup', { name: name, phone: phone, code: 'SPRING30' });
-      pop.querySelector('#lr-pop-body').innerHTML = '<div class="lr-thanks"><h3>Your coupon is unlocked!</h3>' +
-        '<div class="lr-code"><small>Your code</small><strong>SPRING30</strong></div>' +
-        '<p>Mention this code when you call for $30 off a single spring repair. Replacing both springs? Use <strong>SPRING79</strong> for $79 off. Cannot be combined with other offers. Expires November 11, 2026.</p>' +
-        '<a class="lr-btn" href="' + TEL + '">Call Now &amp; Save</a>' +
-        '<a class="lr-link" href="coupons.html">See all current deals</a></div>';
-    });
-    setTimeout(openPop, POPUP_DELAY);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
