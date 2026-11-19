@@ -36,7 +36,10 @@ Let's Roll Garage Doors serves Austin, TX homeowners with fast, transparent, and
 - Garage door manufacturers: Clopay, Wayne Dalton, Amarr, and all major brands
 - Smart opener compatibility: LiftMaster myQ, Aladdin Connect, Google Home, Amazon Alexa, Apple HomeKit
 
-## Key Service Pages
+## Key Service Pages
+
+- [All Services](https://www.letsrollgaragedoors.com/services.html): Every garage door service we offer, with links to each page.
+- [Service Areas](https://www.letsrollgaragedoors.com/service-areas.html): All cities and areas we serve around Austin, TX.
 
 - [Homepage](https://www.letsrollgaragedoors.com/): Overview, free quote form, testimonials, service area
 - [Garage Door Repair Austin](https://www.letsrollgaragedoors.com/garage-door-repair-austin.html): General repair services, brands, process, pricing ranges
