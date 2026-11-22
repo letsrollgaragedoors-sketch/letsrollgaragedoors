@@ -441,6 +441,34 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/css/workorder.css?v=20261107">
 <!-- Microsoft UET tag loaded after page render -->
+<style>
+/* 3-question quote box */
+#quote-form .qs{border:0;padding:0;margin:0;min-width:0}
+#quote-form .qs+.qs{margin-top:18px}
+#quote-form legend{display:block;width:100%;padding:0;margin:8px 0 0;font-family:var(--display);text-transform:uppercase;font-size:1.05rem;line-height:1.1;color:var(--navy)}
+#quote-form legend:focus{outline:none}
+.q-step-label{margin:12px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.q-prog{display:flex;gap:6px;margin:6px 0 4px}
+.q-prog span{flex:1;height:6px;background:#d6dae3;display:block}
+.q-prog span.on{background:var(--navy)}
+.q-opts{display:grid;gap:8px;margin-top:12px}
+.q-opt{position:relative;display:block}
+.q-opt input{position:absolute;opacity:0;width:1px;height:1px}
+.q-opt span{display:flex;align-items:center;min-height:48px;padding:10px 14px;border:2px solid var(--navy);background:var(--bg);color:var(--navy);font-weight:700;font-size:15px;cursor:pointer;transition:transform .12s,box-shadow .12s,background .12s}
+.q-opt span:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--navy)}
+.q-opt input:checked+span{background:var(--accent);box-shadow:4px 4px 0 var(--navy)}
+.q-opt input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+.q-back{margin-top:12px;background:none;border:0;padding:6px 0;font:inherit;font-size:13px;font-weight:700;color:var(--muted);text-decoration:underline;cursor:pointer}
+.q-opt-note{font-weight:400;text-transform:none;letter-spacing:0}
+.q-done{padding:18px 0 6px}
+.q-done-t{font-family:var(--display);text-transform:uppercase;font-size:1.2rem;color:var(--navy);margin:0 0 8px}
+.q-done .btn{margin-top:12px}
+.js #quote-form .qs{display:none}
+.js #quote-form .qs.on{display:block}
+.js #quote-form .qs+.qs{margin-top:0}
+html:not(.js) .q-step-label,html:not(.js) .q-prog,html:not(.js) .q-back{display:none}
+@media (prefers-reduced-motion:reduce){.q-opt span{transition:none}}
+</style>
 </head>
 <body>
 
@@ -523,24 +551,49 @@
         <input type="hidden" name="from_name" value="Let's Roll Garage Doors Website">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <input type="hidden" name="referral_code" id="referral-code-field" value="">
-        <div class="form-row">
-          <div class="fg"><label for="f-fn">First Name</label><input id="f-fn" name="first_name" type="text" placeholder="John" autocomplete="given-name" required></div>
-          <div class="fg"><label for="f-ln">Last Name</label><input id="f-ln" name="last_name" type="text" placeholder="Smith" autocomplete="family-name" required></div>
+        <p class="q-step-label" id="q-step-label" aria-live="polite">Step 1 of 3</p>
+        <div class="q-prog" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+
+        <fieldset class="qs on" data-step="1">
+          <legend>What's going on with your door?</legend>
+          <div class="q-opts">
+            <label class="q-opt"><input type="radio" name="service_needed" value="Garage Door Repair"><span>Won't open or close</span></label>
+            <label class="q-opt"><input type="radio" name="service_needed" value="Spring / Cable Repair"><span>Broken spring or cable</span></label>
+            <label class="q-opt"><input type="radio" name="service_needed" value="Opener Repair / Installation"><span>Opener not working</span></label>
+            <label class="q-opt"><input type="radio" name="service_needed" value="New Door Installation"><span>I need a new door</span></label>
+            <label class="q-opt"><input type="radio" name="service_needed" value="Other / Not Sure"><span>Something else / not sure</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="qs" data-step="2">
+          <legend>How soon do you need us?</legend>
+          <div class="q-opts">
+            <label class="q-opt"><input type="radio" name="urgency" value="Right now (emergency)"><span>Right now, it's an emergency</span></label>
+            <label class="q-opt"><input type="radio" name="urgency" value="Today"><span>Today</span></label>
+            <label class="q-opt"><input type="radio" name="urgency" value="This week"><span>This week</span></label>
+            <label class="q-opt"><input type="radio" name="urgency" value="Just getting a price"><span>Just getting a price</span></label>
+          </div>
+          <button type="button" class="q-back" data-back="1">&larr; Back</button>
+        </fieldset>
+
+        <fieldset class="qs" data-step="3">
+          <legend>Where should we reach you?</legend>
+          <div class="form-row">
+            <div class="fg"><label for="f-fn">First Name</label><input id="f-fn" name="first_name" type="text" placeholder="John" autocomplete="given-name" required></div>
+            <div class="fg"><label for="f-ln">Last Name</label><input id="f-ln" name="last_name" type="text" placeholder="Smith" autocomplete="family-name" required></div>
+          </div>
+          <div class="fg"><label for="f-ph">Phone Number</label><input id="f-ph" name="phone" type="tel" placeholder="(512) 555-0123" autocomplete="tel" required></div>
+          <div class="fg"><label for="f-zip">ZIP Code</label><input id="f-zip" name="zip_code" type="text" inputmode="numeric" pattern="[0-9]{5}" title="5-digit ZIP code" placeholder="78701" maxlength="5" autocomplete="postal-code" required></div>
+          <button class="form-submit" type="submit">Send My Free Request</button>
+          <button type="button" class="q-back" data-back="2">&larr; Back</button>
+          <p class="form-note">Emergency? <a href="tel:+15129474451" style="text-decoration:underline;font-weight:700">Call (512) 947-4451</a> now. Your info is private and never sold. <a href="/privacy-policy.html" style="text-decoration:underline">Privacy Policy</a></p>
+        </fieldset>
+
+        <div class="q-done" id="q-done" hidden tabindex="-1">
+          <p class="q-done-t">Request sent. Thank you!</p>
+          <p>We will call you back shortly. If it can't wait, call us now.</p>
+          <a href="tel:+15129474451" class="btn btn-orange">Call (512) 947-4451</a>
         </div>
-        <div class="fg"><label for="f-ph">Phone Number</label><input id="f-ph" name="phone" type="tel" placeholder="(512) 000-0000" autocomplete="tel" required></div>
-        <div class="fg"><label for="f-zip">ZIP Code</label><input id="f-zip" name="zip_code" type="text" placeholder="78701" maxlength="5"></div>
-        <div class="fg"><label for="f-svc">Service Needed</label>
-          <select id="f-svc" name="service_needed">
-            <option value="">Select a service…</option>
-            <option>Garage Door Repair</option><option>New Door Installation</option>
-            <option>Opener Repair / Installation</option><option>Spring Replacement</option>
-            <option>Cable Repair</option><option>Emergency Service</option>
-            <option>Routine Tune-Up</option><option>Other / Not Sure</option>
-          </select>
-        </div>
-        <div class="fg"><label for="f-msg">Message <span style="font-weight:400;text-transform:none">(optional)</span></label><textarea id="f-msg" name="message" placeholder="Tell us what's going on with your door…"></textarea></div>
-        <button class="form-submit" type="submit">Send My Free Request</button>
-        <p class="form-note">Your info is private and never sold. <a href="/privacy-policy.html" style="text-decoration:underline">Privacy Policy</a></p>
       </form>
     </div>
 </section>
@@ -754,12 +807,43 @@
 <script>
 
 // Form, submits to Web3Forms (real lead delivery to letsrollgaragedoors@gmail.com)
+(function(){
+  var form=document.getElementById('quote-form');
+  if(!form) return;
+  var steps=[].slice.call(form.querySelectorAll('.qs'));
+  var bars=form.querySelectorAll('.q-prog span');
+  var label=document.getElementById('q-step-label');
+  function show(n,focus){
+    steps.forEach(function(el,i){el.classList.toggle('on',i===n-1)});
+    bars.forEach(function(el,i){el.classList.toggle('on',i<n)});
+    label.textContent='Step '+n+' of 3';
+    if(focus){
+      var t=steps[n-1].querySelector('input:checked,input[type=text],input[type=tel],legend');
+      if(t){ if(t.tagName==='LEGEND'){t.setAttribute('tabindex','-1')} t.focus({preventScroll:true}); }
+    }
+  }
+  form.addEventListener('change',function(e){
+    var i=e.target;
+    if(i.type!=='radio') return;
+    var step=+i.closest('.qs').getAttribute('data-step');
+    setTimeout(function(){show(step+1,true)},180);
+  });
+  form.addEventListener('click',function(e){
+    var b=e.target.closest('.q-back');
+    if(b) show(+b.getAttribute('data-back'),true);
+  });
+})();
+
 async function submitQuoteForm(e){
   e.preventDefault();
   const form = document.getElementById('quote-form');
   const btn = form.querySelector('.form-submit');
   const originalText = btn.textContent;
-
+  if(!form.querySelector('input[name="service_needed"]:checked') || !form.querySelector('input[name="urgency"]:checked')){
+    btn.textContent = 'Please answer the questions above';
+    setTimeout(()=>{btn.textContent=originalText},3000);
+    return false;
+  }
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
@@ -772,14 +856,12 @@ async function submitQuoteForm(e){
     const data = await res.json();
 
     if (data.success) {
-      btn.textContent = '✓ Request Sent!';
-      btn.style.background = '#1a7a3a';
+      form.querySelectorAll('.qs,.q-step-label,.q-prog').forEach(el=>{el.style.display='none'});
+      const done=document.getElementById('q-done');
+      done.hidden=false; done.focus();
       form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 5000);
+      btn.textContent = originalText;
+      btn.disabled = false;
     } else {
       throw new Error(data.message || 'Submission failed');
     }
